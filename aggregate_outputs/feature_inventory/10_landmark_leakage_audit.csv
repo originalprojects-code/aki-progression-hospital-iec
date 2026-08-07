@@ -1,0 +1,9 @@
+source,all_source_records,selected_records,source_records_after_landmark,selected_min_offset,selected_max_offset,landmark_window_pass
+infusiondrug,2296878,319279,1958305,0,720,1
+lab,17123124,2293232,11619368,0,720,1
+pasthistory,419084,243889,175195,-44487,720,1
+respiratorycare_status,451031,61635,377185,0,720,1
+respiratorycare_vent_start,451031,375250,21741,0,719,1
+treatment,1617741,436087,1175580,0,720,1
+vitalaperiodic,10621278,2143062,8468345,0,720,1
+vitalperiodic,62627418,7890198,54718402,0,720,1

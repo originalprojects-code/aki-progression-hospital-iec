@@ -1,0 +1,34 @@
+treatment_item,records,patient_stays,patients_with_documented_invasive_airway,patients_without_documented_invasive_airway
+pulmonary|ventilation and oxygenation|mechanical ventilation,20524,13011,1853,11158
+pulmonary|ventilation and oxygenation|ventilator weaning,2425,1550,301,1249
+pulmonary|ventilation and oxygenation|mechanical ventilation|assist controlled,1424,1079,226,853
+surgery|pulmonary therapies|mechanical ventilation,1067,795,58,737
+pulmonary|ventilation and oxygenation|mechanical ventilation|volume controlled,867,673,295,378
+pulmonary|ventilation and oxygenation|mechanical ventilation|synchronized intermittent,404,336,223,113
+pulmonary|ventilation and oxygenation|mechanical ventilation|tidal volume 6-10 ml/kg,410,269,166,103
+pulmonary|ventilation and oxygenation|ventilator weaning|rapid,289,241,161,80
+surgery|pulmonary therapies|ventilator weaning,298,213,28,185
+pulmonary|ventilation and oxygenation|mechanical ventilation|pressure controlled,255,180,98,82
+pulmonary|ventilation and oxygenation|ventilator weaning|active,154,106,37,69
+toxicology|drug overdose|mechanical ventilation,105,77,18,59
+surgery|pulmonary therapies|ventilator weaning|rapid,87,66,4,62
+pulmonary|ventilation and oxygenation|mechanical ventilation|pressure support,84,59,30,29
+surgery|pulmonary therapies|mechanical ventilation|assist controlled,68,51,2,49
+pulmonary|ventilation and oxygenation|ventilator weaning|slow,42,32,10,22
+surgery|pulmonary therapies|mechanical ventilation|volume controlled,27,25,2,23
+pulmonary|ventilation and oxygenation|mechanical ventilation|tidal volume < 6 ml/kg,35,22,5,17
+surgery|pulmonary therapies|ventilator weaning|active,21,20,3,17
+pulmonary|radiologic procedures / bronchoscopy|reintubation,23,19,2,17
+pulmonary|ventilation and oxygenation|mechanical ventilation|volume assured,25,16,5,11
+surgery|pulmonary therapies|mechanical ventilation|synchronized intermittent,14,9,1,8
+pulmonary|ventilation and oxygenation|mechanical ventilation|permissive hypercapnea,12,6,4,2
+surgery|pulmonary therapies|mechanical ventilation|tidal volume 6-10 ml/kg,8,5,2,3
+toxicology|drug overdose|mechanical ventilation|assist controlled,5,5,1,4
+surgery|pulmonary therapies|mechanical ventilation|pressure support,3,3,2,1
+surgery|pulmonary therapies|mechanical ventilation|tidal volume < 6 ml/kg,3,3,0,3
+pulmonary|ventilation and oxygenation|mechanical ventilation|tidal volume > 10 ml/kg,2,2,2,0
+surgery|pulmonary therapies|mechanical ventilation|permissive hypercapnea,2,2,0,2
+surgery|pulmonary therapies|mechanical ventilation|pressure controlled,1,1,1,0
+surgery|pulmonary therapies|ventilator weaning|slow,1,1,1,0
+toxicology|drug overdose|mechanical ventilation|permissive hypercapnea,1,1,1,0
+toxicology|drug overdose|mechanical ventilation|tidal volume 6-10 ml/kg,1,1,1,0

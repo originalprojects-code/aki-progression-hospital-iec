@@ -1,0 +1,28 @@
+{
+  "title": "AKI progression prediction with hospital-disjoint internal-external validation",
+  "description": "Reproducibility code, parameterized SQL, predefined analysis specifications, aggregate outputs, figures, and documentation for the associated manuscript. No patient-level data are included.",
+  "creators": [
+    {
+      "name": "Yilmaz, Cagdas",
+      "orcid": "0000-0001-6373-2768",
+      "affiliation": "Mersin University"
+    },
+    {
+      "name": "Akdagli, Ali",
+      "orcid": "0000-0003-3312-992X",
+      "affiliation": "Mersin University"
+    }
+  ],
+  "license": "mit",
+  "keywords": [
+    "acute kidney injury",
+    "critical care",
+    "machine learning",
+    "internal-external validation",
+    "clinical prediction"
+  ],
+  "upload_type": "software",
+  "access_right": "open",
+  "version": "1.0.0-manuscript",
+  "language": "eng"
+}

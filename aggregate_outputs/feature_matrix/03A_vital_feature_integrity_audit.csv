@@ -1,0 +1,2 @@
+main_cohort_rows,vital_table_rows,distinct_unit_stays,duplicate_stay_rows,patients_without_selected_vitals,any_selected_vital_coverage
+58491,57686,57686,0,805,0.9862371988852986

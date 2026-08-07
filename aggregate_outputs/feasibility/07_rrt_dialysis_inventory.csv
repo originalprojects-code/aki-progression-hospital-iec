@@ -1,0 +1,34 @@
+source,item,record_count,patient_stay_count
+INTAKEOUTPUT_SUMMARY,dialysisTotal not null,12030289,180855
+INTAKEOUTPUT_SUMMARY,dialysisTotal nonzero,99067,5030
+TREATMENT_TERM,renal|dialysis|hemodialysis,16916,5110
+TREATMENT_TERM,renal|dialysis|c v v h d,5563,1138
+TREATMENT_TERM,renal|dialysis|hemodialysis|for chronic renal failure,4526,1383
+TREATMENT_TERM,renal|dialysis|hemodialysis|for acute renal failure,3034,668
+TREATMENT_TERM,renal|dialysis|insertion of venous catheter for hemodialysis,2292,595
+TREATMENT_TERM,renal|dialysis|c v v h,1550,330
+TREATMENT_TERM,renal|dialysis|hemodialysis|emergent,1548,580
+TREATMENT_TERM,renal|procedures/radiology|insertion of venous catheter for hemodialysis,1087,288
+TREATMENT_TERM,renal|dialysis|insertion of venous catheter for hemodialysis|percutaneous catheter,775,189
+TREATMENT_TERM,renal|dialysis|peritoneal dialysis,634,199
+TREATMENT_TERM,renal|procedures/radiology|insertion of venous catheter for hemodialysis|percutaneous catheter,537,123
+TREATMENT_TERM,renal|dialysis|peritoneal dialysis|for chronic renal failure,344,104
+TREATMENT_TERM,renal|dialysis|ultrafiltration (fluid removal only),277,86
+TREATMENT_TERM,renal|electrolyte correction|treatment of hyperkalemia|dialysis,260,112
+TREATMENT_TERM,renal|dialysis|insertion of venous catheter for hemodialysis|tunneled catheter,176,42
+TREATMENT_TERM,renal|procedures/radiology|insertion of venous catheter for hemodialysis|tunneled catheter,148,30
+TREATMENT_TERM,cardiovascular|vascular surgery|dialysis access surgery,86,37
+TREATMENT_TERM,renal|procedures/radiology|arteriovenous shunt for renal dialysis,64,23
+TREATMENT_TERM,endocrine|electrolyte correction|treatment of hyperkalemia|dialysis,52,27
+TREATMENT_TERM,renal|dialysis|ultrafiltration (fluid removal only)|for acute renal failure,49,19
+TREATMENT_TERM,renal|dialysis|sled,46,12
+TREATMENT_TERM,toxicology|drug overdose|drug removal measures|hemodialysis,42,16
+TREATMENT_TERM,renal|dialysis|arteriovenous shunt for renal dialysis,37,14
+TREATMENT_TERM,renal|dialysis|ultrafiltration (fluid removal only)|emergent,34,13
+TREATMENT_TERM,renal|dialysis|ultrafiltration (fluid removal only)|for chronic renal failure,31,7
+TREATMENT_TERM,renal|procedures/radiology|insertion of catheter for peritoneal dialysis,25,8
+TREATMENT_TERM,renal|electrolyte correction|treatment of hyperphosphatemia|dialysis,23,5
+TREATMENT_TERM,renal|dialysis|peritoneal dialysis|emergent,15,6
+TREATMENT_TERM,renal|dialysis|c a v h d,12,9
+TREATMENT_TERM,renal|dialysis|peritoneal dialysis|for acute renal failure,5,1
+TREATMENT_TERM,renal|dialysis|peritoneal dialysis|with cannula placement,3,2

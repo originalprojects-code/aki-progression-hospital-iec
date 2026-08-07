@@ -1,0 +1,14 @@
+metric,value
+base_adult_stays_12h,172392
+first_eligible_unit_per_hospital_stay,154529
+cross_hospital_patient_stays,11067
+reference_available,94093
+strict_chronic_dialysis_esrd,3365
+existing_stage23_by_12h,2036
+stage1_at_prediction,4303
+incident_creatinine_stage23,5233
+eligible_main_cohort,58491
+main_events,3032
+main_nonevents,55459
+eligible_rrt_composite_cohort,58561
+sensitivity_rrt_events,3292

@@ -1,0 +1,96 @@
+{
+  "calibration": "Platt calibration fit only on selected candidate pooled inner-OOF logits",
+  "candidate_grid": [
+    {
+      "candidate_id": "XGB01",
+      "colsample_bytree": 0.8,
+      "gamma": 0.0,
+      "learning_rate": 0.03,
+      "max_depth": 2,
+      "min_child_weight": 5.0,
+      "n_estimators": 250,
+      "reg_alpha": 0.0,
+      "reg_lambda": 5.0,
+      "subsample": 0.8
+    },
+    {
+      "candidate_id": "XGB02",
+      "colsample_bytree": 0.8,
+      "gamma": 0.0,
+      "learning_rate": 0.03,
+      "max_depth": 3,
+      "min_child_weight": 5.0,
+      "n_estimators": 350,
+      "reg_alpha": 0.0,
+      "reg_lambda": 5.0,
+      "subsample": 0.8
+    },
+    {
+      "candidate_id": "XGB03",
+      "colsample_bytree": 0.85,
+      "gamma": 0.0,
+      "learning_rate": 0.02,
+      "max_depth": 3,
+      "min_child_weight": 10.0,
+      "n_estimators": 450,
+      "reg_alpha": 0.1,
+      "reg_lambda": 10.0,
+      "subsample": 0.85
+    },
+    {
+      "candidate_id": "XGB04",
+      "colsample_bytree": 0.8,
+      "gamma": 0.1,
+      "learning_rate": 0.03,
+      "max_depth": 4,
+      "min_child_weight": 10.0,
+      "n_estimators": 350,
+      "reg_alpha": 0.1,
+      "reg_lambda": 10.0,
+      "subsample": 0.8
+    },
+    {
+      "candidate_id": "XGB05",
+      "colsample_bytree": 0.9,
+      "gamma": 0.0,
+      "learning_rate": 0.02,
+      "max_depth": 2,
+      "min_child_weight": 10.0,
+      "n_estimators": 450,
+      "reg_alpha": 0.5,
+      "reg_lambda": 10.0,
+      "subsample": 0.9
+    },
+    {
+      "candidate_id": "XGB06",
+      "colsample_bytree": 0.8,
+      "gamma": 0.2,
+      "learning_rate": 0.02,
+      "max_depth": 4,
+      "min_child_weight": 15.0,
+      "n_estimators": 450,
+      "reg_alpha": 0.5,
+      "reg_lambda": 15.0,
+      "subsample": 0.9
+    }
+  ],
+  "class_weighting": false,
+  "early_stopping": false,
+  "eval_metric": "logloss",
+  "feature_set": "core_159",
+  "inner_cv": "locked 5-fold hospital-disjoint inner folds",
+  "model_family": "XGBoost",
+  "objective": "binary:logistic",
+  "outer_cv": "locked 5-fold hospital-disjoint outer folds",
+  "outer_test_use": "diagnostic evaluation only; never used for tuning",
+  "primary_selection_metric": "pooled inner OOF AUPRC descending",
+  "protocol_name": "xgboost_core_nested_hospital_cv_v1",
+  "random_state": 20260721,
+  "scale_pos_weight": 1.0,
+  "selection_tie_breakers": [
+    "AUROC descending",
+    "Brier score ascending"
+  ],
+  "smote": false,
+  "tree_method": "hist"
+}

@@ -1,0 +1,127 @@
+{
+  "analysis_role": "additional_post_hoc_clinical_baseline",
+  "analysis_version": "33A",
+  "calibration": {
+    "fit_scope": "outer_training_only",
+    "method": "Platt",
+    "source": "selected_candidate_pooled_inner_OOF_logits"
+  },
+  "candidate_grid": [
+    {
+      "C": 0.03,
+      "candidate_id": "CLIN01",
+      "l1_ratio": 0.0
+    },
+    {
+      "C": 0.1,
+      "candidate_id": "CLIN02",
+      "l1_ratio": 0.0
+    },
+    {
+      "C": 0.3,
+      "candidate_id": "CLIN03",
+      "l1_ratio": 0.0
+    },
+    {
+      "C": 0.1,
+      "candidate_id": "CLIN04",
+      "l1_ratio": 0.25
+    },
+    {
+      "C": 0.3,
+      "candidate_id": "CLIN05",
+      "l1_ratio": 0.25
+    },
+    {
+      "C": 0.3,
+      "candidate_id": "CLIN06",
+      "l1_ratio": 0.5
+    }
+  ],
+  "cohort": {
+    "events": 3032,
+    "hospitals": 198,
+    "landmark_hours": 12,
+    "outcome": "KDIGO_stage_2_or_3_AKI",
+    "outcome_window_hours": ">12–72",
+    "patients": 58491
+  },
+  "created_utc": "2026-07-25T14:04:18.482171+00:00",
+  "model": {
+    "class_weight": null,
+    "estimator": "LogisticRegression",
+    "max_iter": 5000,
+    "penalty": "elasticnet",
+    "random_state": 20260721,
+    "solver": "saga",
+    "tol": 0.0001
+  },
+  "predictor_count": 8,
+  "predictors": [
+    "x_age_years",
+    "x_sex",
+    "x_reference_creatinine",
+    "x_stage1_at_landmark",
+    "x_lab_creatinine_last",
+    "x_lab_bun_last",
+    "x_vital_respiratory_rate_last",
+    "x_vital_noninvasive_systolic_bp_last"
+  ],
+  "preprocessing": {
+    "categorical_encoding": "one_hot_unknown_ignore",
+    "categorical_imputation": "constant___MISSING__",
+    "categorical_predictors": [
+      "x_sex"
+    ],
+    "numeric_imputation": "median_training_only",
+    "numeric_missing_indicators": true,
+    "numeric_scaling": "StandardScaler_with_mean_false"
+  },
+  "primary_probability_type": "platt_calibrated",
+  "prohibited": [
+    "class_weighting",
+    "SMOTE",
+    "oversampling",
+    "undersampling",
+    "early_stopping",
+    "test_based_retuning",
+    "patient_level_drive_export",
+    "BigQuery_DML_DELETE_INSERT_UPDATE_MERGE"
+  ],
+  "protocol_name": "locked_parsimonious_clinical_baseline_v1",
+  "protocol_status": "locked_before_any_outer_test_evaluation",
+  "provenance_statement": "Additional/post-hoc clinical benchmark; protocol locked before any of its outer-test results were examined.",
+  "rationale": {
+    "apache_24h_substitution_prohibited": true,
+    "complete_case_score_analysis_prohibited": true,
+    "incomplete_scores_prohibited": true,
+    "qsofa_not_used": "Standard 0–12 h qSOFA cannot be reconstructed because no compatible mentation/GCS component was found.",
+    "sirs_not_used": "Standard 0–12 h SIRS was not selected because temperature coverage is approximately 12%, leaving about 9.3% complete cases."
+  },
+  "reported_metrics": [
+    "AUROC",
+    "AUPRC",
+    "Brier_score",
+    "log_loss",
+    "calibration_intercept",
+    "calibration_slope"
+  ],
+  "selection_rule": [
+    "pooled_inner_oof_AUPRC_descending",
+    "pooled_inner_oof_AUROC_descending",
+    "pooled_inner_oof_Brier_ascending",
+    "candidate_id_ascending_immutable_tie_break"
+  ],
+  "uncertainty": {
+    "method": "hospital_cluster_bootstrap",
+    "replicates": 2000,
+    "seed": 20260723
+  },
+  "validation": {
+    "inner_folds_per_outer_training_set": 5,
+    "inner_split_unit": "hospital",
+    "outer_folds": 5,
+    "outer_split_unit": "hospital",
+    "outer_test_used_once_after_selection_and_calibration_lock": true
+  }
+}

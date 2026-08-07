@@ -1,0 +1,23 @@
+{
+  "amendment_name": "parsimonious_clinical_baseline_numerical_convergence_amendment_v1",
+  "amendment_timing": "before_any_outer_test_evaluation",
+  "amends_protocol_sha256": "94b0abb218dbef4e349702ea2824ca4e31dfbe36c53efa05ba1a8bd1f38f835e",
+  "analysis_version": "33A1",
+  "change": {
+    "candidate_grid_unchanged": true,
+    "class_weight_unchanged": null,
+    "new_value": 20000,
+    "old_value": 5000,
+    "parameter": "LogisticRegression.max_iter",
+    "penalty_unchanged": "elasticnet",
+    "platt_calibration_unchanged": true,
+    "predictors_unchanged": true,
+    "random_state_unchanged": 20260721,
+    "selection_rule_unchanged": true,
+    "solver_unchanged": "saga",
+    "tol_unchanged": 0.0001
+  },
+  "existing_inner_checkpoints": "Reusable only because all recorded inner candidate fits converged under the original 5000-iteration ceiling.",
+  "reason": "The selected final outer-fold-1 model emitted a ConvergenceWarning at max_iter=5000. All five inner-fold candidate fits completed with zero convergence warnings. The iteration ceiling is increased solely to allow convergence of the same penalized objective.",
+  "scientific_guard": "This is a numerical optimization amendment, not performance-based retuning. No outer-test prediction or metric was accessed before it."
+}

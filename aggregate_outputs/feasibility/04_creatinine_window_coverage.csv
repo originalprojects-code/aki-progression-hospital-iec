@@ -1,0 +1,2 @@
+adult_stays_at_prediction_time,with_reference_m24_to_p6,with_reference_hosp_to_p6,with_creatinine_0_12h,with_creatinine_12_48h,with_creatinine_12_72h,no_future_creat_despite_72h_icu,deciles_n_creat_0_12h,deciles_n_creat_12_72h
+172392,105609,107531,112681,142390,146347,1239,[ 0  0  0  0  1  1  1  1  1  2 10],[ 0  0  1  1  2  2  2  3  3  4 38]

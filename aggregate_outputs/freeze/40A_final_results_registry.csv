@@ -1,0 +1,33 @@
+section,item,value,value_2,status,scope
+cohort,patients,58491.0,,frozen,primary cohort
+cohort,hospitals,198.0,,frozen,primary cohort
+cohort,events_stage23_12_to_72h,3032.0,0.051837,frozen,primary cohort / event rate
+model_performance,XGBoost_AUROC,0.875804,,frozen,main nonlinear model / pooled Platt
+model_performance,XGBoost_AUPRC,0.398832,,frozen,main nonlinear model / pooled Platt
+model_performance,XGBoost_Brier,0.0378,,frozen,main nonlinear model / pooled Platt
+model_performance,XGBoost_log_loss,0.142019,,frozen,main nonlinear model / pooled Platt
+model_performance,CatBoost_AUROC,0.871126,,frozen,additional/post-hoc benchmark / pooled Platt
+model_performance,CatBoost_AUPRC,0.393057,,frozen,additional/post-hoc benchmark / pooled Platt
+model_performance,RandomForest_AUROC,0.867524,,frozen,additional/post-hoc benchmark / pooled Platt
+model_performance,RandomForest_AUPRC,0.38931,,frozen,additional/post-hoc benchmark / pooled Platt
+model_performance,FullLogistic_AUROC,0.847925,,frozen,main linear model / pooled Platt
+model_performance,FullLogistic_AUPRC,0.314647,,frozen,main linear model / pooled Platt
+clinical_baseline,ParsimoniousClinical_AUROC,0.814786,,frozen,additional/post-hoc exploratory benchmark / pooled Platt
+clinical_baseline,ParsimoniousClinical_AUPRC,0.262471,,frozen,additional/post-hoc exploratory benchmark / pooled Platt
+temporal_audit,critical_kidney_outcome_leakage_audit,1.0,0.0,PASS,"reference creatinine, last creatinine, stage1 landmark, outcome"
+primary_dca,XGB_positive_net_benefit_primary_thresholds,19.0,19.0,frozen,1-10% locked threshold range
+primary_dca,XGB_above_clinical_primary_thresholds,19.0,19.0,frozen,point estimates / 1-10% locked threshold range
+explainability,SHAP_rank1_reference_creatinine,0.494474,1.0,frozen,pooled grouped mean absolute SHAP / rank
+explainability,SHAP_rank2_last_creatinine,0.340731,2.0,frozen,pooled grouped mean absolute SHAP / rank
+explainability,SHAP_rank3_stage1_landmark,0.291037,3.0,frozen,pooled grouped mean absolute SHAP / rank
+explainability,SHAP_fold_rank_spearman_range,0.818737,0.890065,frozen,pairwise fold source-rank correlations
+renal_marker_ablation,AblatedXGB_AUROC,0.786269,,frozen,post-hoc sensitivity / pooled Platt
+renal_marker_ablation,AblatedXGB_AUPRC,0.209285,,frozen,post-hoc sensitivity / pooled Platt
+renal_marker_ablation,Full_minus_Ablated_AUROC,0.089535,,frozen,post-hoc exploratory paired comparison / Platt
+renal_marker_ablation,Full_minus_Ablated_AUROC_CI95,0.081057,0.097795,frozen,nominal paired hospital bootstrap 95% CI
+renal_marker_ablation,Full_minus_Ablated_AUPRC,0.189547,,frozen,post-hoc exploratory paired comparison / Platt
+renal_marker_ablation,Full_minus_Ablated_AUPRC_CI95,0.172183,0.206503,frozen,nominal paired hospital bootstrap 95% CI
+renal_marker_ablation_dca,Full_above_Ablated_primary,19.0,19.0,frozen,point estimate / lower pointwise CI >0
+renal_marker_ablation_dca,Ablated_above_TreatAll_primary,19.0,19.0,frozen,point estimate / lower pointwise CI >0
+renal_marker_ablation_dca,Ablated_above_TreatNone_primary,19.0,19.0,frozen,point estimate / lower pointwise CI >0
+renal_marker_ablation_dca,Ablated_above_TreatAll_sensitivity,30.0,29.0,frozen,point estimate / thresholds with lower pointwise CI >0; 0.5-15%

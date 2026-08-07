@@ -1,0 +1,2 @@
+total_icu_stays,unique_patients,hospital_stays,hospitals,adult_icu_stays,age_unresolved,adult_stays_at_least_12h,adult_stays_at_least_72h,live_icu_discharge_before_72h,icu_death_before_72h,adult_first_unit_visits,adult_repeat_unit_visits
+200859,139367,166355,208,200234,95,172392,49394,143849,6960,157883,42351

@@ -1,0 +1,10 @@
+{
+  "method": "StratifiedGroupKFold",
+  "n_inner_folds": 5,
+  "shuffle": true,
+  "base_random_seed": 20260721,
+  "outer_specific_seed_rule": "base_random_seed + outer_fold",
+  "group_variable": "group_hospital",
+  "target_variable": "label_stage23",
+  "outer_fold_variable": "outer_fold"
+}

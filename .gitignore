@@ -1,0 +1,10 @@
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.env
+credentials*.json
+service-account*.json
+patient_level/
+raw_predictions/
+restricted_data/
+.DS_Store

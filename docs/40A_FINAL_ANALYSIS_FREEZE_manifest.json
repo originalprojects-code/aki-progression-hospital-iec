@@ -1,0 +1,125 @@
+{
+  "analysis_freeze_rules": {
+    "eicu_model_retuning_after_40A": "PROHIBITED",
+    "independent_external_validation": "allowed_as_new_validation_phase_without altering frozen eICU results",
+    "new_analysis_only_if_scientifically_necessary_and_separately_locked": true,
+    "new_eicu_post_hoc_analysis_for_result_improvement": "PROHIBITED",
+    "test_driven_model_changes_after_40A": "PROHIBITED"
+  },
+  "analysis_type": "final_eicu_aki_analysis_freeze_and_results_registry",
+  "analysis_version": "40A",
+  "bigquery_action_performed_by_40A": false,
+  "canonical_clinical_baseline": {
+    "AUPRC": 0.262471,
+    "AUROC": 0.814786,
+    "Brier": 0.043773,
+    "log_loss": 0.167491,
+    "status": "additional_post_hoc_exploratory"
+  },
+  "canonical_primary_result": {
+    "AUPRC": 0.398832,
+    "AUROC": 0.875804,
+    "Brier": 0.0378,
+    "log_loss": 0.142019,
+    "model": "XGBoost",
+    "probability": "fold-specific Platt calibrated"
+  },
+  "cohort": {
+    "event_rate": 0.051837,
+    "events": 3032,
+    "hospitals": 198,
+    "landmark_hours": 12,
+    "outcome_window_hours": [
+      12,
+      72
+    ],
+    "patients": 58491
+  },
+  "critical_upstream_sha_locks": {
+    "31_four_model_paired_comparison": {
+      "artifact": "31E_final_four_model_comparison_manifest_SHA256.txt",
+      "sha256": "90ba7b07afd94c733dd231f0eaca300a8c47e70565221373ddba701cc8fc8928"
+    },
+    "34_clinical_baseline": {
+      "artifact": "34E_final_clinical_baseline_pooled_evaluation_manifest_SHA256.txt",
+      "sha256": "a1eb23d936154d521048c88e8b34d58314c38755c8b8e5126741e17c1a9f1924"
+    },
+    "35E_temporal_leakage_audit": {
+      "artifact": "35E_final_critical_temporal_leakage_adjudication_manifest_SHA256.txt",
+      "sha256": "7230605e14a2314ec1724f48c61e42d207f96c70ae2d4fe480bf02145ad24544"
+    },
+    "36_model_vs_clinical_comparison": {
+      "artifact": "36D_model_vs_clinical_paired_comparison_manifest_SHA256.txt",
+      "sha256": "f31ad0df192bc0872d1626771a773c50b7fff798534751144d9a060f82d5f718"
+    },
+    "37B_primary_dca": {
+      "artifact": "37B_decision_curve_analysis_manifest_SHA256.txt",
+      "sha256": "03a14b54c4fde8f23cfbc0ff4276f84c5443663cb0337d052fdf1989933238b4"
+    },
+    "38C_R1_treeshap": {
+      "artifact": "38C_R1_verified_outer_test_treeshap_manifest_SHA256.txt",
+      "sha256": "0469f6e3a1f31c5621904d4fbfd3c35904ccd435eca805ddc60f833f925ec521"
+    },
+    "39B_renal_marker_ablation": {
+      "artifact": "39B_renal_marker_ablation_sensitivity_manifest_SHA256.txt",
+      "sha256": "fe50ce847b8eed3c886d4b2cb7734513316edad2babdbfcac207f8649f547215"
+    },
+    "39D_renal_ablation_dca": {
+      "artifact": "39D_renal_ablation_decision_curve_analysis_manifest_SHA256.txt",
+      "sha256": "294d18b1194af2b582a056f0a245d9a9918243436b73f59b4aeb044b6d93ea05"
+    }
+  },
+  "decision_curve_analysis": {
+    "bootstrap": "2000 paired hospital-cluster replicates",
+    "optimal_threshold_selected": false,
+    "primary_threshold_range": "1%-10% in 0.5 percentage-point increments",
+    "prospective_clinical_effectiveness_claim_permitted": false,
+    "sensitivity_threshold_range": "0.5%-15% in 0.5 percentage-point increments"
+  },
+  "explainability": {
+    "causal_interpretation_permitted": false,
+    "fold_rank_spearman_range": [
+      0.818737,
+      0.890065
+    ],
+    "method": "verified native TreeSHAP on locked outer-test XGBoost models",
+    "top3_source_predictors": [
+      {
+        "pooled_mean_abs_grouped_shap": 0.494474,
+        "predictor": "x_reference_creatinine",
+        "rank": 1
+      },
+      {
+        "pooled_mean_abs_grouped_shap": 0.340731,
+        "predictor": "x_lab_creatinine_last",
+        "rank": 2
+      },
+      {
+        "pooled_mean_abs_grouped_shap": 0.291037,
+        "predictor": "x_stage1_at_landmark",
+        "rank": 3
+      }
+    ]
+  },
+  "patient_level_data_written_by_40A": false,
+  "renal_marker_ablation": {
+    "AUPRC": 0.209285,
+    "AUROC": 0.786269,
+    "Brier": 0.04494,
+    "full_minus_ablated_AUPRC": 0.189547,
+    "full_minus_ablated_AUPRC_CI95": [
+      0.172183,
+      0.206503
+    ],
+    "full_minus_ablated_AUROC": 0.089535,
+    "full_minus_ablated_AUROC_CI95": [
+      0.081057,
+      0.097795
+    ],
+    "log_loss": 0.174346,
+    "removed_source_predictors": 8,
+    "retained_source_predictors": 151,
+    "status": "post_hoc_exploratory_sensitivity"
+  },
+  "status": "FROZEN"
+}

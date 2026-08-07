@@ -1,0 +1,2 @@
+all_hospitals,hospitals_with_at_least_20_events_and_20_nonevents,median_auroc,auroc_iqr_lower,auroc_iqr_upper,median_auprc,auprc_iqr_lower,auprc_iqr_upper,median_calibration_gap,calibration_gap_iqr_lower,calibration_gap_iqr_upper
+198,51,0.8778641891539225,0.8558071824076616,0.8991432071795388,0.4475303864975357,0.3885629441385023,0.5055631362906963,-0.0028398967729341,-0.0092086834310302,0.00512461660189485

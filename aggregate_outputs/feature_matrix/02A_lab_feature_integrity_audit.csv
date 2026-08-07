@@ -1,0 +1,2 @@
+main_cohort_rows,lab_table_rows,distinct_unit_stays,duplicate_stay_rows,patients_without_selected_labs,any_selected_lab_coverage
+58491,54593,54593,0,3898,0.9333572686396198

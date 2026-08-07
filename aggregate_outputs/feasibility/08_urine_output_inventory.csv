@@ -1,0 +1,79 @@
+cell_label,cell_path,records,patient_stays,value_deciles
+urine,flowsheet|flowsheet cell labels|i&o|output (ml)|urine,3300489,145186,"[-3.975000e+03  2.500000e+01  5.000000e+01  7.500000e+01  1.000000e+02
+  1.500000e+02  2.000000e+02  2.900000e+02  3.750000e+02  5.500000e+02
+  1.800755e+06]"
+urine catheter,flowsheet|flowsheet cell labels|i&o|output (ml)|urine catheter,406364,11578,"[-1.5000e+02  2.0000e+01  4.4000e+01  6.6000e+01  1.0000e+02  1.2500e+02
+  1.7500e+02  2.5000e+02  3.5000e+02  6.0000e+02  3.9085e+04]"
+urinary catheter output: indwelling/continuous ure,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary catheter output: indwelling/continuous ure,261045,9396,"[-1.0000e+02  1.8000e+01  3.2000e+01  4.5000e+01  5.9000e+01  7.6000e+01
+  1.0000e+02  1.4100e+02  2.0000e+02  4.0000e+02  2.5016e+04]"
+voided amount,flowsheet|flowsheet cell labels|i&o|output (ml)|voided amount,34967,2200,"[1.00e+00 1.00e+02 2.00e+02 2.00e+02 2.50e+02 3.00e+02 3.50e+02 4.00e+02
+ 4.60e+02 6.00e+02 6.02e+03]"
+foley cath,flowsheet|flowsheet cell labels|i&o|output (ml)|foley cath,15040,304,"[    0.    30.    50.    65.    90.   120.   150.   200.   280.   450.
+ 19035.]"
+urine count,flowsheet|flowsheet cell labels|i&o|output (ml)|urine count,13459,3147,"[0.e+00 1.e+00 1.e+00 1.e+00 1.e+00 1.e+00 1.e+00 1.e+00 1.e+00 1.e+00
+ 4.e+03]"
+foley,flowsheet|flowsheet cell labels|i&o|output (ml)|foley,7293,383,[   0.   50.   90.  115.  150.  200.  250.  300.  400.  600. 7053.]
+urine occurrence,flowsheet|flowsheet cell labels|i&o|output (ml)|urine occurrence,5197,601,"[0.0e+00 1.0e+00 1.0e+00 1.0e+00 1.0e+00 1.0e+00 1.0e+00 2.0e+00 2.0e+00
+ 3.0e+00 3.5e+03]"
+urine output-foley,flowsheet|flowsheet cell labels|i&o|output (ml)|urine output-foley,3246,227,[   0.   40.   75.  150.  250.  350.  450.  575.  750. 1025. 4600.]
+output (ml)-external urinary catheter,flowsheet|flowsheet cell labels|i&o|output (ml)|output (ml)-external urinary catheter,3162,315,[   0.   50.  100.  150.  200.  250.  300.  360.  500.  700. 2500.]
+urinary catheter output: indwelling/continuous sup,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary catheter output: indwelling/continuous sup,3002,124,[   0.   28.   45.   60.   80.  106.  150.  245.  400.  700. 2400.]
+"urine, void:","flowsheet|flowsheet cell labels|i&o|output (ml)|urine, void:",2800,152,"[1.000e+00 1.000e+02 1.500e+02 2.000e+02 2.000e+02 2.500e+02 3.000e+02
+ 3.750e+02 4.500e+02 6.000e+02 1.925e+03]"
+urine output (ml)-urethral catheter,flowsheet|flowsheet cell labels|i&o|output (ml)|urine output (ml)-urethral catheter,2489,62,[   0.   30.   40.   50.   70.   95.  120.  155.  235.  360. 1800.]
+mixed urine/stool volume,flowsheet|flowsheet cell labels|i&o|output (ml)|mixed urine/stool volume,2018,536,[   0.  120.  200.  250.  300.  350.  400.  450.  500.  700. 2650.]
+urinary catheter output: straight/intermittent ure,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary catheter output: straight/intermittent ure,1720,291,[   0.   20.   38.   60.   99.  150.  220.  350.  500.  794. 4000.]
+urinary catheter output: indwelling/continuous ext,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary catheter output: indwelling/continuous ext,1586,61,[   0.   11.   28.   41.   55.   76.  102.  150.  205.  400. 2300.]
+output amt-urinary catheter,flowsheet|flowsheet cell labels|i&o|output (ml)|output amt-urinary catheter,1515,57,[   0.   30.   50.   60.   75.  100.  125.  190.  275.  450. 1800.]
+output (ml)-urinary catheter indwelling,flowsheet|flowsheet cell labels|i&o|output (ml)|output (ml)-urinary catheter indwelling,1303,51,[   0.    0.   17.   50.   80.  125.  200.  300.  500.  800. 3300.]
+sn urine output(ml),flowsheet|flowsheet cell labels|i&o|output (ml)|sn urine output(ml),1233,611,[   0.   25.   50.   75.  112.  179.  250.  346.  500.  700. 3750.]
+nephrostomy output,flowsheet|flowsheet cell labels|i&o|output (ml)|nephrostomy output,1083,43,[   0.   30.   75.  100.  125.  175.  200.  250.  325.  450. 1100.]
+urostomy,flowsheet|flowsheet cell labels|i&o|output (ml)|urostomy,872,66,[   0.   50.  100.  150.  200.  250.  300.  400.  600.  850. 4500.]
+output (ml)-nephrostomy left,flowsheet|flowsheet cell labels|i&o|output (ml)|output (ml)-nephrostomy left,792,31,[   0.   50.   75.  100.  150.  200.  225.  300.  350.  500. 1950.]
+urinary catheter output: coude urethral 16 fr.,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary catheter output: coude urethral 16 fr.,781,26,[   0.   27.   46.   65.   85.  101.  139.  200.  344.  750. 3000.]
+output (ml)-nephrostomy right,flowsheet|flowsheet cell labels|i&o|output (ml)|output (ml)-nephrostomy right,767,27,[  0.  40.  75. 100. 150. 175. 200. 250. 300. 375. 750.]
+output (ml)-urinary catheter  indwelling,flowsheet|flowsheet cell labels|i&o|output (ml)|output (ml)-urinary catheter  indwelling,739,16,[   0.   60.   80.  100.  150.  200.  250.  340.  450.  700. 2125.]
+urinary catheter output: urethral,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary catheter output: urethral,727,56,"[1.00e+00 2.40e+01 4.00e+01 5.00e+01 7.00e+01 9.40e+01 1.25e+02 1.75e+02
+ 2.90e+02 5.00e+02 3.00e+03]"
+urinary catheter output: coude urethral 14 fr.,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary catheter output: coude urethral 14 fr.,619,13,[   0.   30.   48.   60.   75.   90.  108.  140.  194.  258. 1600.]
+urinary catheter output: coude urethral 18 fr.,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary catheter output: coude urethral 18 fr.,595,15,[   0.   27.   45.   57.   77.  100.  160.  225.  399.  650. 1800.]
+urinary catheter output: urethral 16 fr.,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary catheter output: urethral 16 fr.,525,32,"[1.00e+00 2.30e+01 3.00e+01 4.00e+01 5.40e+01 7.80e+01 1.00e+02 1.41e+02
+ 2.50e+02 4.25e+02 1.70e+03]"
+nephrostomy #1,flowsheet|flowsheet cell labels|i&o|output (ml)|nephrostomy #1,455,26,[   0.   80.  120.  150.  175.  200.  250.  275.  350.  475. 2350.]
+nephrostomy left output,flowsheet|flowsheet cell labels|i&o|output (ml)|nephrostomy left output,434,28,[   5.   50.   90.  125.  160.  200.  250.  300.  350.  500. 1400.]
+urinary catheter output: indwelling/continuous per,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary catheter output: indwelling/continuous per,396,21,"[1.000e+00 2.000e+01 3.000e+01 4.500e+01 5.500e+01 7.100e+01 9.700e+01
+ 1.510e+02 3.000e+02 6.290e+02 1.289e+03]"
+urinary catheter output: coude urethral,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary catheter output: coude urethral,389,19,"[1.00e+00 2.30e+01 3.20e+01 5.00e+01 6.10e+01 8.10e+01 1.15e+02 1.57e+02
+ 2.59e+02 7.00e+02 1.90e+03]"
+urinary catheter output: indwelling/continuous nep,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary catheter output: indwelling/continuous nep,385,36,"[1.00e+00 5.00e+01 5.00e+01 1.00e+02 1.25e+02 1.50e+02 2.00e+02 2.50e+02
+ 3.00e+02 4.50e+02 1.40e+03]"
+urinary catheter output: condom external,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary catheter output: condom external,379,35,"[1.00e+00 2.00e+01 5.00e+01 7.00e+01 1.00e+02 1.30e+02 1.66e+02 2.25e+02
+ 3.50e+02 5.50e+02 2.20e+03]"
+output (ml)-urinary catheter suprapubic catheter,flowsheet|flowsheet cell labels|i&o|output (ml)|output (ml)-urinary catheter suprapubic catheter,357,12,[   0.   50.  100.  125.  150.  225.  300.  400.  550.  850. 2250.]
+urinary incontinence,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary incontinence,336,19,[  0.   1.   1.   1.   1.   1.   1.   1.   1.   1. 250.]
+number of incontinent voids,flowsheet|flowsheet cell labels|i&o|output (ml)|number of incontinent voids,325,88,[  0.   1.   1.   1.   1.   1.   1.   1.   1.   2. 250.]
+nephrostomy right output,flowsheet|flowsheet cell labels|i&o|output (ml)|nephrostomy right output,274,20,[  5.  40.  50.  75. 100. 125. 150. 200. 250. 325. 800.]
+urine incontinence,flowsheet|flowsheet cell labels|i&o|output (ml)|urine incontinence,257,32,[  0.   1.   1.   1.   1.   1.   1.   1.   1.   1. 310.]
+r nephrostomy,flowsheet|flowsheet cell labels|i&o|output (ml)|r nephrostomy,232,5,[  0.  30.  50.  50.  80. 100. 150. 200. 300. 400. 650.]
+urine output-urine output,flowsheet|flowsheet cell labels|i&o|output (ml)|urine output-urine output,231,13,[   0.   75.  100.  150.  200.  200.  200.  225.  250.  300. 1550.]
+l nephrostomy,flowsheet|flowsheet cell labels|i&o|output (ml)|l nephrostomy,226,4,[  0.  20.  25.  30.  50.  50. 100. 125. 150. 200. 500.]
+output (ml)-nephrostomy right 10 fr.,flowsheet|flowsheet cell labels|i&o|output (ml)|output (ml)-nephrostomy right 10 fr.,225,11,[   0.   50.  100.  150.  175.  200.  225.  275.  325.  400. 2000.]
+output (ml)-nephrostomy left 10 fr.,flowsheet|flowsheet cell labels|i&o|output (ml)|output (ml)-nephrostomy left 10 fr.,221,10,[  0.  50. 100. 100. 125. 150. 200. 225. 275. 350. 700.]
+suprapubic urine output,flowsheet|flowsheet cell labels|i&o|output (ml)|suprapubic urine output,220,27,[  25.  100.  200.  275.  350.  400.  500.  625.  800. 1000. 2500.]
+urinary catheter output: condom urethral,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary catheter output: condom urethral,198,14,[   0.    6.   24.   79.  100.  121.  140.  165.  250.  500. 1500.]
+output (ml)-ostomy-gu urostomy,flowsheet|flowsheet cell labels|i&o|output (ml)|output (ml)-ostomy-gu urostomy,190,10,[   0.  100.  150.  175.  200.  250.  300.  375.  550.  750. 1350.]
+unmeasured voids,flowsheet|flowsheet cell labels|i&o|output (ml)|unmeasured voids,170,49,[  1.   1.   1.   1.   1.   1.   1.   1.   1.   1. 675.]
+urine output-right nephrouretero stent urine output,flowsheet|flowsheet cell labels|i&o|output (ml)|urine output-right nephrouretero stent urine output,159,1,[  0.  15.  25.  40.  50.  70. 100. 125. 180. 250. 400.]
+urinary catheter output: nephrostomy l,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary catheter output: nephrostomy l,148,10,"[1.00e+00 1.00e+01 2.50e+01 4.50e+01 5.00e+01 7.50e+01 1.00e+02 1.25e+02
+ 1.50e+02 2.50e+02 1.30e+03]"
+right nephrostomy,flowsheet|flowsheet cell labels|i&o|output (ml)|right nephrostomy,139,7,[ 20.  50.  75.  90. 110. 135. 175. 200. 250. 300. 600.]
+urinary catheter output: nephrostomy r,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary catheter output: nephrostomy r,139,14,[   9.   50.  100.  134.  200.  200.  250.  350.  450.  650. 1025.]
+output (ml)-nephrostomy right 10.2 fr.,flowsheet|flowsheet cell labels|i&o|output (ml)|output (ml)-nephrostomy right 10.2 fr.,129,3,[  0.  50. 100. 100. 150. 200. 200. 250. 300. 350. 750.]
+urinary catheter output: suprapubic,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary catheter output: suprapubic,127,14,[   3.   50.  125.  200.  250.  400.  450.  600. 1000. 1300. 2400.]
+urine output-nephrostomy,flowsheet|flowsheet cell labels|i&o|output (ml)|urine output-nephrostomy,124,4,[  0.   5.  10.  15.  15.  20.  40.  50. 100. 200. 450.]
+foley catheter,flowsheet|flowsheet cell labels|i&o|output (ml)|foley catheter,120,4,[  50.  125.  175.  250.  350.  450.  550.  650.  750. 1000. 1800.]
+urinary incont.,flowsheet|flowsheet cell labels|i&o|output (ml)|urinary incont.,110,1,[1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+nephrostomy,flowsheet|flowsheet cell labels|i&o|output (ml)|nephrostomy,109,5,[  0.  40.  80. 100. 110. 125. 150. 200. 240. 325. 600.]
+or urine,flowsheet|flowsheet cell labels|i&o|output (ml)|or urine,108,91,[   0.   50.  185.  250.  375.  475.  600.  770. 1000. 1450. 5500.]
+"urine, l neph:","flowsheet|flowsheet cell labels|i&o|output (ml)|urine, l neph:",106,3,[ 25.  50.  80. 100. 100. 110. 150. 210. 275. 425. 675.]
+incontinent urine,flowsheet|flowsheet cell labels|i&o|output (ml)|incontinent urine,100,13,[0. 1. 1. 1. 1. 1. 1. 1. 1. 1. 2.]

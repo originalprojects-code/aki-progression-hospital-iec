@@ -1,0 +1,5 @@
+critical_item,temporal_rule,decision,basis
+x_lab_creatinine_last,eICU labResultOffset BETWEEN 0 AND 720; last creatinine selected within that window,PASS,Exact construction SQL
+x_reference_creatinine,reference creatinine selected from offset max 360 min; no reference offset >720,PASS,"Exact construction SQL + 58,491-patient aggregate offset audit"
+x_stage1_at_landmark,max KDIGO creatinine stage through 720 min; stage1 flag equals max-stage-by-12h definition,PASS,"Exact cohort SQL + zero-mismatch 58,491-patient reconstruction"
+label_stage23,"incident KDIGO stage 2/3 strictly >720 and <=min(discharge,4320)",PASS,"Exact cohort SQL + zero-mismatch 58,491-patient outcome reconstruction"

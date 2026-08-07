@@ -1,0 +1,13 @@
+1. Use 'internal-external cross-validation' for the eICU hospital-disjoint outer-fold design. Do not call it independent external validation.
+2. The primary outcome is incident/progressive KDIGO stage 2-3 after the 12-hour landmark through 72 hours.
+3. Main scientific framing: early prediction of AKI progression across unseen hospitals.
+4. XGBoost had the best overall numerical performance, but the three nonlinear ensemble learners formed a broadly comparable upper performance cluster. Do not claim universal or dramatic superiority.
+5. CatBoost and Random Forest are additional/post-hoc benchmarks unless separate prior provenance demonstrates otherwise.
+6. The parsimonious clinical logistic baseline is an additional/post-hoc exploratory benchmark. qSOFA and SIRS were not adequately reconstructable within 0-12 hours; do not state that they underperformed.
+7. Temporal leakage audit supports the validity of the critical kidney/outcome timing. It does not claim that every one of the 159 predictors was independently reconstructed from source SQL.
+8. SHAP values are descriptive model attributions on the raw-margin scale, not causal effects.
+9. Do not interpret pooled mean signed SHAP as a monotonic direction-of-risk coefficient. Use dependence/beeswarm plots for directionality.
+10. Primary DCA supports potential clinical utility across the prespecified threshold range; it does not establish prospective clinical effectiveness.
+11. DCA confidence intervals are pointwise, not simultaneous, and are not multiplicity-adjusted.
+12. Renal-marker ablation is explicitly post-hoc/exploratory. The performance drop shows substantial reliance on legitimate pre-landmark renal-state information; it does not demonstrate leakage.
+13. The ablated model retained residual discrimination (AUROC about 0.786) and positive net benefit across the prespecified threshold ranges, supporting additional predictive information beyond direct creatinine/KDIGO markers.

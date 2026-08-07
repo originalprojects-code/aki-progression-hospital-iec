@@ -1,0 +1,9 @@
+40A FINAL ANALYSIS FREEZE SHA-256
+cd3524f4620c9a907c45d7a7692839f4dee2df20db5bc4cb7f5635a76f703ed9
+
+RULES
+- No eICU model retuning.
+- No test-driven changes.
+- No alteration of frozen numerical results.
+- Any new analysis requires a separately locked protocol and explicit human approval.
+- Patient-level predictions must never be written into the manuscript project folder.

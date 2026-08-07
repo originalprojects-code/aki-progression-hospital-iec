@@ -1,0 +1,2 @@
+main_cohort_rows,context_table_rows,distinct_unit_stays,duplicate_stay_rows,patients_missing_context_row,inconsistent_any_vasopressor,inconsistent_tracheostomy_airway,invasive_vent_without_documented_airway,invasive_airway_without_documented_ventilation
+58491,58491,58491,0,0,0,0,13369,0

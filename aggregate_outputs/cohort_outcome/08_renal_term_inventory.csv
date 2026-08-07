@@ -1,0 +1,501 @@
+source,term,records,patient_stays
+DIAGNOSIS,renal|disorder of kidney|acute renal failure,65313,16375
+DIAGNOSIS,renal|disorder of kidney|esrd (end stage renal disease),16401,5030
+DIAGNOSIS,renal|disorder of kidney|chronic kidney disease,16171,4731
+DIAGNOSIS,renal|electrolyte imbalance|hypokalemia,15023,3227
+DIAGNOSIS,renal|electrolyte imbalance|hypomagnesemia,11349,2372
+DIAGNOSIS,renal|disorder of urinary tract / renal system infection|urinary tract infection,10965,3727
+DIAGNOSIS,renal|fluid imbalance|hypovolemia,9129,1534
+DIAGNOSIS,renal|disorder of kidney|chronic kidney disease|stage 3 (gfr 30-59),8722,2188
+DIAGNOSIS,renal|electrolyte imbalance|hyponatremia,8684,2202
+DIAGNOSIS,renal|disorder of kidney|chronic renal insufficiency,8403,2294
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|lactic acidosis,7238,1792
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis,6708,1752
+DIAGNOSIS,renal|electrolyte imbalance|hyperkalemia,6061,1821
+DIAGNOSIS,renal|fluid imbalance|hypervolemia,5608,722
+DIAGNOSIS,renal|electrolyte imbalance|hypocalcemia,5374,814
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to sepsis,5236,840
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to hypovolemia/decreased circulating volume,5118,1056
+DIAGNOSIS,renal|electrolyte imbalance|hypernatremia,4784,880
+DIAGNOSIS,renal|electrolyte imbalance|hypophosphatemia,4581,910
+DIAGNOSIS,renal|disorder of kidney|chronic kidney disease|stage 4 (gfr 15-29),3640,843
+DIAGNOSIS,renal|electrolyte imbalance|hyponatremia|moderate (125 - 135 meq/dl),3484,789
+DIAGNOSIS,renal|fluid imbalance|third spacing,3290,314
+DIAGNOSIS,renal|disorder of urinary tract / renal system infection|lower urinary tract infection,3167,1257
+DIAGNOSIS,renal|disorder of kidney|chronic kidney disease|stage 2 (gfr 60-89),3024,1030
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|acute tubular necrosis,2957,479
+DIAGNOSIS,renal|electrolyte imbalance|hypokalemia|moderate ( 2.8 - 3.5 meq/dl),2894,714
+DIAGNOSIS,cardiovascular|shock / hypotension|sepsis|sepsis with single organ dysfunction- acute renal failure,2831,694
+DIAGNOSIS,renal|electrolyte imbalance|hyperkalemia|severe (> 6.1 meq/dl),2535,852
+DIAGNOSIS,renal|abnormality of urine quantity or quality|oliguria,2498,452
+DIAGNOSIS,renal|fluid imbalance|dehydration,2483,846
+DIAGNOSIS,renal|electrolyte imbalance|hypernatremia|moderate (146 - 155 meq/dl),2286,354
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to rhabdomyolysis,2025,489
+DIAGNOSIS,renal|electrolyte imbalance|hyperchloremia,1954,270
+DIAGNOSIS,renal|electrolyte imbalance|hyponatremia|severe (< 125 meq/dl),1871,583
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|etiology unknown,1866,379
+DIAGNOSIS,renal|disorder of urinary tract / renal system infection|obstructive uropathy,1837,505
+DIAGNOSIS,renal|electrolyte imbalance|hyperphosphatemia,1808,255
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|increased anion gap,1758,379
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|severe,1557,389
+DIAGNOSIS,renal|abnormality of urine quantity or quality|hematuria,1538,480
+DIAGNOSIS,hematology|bleeding and red blood cell disorders|anemia|anemia of renal disease,1441,238
+DIAGNOSIS,renal|electrolyte imbalance|hyperkalemia|moderate ( 5.5 -6.1 meq/dl),1397,407
+DIAGNOSIS,renal|disorder of urinary tract / renal system infection|nephrolithiasis,1383,361
+DIAGNOSIS,renal|disorder of acid base|respiratory acidosis,1288,289
+DIAGNOSIS,transplant|s/p kidney transplant|s/p kidney transplant,1273,255
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|moderate,1163,251
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to hepatorenal syndrome,1111,161
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|ketoacidosis/diabetic,969,303
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|normal anion gap,954,199
+DIAGNOSIS,endocrine|adrenal disorders|adrenal insufficiency,948,189
+DIAGNOSIS,renal|disorder of kidney|chronic kidney disease|stage 5 (gfr <14),885,229
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|suspected,878,190
+DIAGNOSIS,renal|electrolyte imbalance|hypernatremia|severe (> 155 meq/dl),836,182
+DIAGNOSIS,renal|disorder of acid base|metabolic alkalosis,819,190
+DIAGNOSIS,infectious diseases|systemic/other infections|sepsis|sepsis with single organ dysfunction- acute renal failure,815,153
+DIAGNOSIS,renal|disorder of urinary tract / renal system infection|upper urinary tract infection,814,316
+DIAGNOSIS,renal|electrolyte imbalance|hypokalemia|severe ( < 2.8 meq/dl),797,249
+DIAGNOSIS,renal|abnormality of urine quantity or quality|anuria,795,134
+DIAGNOSIS,renal|electrolyte imbalance|hypochloremia,778,200
+DIAGNOSIS,renal|post gu surgery|s/p nephrectomy,703,235
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to renal ischemia,692,145
+DIAGNOSIS,gastrointestinal|hepatic disease|hepatorenal syndrome,678,145
+DIAGNOSIS,oncology|gu tumors|renal cell ca,672,195
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|due to bicarbonate loss,629,116
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to obstruction,602,151
+DIAGNOSIS,renal|disorder of urinary tract / renal system infection|lower urinary tract infection|with in-dwelling catheter,578,105
+DIAGNOSIS,burns/trauma|trauma - abdomen|renal trauma,565,114
+DIAGNOSIS,renal|electrolyte imbalance|hypermagnesemia,557,125
+DIAGNOSIS,renal|disorder of urinary tract / renal system infection|lower urinary tract infection|likely bacterial,544,163
+DIAGNOSIS,renal|electrolyte imbalance|hypomagnesemia|etiology unknown,505,119
+DIAGNOSIS,renal|abnormality of urine quantity or quality|oliguria|probable hypovolemia,471,91
+DIAGNOSIS,cardiovascular|ventricular disorders|acute pulmonary edema|due to renal dysfunction,459,133
+DIAGNOSIS,renal|electrolyte imbalance|hypocalcemia|moderate,407,60
+DIAGNOSIS,renal|disorder of acid base|mixed acid base disorder,365,57
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to nephrotoxic agents,357,93
+DIAGNOSIS,"renal|fluid imbalance|volume depletion, unspecified",345,75
+DIAGNOSIS,renal|disorder of urinary tract / renal system infection|lower urinary tract infection|without in-dwelling catheter,345,108
+DIAGNOSIS,renal|electrolyte imbalance|hyponatremia|etiology unknown,321,79
+DIAGNOSIS,renal|electrolyte imbalance|hyperkalemia|due to renal disease,316,104
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|uremic acidosis,316,64
+DIAGNOSIS,renal|electrolyte imbalance|hypernatremia|due to volume depletion,309,62
+DIAGNOSIS,renal|post gu surgery|s/p cystectomy,303,129
+DIAGNOSIS,renal|electrolyte imbalance|hypercalcemia,297,89
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|etiology unknown,295,55
+DIAGNOSIS,infectious diseases|gu infections|acute pyelonephritis|with renal calculi,290,81
+DIAGNOSIS,renal|abnormality of urine quantity or quality|oliguria|suspect atn,283,47
+DIAGNOSIS,cardiovascular|vascular disorders|hypertension|with renal failure,281,65
+DIAGNOSIS,renal|electrolyte imbalance|hypomagnesemia|due to etoh abuse,280,67
+DIAGNOSIS,renal|electrolyte imbalance|hyponatremia|due to cirrhosis,280,64
+DIAGNOSIS,endocrine|adrenal disorders|adrenal insufficiency|due to chronic steroid administration,269,39
+DIAGNOSIS,renal|disorder of acid base|respiratory alkalosis,258,50
+DIAGNOSIS,renal|fluid imbalance|hypervolemia|in the absence of chf,258,57
+DIAGNOSIS,renal|disorder of kidney|transplant rejection,249,50
+DIAGNOSIS,renal|fluid imbalance|hypervolemia|in the absence of renal failure and chf,248,29
+DIAGNOSIS,cardiovascular|ventricular disorders|low cardiac output state|with renal insufficiency,242,44
+DIAGNOSIS,cardiovascular|shock / hypotension|hypotension / pressor dependent|r/o adrenal insufficiency,223,52
+DIAGNOSIS,renal|disorder of urinary tract / renal system infection|lower urinary tract infection|known bacterial,216,63
+DIAGNOSIS,renal|disorder of acid base|respiratory acidosis|acute,210,62
+DIAGNOSIS,renal|electrolyte imbalance|hyperchloremia|due to normal saline administration,206,41
+DIAGNOSIS,renal|electrolyte imbalance|hypercalcemia|due to malignancy,206,24
+DIAGNOSIS,renal|abnormality of urine quantity or quality|polyuria,199,43
+DIAGNOSIS,renal|disorder of acid base|mixed acid base disorder|metabolic acidosis,189,46
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|unstable during hemodialysis,189,45
+DIAGNOSIS,burns/trauma|trauma - skeletal|rhabdomyolysis|with renal insufficiency,187,38
+DIAGNOSIS,renal|disorder of urinary tract / renal system infection|upper urinary tract infection|likely bacterial,184,83
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|drug induced,178,32
+DIAGNOSIS,renal|disorder of acid base|metabolic alkalosis|due to diuretics,178,33
+DIAGNOSIS,renal|post gu surgery|s/p prostatectomy,175,63
+DIAGNOSIS,transplant|s/p kidney transplant|hypertension - kidney transplant,173,36
+DIAGNOSIS,renal|electrolyte imbalance|hypernatremia|due to excess sodium administration,172,28
+DIAGNOSIS,cardiovascular|post vascular surgery|s/p dialysis access surgery,172,82
+DIAGNOSIS,cardiovascular|shock / hypotension|hypotension / pressor dependent|adrenal insufficiency present,170,37
+DIAGNOSIS,renal|post gu surgery|s/p procedure for nephrolithiasis,168,70
+DIAGNOSIS,renal|abnormality of urine quantity or quality|pyuria,167,42
+DIAGNOSIS,renal|post gu surgery|s/p procedure for nephrolithiasis|closed,163,43
+DIAGNOSIS,renal|abnormality of urine quantity or quality|oliguria|low effective intravascular volume,160,32
+DIAGNOSIS,renal|disorder of kidney|chronic kidney disease|stage 1 (gfr >90),160,65
+DIAGNOSIS,renal|electrolyte imbalance|hyponatremia|due to renal disease,159,36
+DIAGNOSIS,cardiovascular|vascular disorders|hypertension|with heart failure and renal failure,150,34
+DIAGNOSIS,renal|disorder of acid base|metabolic alkalosis|moderate,148,27
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to nephrotoxic agents|radiocontrast dye,147,41
+DIAGNOSIS,renal|electrolyte imbalance|hypocalcemia|etiology unknown,146,20
+DIAGNOSIS,renal|disorder of acid base|respiratory acidosis|chronic,139,31
+DIAGNOSIS,renal|fluid imbalance|hypervolemia|in the absence of renal failure,137,21
+DIAGNOSIS,renal|abnormality of urine quantity or quality|anuria|suspect atn,134,23
+DIAGNOSIS,cardiovascular|ventricular disorders|hypertension|with renal failure,132,31
+DIAGNOSIS,renal|electrolyte imbalance|hypokalemia|due to poor intake,130,34
+DIAGNOSIS,renal|electrolyte imbalance|hypercalcemia|moderate,128,10
+DIAGNOSIS,renal|electrolyte imbalance|hyponatremia|due to diuretics,128,29
+DIAGNOSIS,endocrine|adrenal disorders|hypotension / pressor dependent|adrenal insufficiency present,127,12
+DIAGNOSIS,oncology|gu tumors|renal cell ca|left kidney,127,39
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to nephrotoxic agents|nsaids,126,32
+DIAGNOSIS,renal|electrolyte imbalance|hypokalemia|etiology unknown,124,18
+DIAGNOSIS,infectious diseases|gi infections|peritonitis|dialysis associated,118,21
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to nephrotoxic agents|rhabdomyolysis,117,40
+DIAGNOSIS,renal|electrolyte imbalance|hypocalcemia|severe,116,25
+DIAGNOSIS,oncology|gu tumors|renal cell ca|right kidney,115,42
+DIAGNOSIS,renal|disorder of urinary tract / renal system infection|upper urinary tract infection|known bacterial,111,20
+DIAGNOSIS,renal|electrolyte imbalance|hypocalcemia|due to sepsis,109,10
+DIAGNOSIS,surgery|renal issues|acute renal failure,106,37
+DIAGNOSIS,renal|disorder of acid base|mixed acid base disorder|metabolic acidosis|acute,105,33
+DIAGNOSIS,endocrine|adrenal disorders|adrenal insufficiency|unexpected hypotension / pressor requirement,101,21
+DIAGNOSIS,renal|abnormality of urine quantity or quality|diabetes insipidus,99,20
+DIAGNOSIS,renal|electrolyte imbalance|hyponatremia|due to congestive heart failure,98,20
+DIAGNOSIS,endocrine|adrenal disorders|adrenal insufficiency|primary,95,15
+DIAGNOSIS,endocrine|adrenal disorders|hypotension / pressor dependent,94,26
+DIAGNOSIS,renal|disorder of acid base|metabolic alkalosis|posthypercapneic metabolic alkalosis,93,18
+DIAGNOSIS,endocrine|fluids and electrolytes|hyperkalemia|due to renal disease,92,40
+DIAGNOSIS,renal|electrolyte imbalance|hypokalemia|due to renal loss,91,24
+DIAGNOSIS,transplant|s/p kidney transplant|rejection - kidney transplant,91,16
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|suspected,87,16
+DIAGNOSIS,renal|electrolyte imbalance|hypernatremia|suspected,84,9
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|renal tubular acidosis,83,14
+DIAGNOSIS,transplant|s/p kidney transplant|oliguria - kidney transplant,83,30
+DIAGNOSIS,renal|disorder of kidney|traumatic renal injury,82,30
+DIAGNOSIS,renal|disorder of acid base|mixed acid base disorder|respiratory acidosis,82,22
+DIAGNOSIS,infectious diseases|gu infections|acute pyelonephritis|without renal calculi,81,36
+DIAGNOSIS,renal|electrolyte imbalance|hypomagnesemia|due to gi loss,80,24
+DIAGNOSIS,burns/trauma|trauma - abdomen|adrenal trauma,76,17
+DIAGNOSIS,renal|electrolyte imbalance|hypernatremia|etiology unknown,75,12
+DIAGNOSIS,renal|electrolyte imbalance|hypokalemia|due to extra-renal loss,72,14
+DIAGNOSIS,renal|electrolyte imbalance|hyponatremia|due to elevated adh levels,72,11
+DIAGNOSIS,transplant|s/p kidney transplant|fever - kidney transplant,69,19
+DIAGNOSIS,renal|electrolyte imbalance|hyperkalemia|due to hypovolemia,68,26
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to interstitial nephritis from drugs,68,19
+DIAGNOSIS,renal|abnormality of urine quantity or quality|anuria|etiology unknown,67,9
+DIAGNOSIS,renal|electrolyte imbalance|hypocalcemia|due to rhabdomyolysis,66,12
+DIAGNOSIS,renal|disorder of acid base|metabolic alkalosis|due to hypovolemia,66,18
+DIAGNOSIS,renal|disorder of urinary tract / renal system infection|lower urinary tract infection|known fungal,65,5
+DIAGNOSIS,renal|electrolyte imbalance|hypocalcemia|due to massive transfusion,64,7
+DIAGNOSIS,renal|electrolyte imbalance|hyperkalemia|etiology unknown,62,22
+DIAGNOSIS,renal|electrolyte imbalance|hypokalemia|due to transcellular shift,59,12
+DIAGNOSIS,cardiovascular|vascular disorders|hypertension|renal artery stenosis,59,13
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|drug induced|ethylene glycol-induced,59,11
+DIAGNOSIS,gastrointestinal|trauma|renal trauma,57,12
+DIAGNOSIS,endocrine|adrenal disorders|adrenal insufficiency|secondary,56,16
+DIAGNOSIS,renal|abnormality of urine quantity or quality|oliguria|etiology unknown,55,12
+DIAGNOSIS,renal|electrolyte imbalance|hyperkalemia|due to rhabdomyolysis,55,21
+DIAGNOSIS,renal|electrolyte imbalance|hypomagnesemia|suspected,53,19
+DIAGNOSIS,toxicology|drug overdose|acetaminophen overdose|with acute renal failure,52,9
+DIAGNOSIS,cardiovascular|vascular disorders|arterial thromboembolism|kidney,52,19
+DIAGNOSIS,gastrointestinal|abdominal/ general|peritonitis|dialysis associated,51,25
+DIAGNOSIS,renal|abnormality of urine quantity or quality|diabetes insipidus|central,51,9
+DIAGNOSIS,cardiovascular|diseases of the aorta|aortic dissection|with renal ischemia,51,6
+DIAGNOSIS,renal|electrolyte imbalance|hyperkalemia|due to transcellular shift,51,18
+DIAGNOSIS,renal|disorder of urinary tract|urinary tract disorder,50,28
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to nephrotoxic agents|ace inhibitors,49,17
+DIAGNOSIS,endocrine|pituitary and temperature regulation|pituitary adrenal insufficiency,48,15
+DIAGNOSIS,renal|disorder of acid base|mixed acid base disorder|respiratory acidosis|acute,48,11
+DIAGNOSIS,renal|electrolyte imbalance|hypomagnesemia|due to diuresis,48,11
+DIAGNOSIS,renal|electrolyte imbalance|hypercalcemia|severe,47,17
+DIAGNOSIS,renal|disorder of acid base|mixed acid base disorder|respiratory alkalosis-|acute,44,6
+DIAGNOSIS,renal|electrolyte imbalance|hyponatremia|due to elevated adh levels|from drugs,44,4
+DIAGNOSIS,renal|abnormality of urine quantity or quality|oliguria|possibly due to low co,43,11
+DIAGNOSIS,renal|disorder of urinary tract / renal system infection|perinephric abscess,43,8
+DIAGNOSIS,renal|electrolyte imbalance|hyponatremia|suspected,42,12
+DIAGNOSIS,renal|disorder of urinary tract|lower urinary tract calculus,41,27
+DIAGNOSIS,renal|post gu surgery|s/p nephrectomy|with ivc involvement,41,9
+DIAGNOSIS,cardiovascular|ventricular disorders|hypertension|with heart failure and renal failure,41,10
+DIAGNOSIS,endocrine|adrenal disorders|hypotension / pressor dependent|r/o adrenal insufficiency,40,12
+DIAGNOSIS,renal|disorder of acid base|metabolic alkalosis|severe,39,8
+DIAGNOSIS,transplant|s/p kidney transplant|rejection - kidney transplant|chronic,39,4
+DIAGNOSIS,surgery|renal issues|hypokalemia|moderate ( 2.8 - 3.5 meq/dl),39,12
+DIAGNOSIS,renal|electrolyte imbalance|hypocalcemia|due to tumor lysis,38,6
+DIAGNOSIS,renal|electrolyte imbalance|hyperkalemia|due to tumor lysis,37,8
+DIAGNOSIS,renal|post gu surgery|s/p pelvic exenteration,36,20
+DIAGNOSIS,renal|electrolyte imbalance|hypercalcemia|due to hyperparathyroidism,35,11
+DIAGNOSIS,renal|electrolyte imbalance|hyperkalemia|due to drugs,35,13
+DIAGNOSIS,renal|electrolyte imbalance|hypercalcemia|etiology unknown,35,6
+DIAGNOSIS,renal|abnormality of urine quantity or quality|anuria|r/o obstruction,35,10
+DIAGNOSIS,renal|disorder of acid base|metabolic alkalosis|hypokalemic alkalosis,34,10
+DIAGNOSIS,renal|disorder of acid base|mixed acid base disorder|metabolic alkalosis,34,9
+DIAGNOSIS,surgery|renal issues|acute renal failure|due to hypovolemia/decreased circulating volume,33,12
+DIAGNOSIS,"renal|disorder of acid base|metabolic alkalosis|due to gi acid loss (vomiting, ng drainage)",33,11
+DIAGNOSIS,renal|disorder of acid base|mixed acid base disorder|metabolic alkalosis|acute,32,7
+DIAGNOSIS,renal|disorder of acid base|respiratory alkalosis|etiology unknown,32,5
+DIAGNOSIS,renal|disorder of kidney|chronic kidney disease|hydronephrosis,31,15
+DIAGNOSIS,surgery|renal issues|hyperkalemia,31,11
+DIAGNOSIS,renal|electrolyte imbalance|hypokalemia|due to hypomagnesemia,30,10
+DIAGNOSIS,renal|electrolyte imbalance|hypocalcemia|due to renal failure,29,11
+DIAGNOSIS,renal|disorder of acid base|mixed acid base disorder|respiratory acidosis|chronic,29,6
+DIAGNOSIS,renal|electrolyte imbalance|hypokalemia|suspected,28,6
+DIAGNOSIS,surgery|renal issues|oliguria,27,11
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to cardio-pulmonary bypass,27,10
+DIAGNOSIS,endocrine|adrenal disorders|cushing's syndrome|hypercortisolism,26,3
+DIAGNOSIS,renal|disorder of acid base|metabolic alkalosis|etiology unknown,26,6
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to nephrotoxic agents|arbs,26,3
+DIAGNOSIS,renal|disorder of urinary tract / renal system infection|lower urinary tract infection|likely fungal,25,3
+DIAGNOSIS,surgery|renal issues|metabolic acidosis,24,13
+DIAGNOSIS,renal|electrolyte imbalance|hyponatremia|due to adrenal insufficiency,24,9
+DIAGNOSIS,renal|electrolyte imbalance|hyponatremia|due to elevated adh levels|from pulmonary process,23,6
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to nephrotoxic agents|ethylene glycol,23,8
+DIAGNOSIS,surgery|renal issues|acute renal failure|due to sepsis,22,8
+DIAGNOSIS,renal|abnormality of urine quantity or quality|diabetes insipidus|central|from trauma,22,4
+DIAGNOSIS,surgery|renal issues|hyponatremia|moderate (125 - 135 meq/dl),21,10
+DIAGNOSIS,surgery|renal issues|metabolic acidosis|severe,21,7
+DIAGNOSIS,renal|electrolyte imbalance|hypomagnesemia|due to drugs,21,4
+DIAGNOSIS,infectious diseases|gu infections|renal abscess,21,9
+DIAGNOSIS,renal|disorder of acid base|metabolic alkalosis|suspected,21,5
+DIAGNOSIS,surgery|renal issues|hypokalemia,18,7
+DIAGNOSIS,renal|disorder of urinary tract / renal system infection|renal abscess,18,11
+DIAGNOSIS,renal|abnormality of urine quantity or quality|diabetes insipidus|central|from neurosurgery,18,5
+DIAGNOSIS,renal|electrolyte imbalance|hypernatremia|due to central diabetes insipidus,18,6
+DIAGNOSIS,endocrine|fluids and electrolytes|hyponatremia|due to renal disease,17,5
+DIAGNOSIS,surgery|renal issues|acute renal failure|due to obstruction,17,7
+DIAGNOSIS,surgery|renal issues|acute renal failure|etiology unknown,17,6
+DIAGNOSIS,renal|electrolyte imbalance|hyperkalemia|due to excess intake,16,8
+DIAGNOSIS,transplant|s/p kidney transplant|hyperkalemia - kidney transplant,16,5
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|renal tubular acidosis|type unknown,16,3
+DIAGNOSIS,renal|electrolyte imbalance|hyponatremia|due to elevated adh levels|from cns process,16,7
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to nephrotoxic agents|immunosuppressives,16,6
+DIAGNOSIS,renal|electrolyte imbalance|hypermagnesemia|due to magnesium therapy,16,2
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to transplant rejection,16,4
+DIAGNOSIS,transplant|s/p kidney transplant|fever - kidney transplant|postop < 2 weeks,15,3
+DIAGNOSIS,surgery|renal issues|hyperkalemia|severe (> 6.1 meq/dl),15,6
+DIAGNOSIS,surgery|other surgery|s/p adrenal surgery,15,8
+DIAGNOSIS,surgery|renal issues|hyperkalemia|moderate ( 5.5 -6.1 meq/dl),15,6
+DIAGNOSIS,renal|abnormality of urine quantity or quality|polyuria|post atn diuresis,14,3
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|drug induced|drug unknown,14,6
+DIAGNOSIS,renal|abnormality of urine quantity or quality|diabetes insipidus|nephrogenic|from drugs,14,1
+DIAGNOSIS,renal|disorder of urinary tract|renal and ureteral disorder,14,12
+DIAGNOSIS,renal|post gu surgery|s/p procedure for nephrolithiasis|open,13,5
+DIAGNOSIS,renal|abnormality of urine quantity or quality|myoglobinuria,13,4
+DIAGNOSIS,endocrine|adrenal disorders|cushing's syndrome,13,7
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|drug induced|other chemical,13,4
+DIAGNOSIS,surgery|renal issues|hyponatremia,13,5
+DIAGNOSIS,surgery|other surgery|s/p adrenal surgery|pheochromocytoma,13,5
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to nephrotoxic agents|hemolysis,13,2
+DIAGNOSIS,renal|electrolyte imbalance|hyperkalemia|suspected,12,4
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|renal tubular acidosis|probable type 2,12,1
+DIAGNOSIS,surgery|renal issues|respiratory acidosis,12,4
+DIAGNOSIS,renal|electrolyte imbalance|hyperkalemia|due to rapid transfusion,11,2
+DIAGNOSIS,renal|electrolyte imbalance|hyponatremia|due to elevated adh levels|from major surgery,11,2
+DIAGNOSIS,endocrine|fluids and electrolytes|hyponatremia|due to adrenal insufficiency,11,4
+DIAGNOSIS,renal|electrolyte imbalance|hypermagnesemia|due to renal insufficiency,11,5
+DIAGNOSIS,endocrine|adrenal disorders|cushing's syndrome|pituitary,11,4
+DIAGNOSIS,surgery|renal issues|metabolic acidosis|increased anion gap,10,6
+DIAGNOSIS,gastrointestinal|abdominal/ general|ascites|dialysis associated,10,4
+DIAGNOSIS,renal|disorder of urinary tract|urethral stricture,9,2
+DIAGNOSIS,surgery|renal issues|acute renal failure|suspected,9,2
+DIAGNOSIS,renal|disorder of acid base|mixed acid base disorder|metabolic alkalosis|chronic,9,4
+DIAGNOSIS,endocrine|adrenal disorders|adrenal insufficiency|unexplained electrolyte abnormality,9,5
+DIAGNOSIS,surgery|renal issues|acute renal failure|due to hepatorenal syndrome,9,3
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|with intestinal bladder,9,2
+DIAGNOSIS,surgery|renal issues|hyponatremia|severe (< 125 meq/dl),9,4
+DIAGNOSIS,endocrine|fluids and electrolytes|hypocalcemia|due to renal failure,8,1
+DIAGNOSIS,renal|abnormality of urine quantity or quality|diabetes insipidus|central|from cva,8,4
+DIAGNOSIS,surgery|renal issues|hypernatremia|severe (> 155 meq/dl),8,3
+DIAGNOSIS,endocrine|fluids and electrolytes|hypokalemia|due to extra-renal loss,8,3
+DIAGNOSIS,renal|electrolyte imbalance|hypernatremia|due to nephrogenic diabetes insipidus,8,2
+DIAGNOSIS,surgery|renal issues|metabolic acidosis|moderate,8,4
+DIAGNOSIS,renal|disorder of acid base|respiratory acidosis|due to cns depression|related to drugs or medications,7,5
+DIAGNOSIS,surgery|renal issues|oliguria|hypovolemia,7,1
+DIAGNOSIS,renal|abnormality of urine quantity or quality|diabetes insipidus|nephrogenic,7,2
+DIAGNOSIS,renal|disorder of acid base|respiratory alkalosis|iatrogenic,7,2
+DIAGNOSIS,renal|disorder of acid base|respiratory acidosis|due to intrinsic lung disease,7,2
+DIAGNOSIS,renal|disorder of acid base|respiratory acidosis|suspected,7,2
+DIAGNOSIS,endocrine|adrenal disorders|hyperaldosteronism,6,1
+DIAGNOSIS,renal|disorder of acid base|respiratory alkalosis|anxiety related,6,2
+DIAGNOSIS,renal|abnormality of urine quantity or quality|polyuria|r/o renal concentrating defect,6,1
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to nephrotoxic agents|aminoglycosides,6,2
+DIAGNOSIS,surgery|infections|sepsis|sepsis with single organ dysfunction- acute renal failure,6,3
+DIAGNOSIS,renal|electrolyte imbalance|hyponatremia|due to elevated adh levels|from tumor other than lung,6,5
+DIAGNOSIS,renal|electrolyte imbalance|hypermagnesemia|etiology unknown,6,2
+DIAGNOSIS,surgery|renal issues|acute renal failure|due to cardio-pulmonary bypass,6,1
+DIAGNOSIS,renal|disorder of acid base|respiratory acidosis|due to cns depression,6,1
+DIAGNOSIS,renal|abnormality of urine quantity or quality|polyuria|r/o polydipsia,6,3
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|drug induced|methanol-induced,5,1
+DIAGNOSIS,renal|abnormality of urine quantity or quality|polyuria|due to glycosuria,5,1
+DIAGNOSIS,transplant|s/p kidney transplant|rejection - kidney transplant|acute,5,2
+DIAGNOSIS,renal|disorder of acid base|respiratory alkalosis|suspected,5,2
+DIAGNOSIS,surgery|renal issues|hypernatremia|moderate (146 - 155 meq/dl),5,2
+DIAGNOSIS,renal|disorder of urinary tract / renal system infection|upper urinary tract infection|likely fungal,5,1
+DIAGNOSIS,renal|disorder of acid base|metabolic alkalosis|due to mineralocorticoid excess,4,1
+DIAGNOSIS,surgery|renal issues|respiratory acidosis|acute,4,1
+DIAGNOSIS,renal|electrolyte imbalance|hypercalcemia|suspected,4,2
+DIAGNOSIS,transplant|s/p kidney transplant|hemorrhage - kidney transplant,4,3
+DIAGNOSIS,endocrine|adrenal disorders|adrenal insufficiency|due to autoimmune adrenal atrophy,4,1
+DIAGNOSIS,surgery|renal issues|anuria|suspect atn,4,1
+DIAGNOSIS,renal|electrolyte imbalance|hypocalcemia|due to adrenal insufficiency,4,1
+DIAGNOSIS,endocrine|fluids and electrolytes|hypokalemia|due to renal loss,4,3
+DIAGNOSIS,renal|disorder of acid base|mixed acid base disorder|respiratory alkalosis-,4,2
+DIAGNOSIS,endocrine|adrenal disorders|hypoaldosteronism,4,2
+DIAGNOSIS,renal|disorder of acid base|respiratory acidosis|due to cns depression|related to encephalopathy,3,2
+DIAGNOSIS,surgery|infections|peritonitis|dialysis associated,3,2
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|drug induced|salicylate-induced,3,1
+DIAGNOSIS,transplant|s/p kidney transplant|renal vein thrombosis - kidney transplant,3,1
+DIAGNOSIS,surgery|renal issues|acute renal failure|due to nephrotoxic agents,2,2
+DIAGNOSIS,endocrine|fluids and electrolytes|hypermagnesemia|due to renal insufficiency,2,1
+DIAGNOSIS,surgery|renal issues|anuria,2,2
+DIAGNOSIS,renal|disorder of acid base|metabolic alkalosis|due to excess bicarbonate administration,2,1
+DIAGNOSIS,endocrine|adrenal disorders|hyperaldosteronism|adrenal,2,2
+DIAGNOSIS,transplant|s/p kidney transplant|fever - kidney transplant|postop >= 2 weeks,2,1
+DIAGNOSIS,renal|disorder of urinary tract / renal system infection|upper urinary tract infection|known fungal,2,1
+DIAGNOSIS,cardiovascular|ventricular disorders|hypertension|renal artery stenosis,2,1
+DIAGNOSIS,renal|electrolyte imbalance|hypocalcemia|suspected,2,1
+DIAGNOSIS,renal|abnormality of urine quantity or quality|diabetes insipidus|central|from primary or metastatic tumor,2,2
+DIAGNOSIS,renal|disorder of acid base|respiratory alkalosis|therapeutic hyperventilation,2,2
+DIAGNOSIS,renal|disorder of urinary tract|urethritis/urethral syndrome,1,1
+DIAGNOSIS,surgery|renal issues|respiratory alkalosis,1,1
+DIAGNOSIS,surgery|renal issues|oliguria|low effective intravascular volume,1,1
+DIAGNOSIS,surgery|renal issues|anuria|r/o obstruction,1,1
+DIAGNOSIS,transplant|s/p kidney transplant|renal artery thrombosis - kidney transplant,1,1
+DIAGNOSIS,surgery|renal issues|metabolic acidosis|normal anion gap,1,1
+DIAGNOSIS,surgery|cardiac surgery|low cardiac output state|with renal insufficiency,1,1
+DIAGNOSIS,renal|electrolyte imbalance|hypermagnesemia|suspected,1,1
+DIAGNOSIS,renal|disorder of acid base|metabolic acidosis|due to acetazolamide,1,1
+DIAGNOSIS,transplant|s/p kidney transplant|fever - kidney transplant|postop < 48 hours,1,1
+DIAGNOSIS,surgery|renal issues|anuria|etiology unknown,1,1
+DIAGNOSIS,renal|electrolyte imbalance|hyperkalemia|due to mineralocorticoid excess,1,1
+DIAGNOSIS,renal|disorder of kidney|acute renal failure|due to nephrotoxic agents|amphotericin,1,1
+DIAGNOSIS,endocrine|fluids and electrolytes|hypocalcemia|due to adrenal insufficiency,1,1
+DIAGNOSIS,surgery|acute cardiac problems|hypertension|renal artery stenosis,1,1
+DIAGNOSIS,endocrine|diagnostic studies|ct scan|adrenals,1,1
+PASTHISTORY,notes/progress notes/past history/organ systems/renal  (r)/renal failure/renal failure - hemodialysis | renal failure - hemodialysis | renal failure - hemodialysis,12043,6961
+PASTHISTORY,notes/progress notes/past history/organ systems/renal  (r)/renal insufficiency/renal insufficiency - creatinine 1-2 | renal insufficiency - creatinine 1-2 | renal insufficiency - creatinine 1-2,10263,4381
+PASTHISTORY,notes/progress notes/past history/organ systems/renal  (r)/renal insufficiency/renal insufficiency - baseline creatinine unknown | renal insufficiency - baseline creatinine unknown | renal insufficiency - baseline creatinine unknown,7416,5500
+PASTHISTORY,notes/progress notes/past history/organ systems/renal  (r)/renal failure/renal failure- not currently dialyzed | renal failure- not currently dialyzed | renal failure- not currently dialyzed,6712,3492
+PASTHISTORY,notes/progress notes/past history/organ systems/renal  (r)/renal insufficiency/renal insufficiency - creatinine 2-3 | renal insufficiency - creatinine 2-3 | renal insufficiency - creatinine 2-3,3584,1576
+PASTHISTORY,notes/progress notes/past history/organ systems/renal  (r)/chronic stone disease/chronic kidney stones | chronic kidney stones | chronic kidney stones,2950,1893
+PASTHISTORY,notes/progress notes/past history/organ systems/renal  (r)/s/p renal transplant/s/p renal transplant | s/p renal transplant | s/p renal transplant,1734,908
+PASTHISTORY,notes/progress notes/past history/organ systems/hematology/oncology (r)/cancer/cancer-primary site/kidney | kidney | kidney,1389,860
+PASTHISTORY,notes/progress notes/past history/organ systems/renal  (r)/renal failure/renal failure - peritoneal dialysis | renal failure - peritoneal dialysis | renal failure - peritoneal dialysis,1195,587
+PASTHISTORY,notes/progress notes/past history/organ systems/renal  (r)/renal insufficiency/renal insufficiency - creatinine 3-4 | renal insufficiency - creatinine 3-4 | renal insufficiency - creatinine 3-4,1181,577
+PASTHISTORY,notes/progress notes/past history/organ systems/renal  (r)/neurogenic bladder/neurogenic bladder | neurogenic bladder | neurogenic bladder,614,327
+PASTHISTORY,notes/progress notes/past history/organ systems/renal  (r)/renal insufficiency/renal insufficiency - creatinine > 5 | renal insufficiency - creatinine > 5 | renal insufficiency - creatinine > 5,438,236
+PASTHISTORY,notes/progress notes/past history/organ systems/renal  (r)/renal insufficiency/renal insufficiency - creatinine 4-5 | renal insufficiency - creatinine 4-5 | renal insufficiency - creatinine 4-5,436,223
+PASTHISTORY,notes/progress notes/past history/organ systems/renal  (r)/rta/renal tubular acidosis | renal tubular acidosis | renal tubular acidosis,104,12
+TREATMENT,renal|urinary catheters|foley catheter,40672,7736
+TREATMENT,renal|consultations|nephrology consultation,21190,5402
+TREATMENT,renal|intravenous fluid|normal saline administration,17477,4762
+TREATMENT,renal|dialysis|hemodialysis,16916,5110
+TREATMENT,renal|electrolyte correction|electrolyte administration,16769,2942
+TREATMENT,renal|electrolyte correction|electrolyte administration|potassium,16413,3806
+TREATMENT,renal|electrolyte correction|electrolyte administration|magnesium,12848,2919
+TREATMENT,renal|medications|bicarbonate|sodium bicarbonate,10501,3110
+TREATMENT,renal|electrolyte correction|electrolyte administration|intravenous,9785,2002
+TREATMENT,renal|medications|intravenous diuretic|iv furosemide,9427,2181
+TREATMENT,renal|dialysis|c v v h d,5563,1138
+TREATMENT,renal|electrolyte correction|electrolyte administration|calcium,5031,892
+TREATMENT,renal|dialysis|hemodialysis|for chronic renal failure,4526,1383
+TREATMENT,renal|medications|bicarbonate,4236,1490
+TREATMENT,renal|procedures/radiology|renal ultrasound,3144,895
+TREATMENT,renal|dialysis|hemodialysis|for acute renal failure,3034,668
+TREATMENT,renal|intravenous fluid|lactated ringer's administration,2933,692
+TREATMENT,endocrine|adrenal disorders|glucocorticoids|hydrocortisone,2841,536
+TREATMENT,renal|medications|intravenous diuretic,2829,779
+TREATMENT,renal|consultations|urology consultation,2738,750
+TREATMENT,endocrine|adrenal disorders|glucocorticoids|methylprednisolone,2576,686
+TREATMENT,renal|electrolyte correction|electrolyte administration|phosphate,2456,529
+TREATMENT,renal|dialysis|insertion of venous catheter for hemodialysis,2292,595
+TREATMENT,renal|intravenous fluid|normal saline administration|fluid bolus (250-1000mls),2277,932
+TREATMENT,renal|intravenous fluid|colloid administration|albumin,2214,399
+TREATMENT,renal|electrolyte correction|treatment of hyperkalemia|kayexalate,2010,733
+TREATMENT,renal|electrolyte correction|electrolyte administration|oral,1928,498
+TREATMENT,renal|electrolyte correction|treatment of hyperkalemia|insulin / glucose,1880,660
+TREATMENT,renal|medications|intravenous diuretic|bumetanide,1860,327
+TREATMENT,renal|intravenous fluid|heparin lock iv fluids,1705,231
+TREATMENT,renal|dialysis|c v v h,1550,330
+TREATMENT,renal|dialysis|hemodialysis|emergent,1548,580
+TREATMENT,renal|electrolyte correction|treatment of hyperkalemia|intravenous calcium,1375,510
+TREATMENT,renal|electrolyte correction|treatment of hypernatremia|free water administration,1354,191
+TREATMENT,renal|intravenous fluid|normal saline administration|moderate volume resuscitation (150-250 mls/hr),1153,385
+TREATMENT,renal|medications|antibacterials,1138,602
+TREATMENT,renal|medications|intravenous diuretic|iv diuretic - continuous infusion,1111,290
+TREATMENT,renal|procedures/radiology|insertion of venous catheter for hemodialysis,1087,288
+TREATMENT,endocrine|adrenal disorders|glucocorticoids|prednisone,1050,281
+TREATMENT,renal|electrolyte correction|treatment of hyperkalemia,1040,397
+TREATMENT,renal|intravenous fluid|normal saline administration|aggressive volume resuscitation (>250 mls/hr),955,491
+TREATMENT,renal|medications|oral diuretic|po furosemide,860,298
+TREATMENT,renal|electrolyte correction|treatment of hyperkalemia|alkalinization,838,302
+TREATMENT,renal|medications|intravenous diuretic|iv diuretic - bolus infusion,780,198
+TREATMENT,renal|dialysis|insertion of venous catheter for hemodialysis|percutaneous catheter,775,189
+TREATMENT,renal|medications|darbepoetin alfa,735,122
+TREATMENT,endocrine|adrenal disorders|glucocorticoids|dexamethasone,692,180
+TREATMENT,renal|intravenous fluid|hypotonic fluid administration|d5 half-normal saline,672,211
+TREATMENT,renal|procedures/radiology|cystoscopy,668,301
+TREATMENT,renal|intravenous fluid|hypotonic fluid administration|d5w,649,191
+TREATMENT,renal|dialysis|peritoneal dialysis,634,199
+TREATMENT,renal|medications|systemic antibiotics,633,327
+TREATMENT,renal|procedures/radiology|insertion of venous catheter for hemodialysis|percutaneous catheter,537,123
+TREATMENT,renal|electrolyte correction|vitamin d administration,530,99
+TREATMENT,renal|electrolyte correction|treatment of hypernatremia|desmopressin,507,48
+TREATMENT,renal|electrolyte correction|treatment of hyponatremia,498,144
+TREATMENT,renal|intravenous fluid|hypotonic fluid administration,491,156
+TREATMENT,renal|medications|oral diuretic|spironolactone,461,125
+TREATMENT,renal|electrolyte correction|treatment of hyperkalemia|beta-agonist nebulized treatment,437,144
+TREATMENT,renal|medications|acetazolamide,436,87
+TREATMENT,renal|medications|oral diuretic,419,151
+TREATMENT,renal|intravenous fluid|hypotonic fluid administration|half-normal saline solution,416,139
+TREATMENT,renal|intravenous fluid|hypertonic saline administration,383,116
+TREATMENT,endocrine|adrenal disorders|glucocorticoids,381,104
+TREATMENT,renal|medications|n-acetylcysteine,375,90
+TREATMENT,renal|electrolyte correction|treatment of hyperkalemia|intravenous diuretics,357,145
+TREATMENT,renal|medications|erythropoietin,345,77
+TREATMENT,renal|dialysis|peritoneal dialysis|for chronic renal failure,344,104
+TREATMENT,renal|intravenous fluid|colloid administration,326,67
+TREATMENT,renal|electrolyte correction|treatment of hyponatremia|hypertonic fluid,308,111
+TREATMENT,renal|electrolyte correction|treatment of hypernatremia|hypotonic fluid,299,79
+TREATMENT,renal|dialysis|ultrafiltration (fluid removal only),277,86
+TREATMENT,renal|urinary catheters|nephrostomy|left,276,58
+TREATMENT,renal|intravenous fluid|lactated ringer's administration|fluid bolus (250-1000mls),267,62
+TREATMENT,renal|medications|systemic antibiotics|vancomycin,266,137
+TREATMENT,renal|urinary catheters|nephrostomy|right,265,49
+TREATMENT,renal|urinary catheters|suprapubic catheter,264,61
+TREATMENT,endocrine|adrenal disorders|mineralocorticoids|fludrocortisone,262,52
+TREATMENT,renal|electrolyte correction|treatment of hyperkalemia|dialysis,260,112
+TREATMENT,renal|medications|systemic antibiotics|cephalosporin,258,89
+TREATMENT,renal|electrolyte correction|treatment of hypernatremia,238,58
+TREATMENT,renal|urinary catheters|suprapubic catheter|permanent bladder catheter,222,36
+TREATMENT,renal|electrolyte correction|treatment of hyponatremia|isotonic fluid,214,68
+TREATMENT,renal|consultations|transplant surgery consultation,209,19
+TREATMENT,renal|medications|oral diuretic|thiazides,207,56
+TREATMENT,renal|intravenous fluid|fluid restriction,202,39
+TREATMENT,renal|medications|glucocorticoid administration,190,63
+TREATMENT,renal|intravenous fluid|blood product administration,185,42
+TREATMENT,renal|dialysis|insertion of venous catheter for hemodialysis|tunneled catheter,176,42
+TREATMENT,renal|procedures/radiology|kidney stone procedure,169,66
+TREATMENT,renal|intravenous fluid|lactated ringer's administration|moderate volume resuscitation (150-250 mls/hr),167,46
+TREATMENT,renal|medications|oral diuretic|metolazone (zaroxolyn),163,34
+TREATMENT,renal|medications|intravenous diuretic|chlorothiazide,152,26
+TREATMENT,renal|electrolyte correction|treatment of hyponatremia|fluid restriction,151,48
+TREATMENT,endocrine|adrenal disorders|glucocorticoids|stress doses,149,25
+TREATMENT,renal|procedures/radiology|insertion of venous catheter for hemodialysis|tunneled catheter,148,30
+TREATMENT,renal|urinary catheters|ureteral stenting,148,39
+TREATMENT,renal|procedures/radiology|kidney biopsy,143,41
+TREATMENT,renal|medications|systemic antibiotics|quinolone,142,54
+TREATMENT,renal|medications|systemic antibiotics|penicillins,142,60
+TREATMENT,renal|medications|analgesics|narcotic analgesic,136,51
+TREATMENT,renal|procedures/radiology|plasmapheresis,133,45
+TREATMENT,renal|medications|immunosuppressive therapy|tacrolimus,133,42
+TREATMENT,renal|medications|analgesics,128,100
+TREATMENT,endocrine|adrenal disorders|glucocorticoids|prednisolone,126,36
+TREATMENT,renal|urinary catheters|nephrostomy,117,38
+TREATMENT,renal|electrolyte correction|electrolyte administration|hypertonic saline,111,39
+TREATMENT,renal|medications|glucocorticoid administration|oral,106,32
+TREATMENT,renal|intravenous fluid|blood product administration|packed red blood cells|transfusion of 1-2 units prbc's,104,42
+TREATMENT,renal|medications|glucocorticoid administration|parenteral,96,37
+TREATMENT,renal|medications|analgesics|non-narcotic analgesic|acetaminophen,92,25
+TREATMENT,renal|medications|antifungal therapy|fluconazole,92,27
+TREATMENT,renal|urinary catheters|ureteral stenting|left,92,38
+TREATMENT,cardiovascular|vascular surgery|dialysis access surgery,86,37
+TREATMENT,renal|medications|immunosuppressive therapy|mycophenolate mofetil,85,26
+TREATMENT,renal|electrolyte correction|treatment of hypercalcemia|bisphosphonates|pamidronate,85,2
+TREATMENT,renal|urinary catheters|ureteral stenting|right,84,35
+TREATMENT,renal|intravenous fluid|blood product administration|packed red blood cells|transfusion of > 2 units prbc's,83,30
+TREATMENT,renal|medications|analgesics|oral analgesics,83,34
+TREATMENT,renal|intravenous fluid|blood product administration|packed red blood cells,82,25
+TREATMENT,renal|medications|analgesics|bolus parenteral analgesics,79,32
+TREATMENT,renal|intravenous fluid|blood product administration|fresh frozen plasma,78,25
+TREATMENT,endocrine|adrenal disorders|normal saline administration,75,31
+TREATMENT,renal|procedures/radiology|kidney stone procedure|transurethral,74,31
+TREATMENT,renal|electrolyte correction|treatment of hyperphosphatemia,72,10
+TREATMENT,renal|medications|n-acetylcysteine|for radiocontrast dye prophylaxis,71,29
+TREATMENT,endocrine|adrenal disorders|mineralocorticoids,70,7
+TREATMENT,renal|procedures/radiology|kidney stone procedure|with removal of ureteral calculus,70,32
+TREATMENT,renal|procedures/radiology|kidney stone procedure|with removal of kidney calculus,70,22
+TREATMENT,renal|intravenous fluid|lactated ringer's administration|aggressive volume resuscitation (>250 mls/hr),68,20
+TREATMENT,renal|procedures/radiology|pyelogram|retrograde,65,33
+TREATMENT,renal|procedures/radiology|arteriovenous shunt for renal dialysis,64,23

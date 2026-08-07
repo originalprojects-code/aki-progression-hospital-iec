@@ -1,0 +1,136 @@
+{
+  "analysis_type": "decision_curve_analysis_protocol_lock",
+  "analysis_unit": "patient",
+  "analysis_version": "37A",
+  "bigquery_dml_used": false,
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20260723,
+  "dca_result_calculated": false,
+  "dca_result_viewed": false,
+  "excluded_from_primary_dca": {
+    "SIRS": "standard definition not adequately reconstructable because of low temperature/full-case coverage",
+    "catboost": "additional/post-hoc benchmark; omitted to keep DCA clinically focused",
+    "qSOFA": "standard definition not reconstructable in the locked 0-12 h data window",
+    "random_forest": "additional/post-hoc benchmark; omitted to keep DCA clinically focused"
+  },
+  "interpretation_rules": [
+    "A model may be described as having higher net benefit only over threshold regions where its curve exceeds the comparator.",
+    "No threshold will be chosen or emphasized because it maximizes observed net benefit.",
+    "Clinical utility claims will remain conditional on the locked threshold range and the retrospective eICU setting.",
+    "DCA does not replace prospective impact evaluation."
+  ],
+  "net_benefit_definition": "TP/N - FP/N * pt/(1-pt)",
+  "patient_level_data_written_to_drive": false,
+  "predictive_model_fit_performed": false,
+  "primary_models": [
+    {
+      "name": "xgboost",
+      "prediction_table": "model_xgb_outer_predictions_all5_v1",
+      "probability": "prediction_platt",
+      "role": "strongest_locked_machine_learning_model"
+    },
+    {
+      "name": "parsimonious_clinical_baseline",
+      "prediction_table": "model_clinical_lr_outer_predictions_all5_v2",
+      "probability": "prediction_platt",
+      "role": "clinically_interpretable_post_hoc_benchmark"
+    }
+  ],
+  "primary_reporting": {
+    "claim_clinical_utility_from_single_threshold": false,
+    "compare_vs_treat_all": true,
+    "compare_vs_treat_none": true,
+    "compare_xgb_vs_clinical_baseline": true,
+    "probability_type": "fold_specific_platt_calibrated",
+    "select_optimal_threshold_post_hoc": false,
+    "show_full_locked_threshold_range": true
+  },
+  "primary_threshold_range": {
+    "lower": 0.01,
+    "status": "a_priori_locked",
+    "step": 0.005,
+    "thresholds": [
+      0.01,
+      0.015,
+      0.02,
+      0.025,
+      0.03,
+      0.035,
+      0.04,
+      0.045,
+      0.05,
+      0.055,
+      0.06,
+      0.065,
+      0.07,
+      0.075,
+      0.08,
+      0.085,
+      0.09,
+      0.095,
+      0.1
+    ],
+    "upper": 0.1
+  },
+  "recalibration_performed": false,
+  "reference_strategies": [
+    "treat_all",
+    "treat_none"
+  ],
+  "retuning_performed": false,
+  "sensitivity_threshold_range": {
+    "lower": 0.005,
+    "status": "a_priori_locked",
+    "step": 0.005,
+    "thresholds": [
+      0.005,
+      0.01,
+      0.015,
+      0.02,
+      0.025,
+      0.03,
+      0.035,
+      0.04,
+      0.045,
+      0.05,
+      0.055,
+      0.06,
+      0.065,
+      0.07,
+      0.075,
+      0.08,
+      0.085,
+      0.09,
+      0.095,
+      0.1,
+      0.105,
+      0.11,
+      0.115,
+      0.12,
+      0.125,
+      0.13,
+      0.135,
+      0.14,
+      0.145,
+      0.15
+    ],
+    "upper": 0.15
+  },
+  "study_context": {
+    "hospitals": 198,
+    "landmark_hours": 12,
+    "observed_event_rate_reference": 0.051837,
+    "outcome": "incident KDIGO creatinine stage 2-3 after 12 h and through 72 h",
+    "outcome_window_hours": ">12 to 72",
+    "patients": 58491
+  },
+  "threshold_rationale": "The outcome prevalence is approximately 5.18%. In an early-warning setting, plausible intervention thresholds are expected to be low because preventive responses may be initiated before high absolute predicted risk. The 1-10% primary range and 0.5-15% sensitivity range are therefore fixed before inspecting decision-curve results and will not be altered based on observed net benefit.",
+  "timing": "locked_before_any_dca_values_or_curves_are_viewed",
+  "uncertainty_unit": "hospital_cluster",
+  "upstream_sha256": {
+    "clinical_baseline_protocol": "94b0abb218dbef4e349702ea2824ca4e31dfbe36c53efa05ba1a8bd1f38f835e",
+    "code36_manifest": "f31ad0df192bc0872d1626771a773c50b7fff798534751144d9a060f82d5f718",
+    "critical_temporal_leakage_audit": "7230605e14a2314ec1724f48c61e42d207f96c70ae2d4fe480bf02145ad24544",
+    "xgboost_protocol": "3434db5dd0b4b5145950fc07fba3d007829738d800b88ec40fbdb09879188264"
+  }
+}

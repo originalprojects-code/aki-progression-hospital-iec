@@ -1,0 +1,121 @@
+source,item,records,patient_stays
+RESPIRATORYCARE,[airway missing],63287,13326
+RESPIRATORYCARE,oral ett,5240,2825
+RESPIRATORYCARE,no artificial airway,1635,706
+RESPIRATORYCARE,tracheostomy,157,92
+RESPIRATORYCARE,other,45,32
+RESPIRATORYCARE,nasal ett,21,14
+RESPIRATORYCARE,cricothyrotomy,2,1
+TREATMENT,pulmonary|ventilation and oxygenation|mechanical ventilation,20524,13011
+TREATMENT,pulmonary|ventilation and oxygenation|non-invasive ventilation,3955,2901
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (< 40%)|nasal cannula,4047,2856
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (40% to 60%),3760,2624
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (< 40%),2363,1633
+TREATMENT,pulmonary|ventilation and oxygenation|ventilator weaning,2425,1550
+TREATMENT,pulmonary|ventilation and oxygenation|cpap/peep therapy,2218,1451
+TREATMENT,"pulmonary|medications|bronchodilator|beta-agonist|albuterol (proventil, ventolin)",2091,1364
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (> 60%),1853,1254
+TREATMENT,pulmonary|ventilation and oxygenation|tracheal suctioning,1859,1158
+TREATMENT,pulmonary|ventilation and oxygenation|mechanical ventilation|assist controlled,1424,1079
+TREATMENT,surgery|pulmonary therapies|mechanical ventilation,1067,795
+TREATMENT,pulmonary|ventilation and oxygenation|mechanical ventilation|volume controlled,867,673
+TREATMENT,pulmonary|ventilation and oxygenation|non-invasive ventilation|face mask,916,656
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (> 60%)|>90%,763,490
+TREATMENT,pulmonary|ventilation and oxygenation|cpap/peep therapy|5-10 cm h2o,516,336
+TREATMENT,pulmonary|ventilation and oxygenation|mechanical ventilation|synchronized intermittent,404,336
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (40% to 60%)|40-50%,403,311
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (> 60%)|reduce fio2 as tolerated,439,296
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (40% to 60%)|reduce fio2 as tolerated,371,274
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (40% to 60%)|face mask,409,271
+TREATMENT,pulmonary|ventilation and oxygenation|mechanical ventilation|tidal volume 6-10 ml/kg,410,269
+TREATMENT,pulmonary|ventilation and oxygenation|ventilator weaning|rapid,289,241
+TREATMENT,surgery|pulmonary therapies|ventilator weaning,298,213
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (40% to 60%)|50-60%,340,210
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (> 60%)|non-rebreather mask,281,208
+TREATMENT,pulmonary|ventilation and oxygenation|mechanical ventilation|non-invasive ventilation,251,184
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (< 40%)|25-30%,313,182
+TREATMENT,pulmonary|ventilation and oxygenation|mechanical ventilation|pressure controlled,255,180
+TREATMENT,surgery|pulmonary therapies|oxygen therapy (40% to 60%),208,146
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (> 60%)|face mask,216,138
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (< 40%)|30-40%,180,137
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (< 40%)|face mask,158,108
+TREATMENT,pulmonary|ventilation and oxygenation|ventilator weaning|active,154,106
+TREATMENT,"surgery|pulmonary therapies|bronchodilator|beta-agonist|albuterol (proventil, ventolin)",100,90
+TREATMENT,surgery|pulmonary therapies|oxygen therapy (< 40%)|nasal cannula,110,90
+TREATMENT,pulmonary|ventilation and oxygenation|mechanical ventilation|non-invasive ventilation|face mask,99,82
+TREATMENT,pulmonary|radiologic procedures / bronchoscopy|pulmonary ventilation perfusion study,113,79
+TREATMENT,toxicology|drug overdose|mechanical ventilation,105,77
+TREATMENT,surgery|pulmonary therapies|cpap/peep therapy,117,74
+TREATMENT,pulmonary|ventilation and oxygenation|physiotherapy of chest,81,66
+TREATMENT,surgery|pulmonary therapies|ventilator weaning|rapid,87,66
+TREATMENT,pulmonary|ventilation and oxygenation|mechanical ventilation|pressure support,84,59
+TREATMENT,surgery|pulmonary therapies|mechanical ventilation|assist controlled,68,51
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (> 60%)|60-70%,80,50
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (> 60%)|70-80%,78,45
+TREATMENT,pulmonary|ventilation and oxygenation|lung recruitment maneuver,53,44
+TREATMENT,pulmonary|ventilation and oxygenation|cpap/peep therapy|10-15 cm h2o,61,41
+TREATMENT,surgery|pulmonary therapies|oxygen therapy (> 60%),52,40
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (> 60%)|80-90%,52,39
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (40% to 60%)|trach collar,44,36
+TREATMENT,pulmonary|ventilation and oxygenation|non-invasive ventilation|nasal mask,38,34
+TREATMENT,surgery|pulmonary therapies|oxygen therapy (< 40%),51,34
+TREATMENT,pulmonary|ventilation and oxygenation|ventilator weaning|slow,42,32
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (> 60%)|trach collar,35,30
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (< 40%)|trach collar,35,29
+TREATMENT,surgery|pulmonary therapies|mechanical ventilation|volume controlled,27,25
+TREATMENT,pulmonary|ventilation and oxygenation|mechanical ventilation|tidal volume < 6 ml/kg,35,22
+TREATMENT,surgery|pulmonary therapies|non-invasive ventilation,31,22
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (40% to 60%)|non-rebreather mask,29,21
+TREATMENT,surgery|pulmonary therapies|oxygen therapy (40% to 60%)|face mask,26,21
+TREATMENT,pulmonary|surgery / incision and drainage of thorax|tracheostomy|performed during current admission for ventilatory support,25,20
+TREATMENT,surgery|pulmonary therapies|ventilator weaning|active,21,20
+TREATMENT,cardiovascular|vascular disorders|pulmonary ventilation perfusion study,23,19
+TREATMENT,pulmonary|radiologic procedures / bronchoscopy|reintubation,23,19
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (< 40%)|non-rebreather mask,26,19
+TREATMENT,pulmonary|ventilation and oxygenation|mechanical ventilation|volume assured,25,16
+TREATMENT,pulmonary|ventilation and oxygenation|cpap/peep therapy|titrate peep,16,13
+TREATMENT,pulmonary|ventilation and oxygenation|cpap/peep therapy|reduce peep as tolerated,17,12
+TREATMENT,pulmonary|vascular disorders|pulmonary ventilation perfusion study,15,11
+TREATMENT,surgery|pulmonary therapies|oxygen therapy (> 60%)|>90%,13,11
+TREATMENT,pulmonary|ventilation and oxygenation|cpap/peep therapy|> 15 cm h2o,17,9
+TREATMENT,surgery|pulmonary therapies|mechanical ventilation|synchronized intermittent,14,9
+TREATMENT,surgery|pulmonary therapies|oxygen therapy (40% to 60%)|40-50%,13,9
+TREATMENT,pulmonary|ventilation and oxygenation|cpap/peep therapy|reduce cpap as tolerated,10,8
+TREATMENT,pulmonary|ventilation and oxygenation|prone position,17,8
+TREATMENT,surgery|pulmonary therapies|oxygen therapy (40% to 60%)|50-60%,8,7
+TREATMENT,pulmonary|ventilation and oxygenation|mechanical ventilation|permissive hypercapnea,12,6
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (40% to 60%)|face tent,9,6
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (< 40%)|heliox,8,6
+TREATMENT,surgery|pulmonary therapies|oxygen therapy (> 60%)|non-rebreather mask,6,6
+TREATMENT,toxicology|drug overdose|non-invasive ventilation,9,6
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (< 40%)|face tent,7,5
+TREATMENT,surgery|pulmonary therapies|mechanical ventilation|tidal volume 6-10 ml/kg,8,5
+TREATMENT,toxicology|drug overdose|mechanical ventilation|assist controlled,5,5
+TREATMENT,neurologic|therapy for controlling cerebral perfusion pressure|hyperventilation,4,4
+TREATMENT,surgery|pulmonary therapies|oxygen therapy (< 40%)|30-40%,4,4
+TREATMENT,neurologic|procedures / diagnostics|intracranial/cerebral perfusion pressure monitoring|cerebral tissue oxygenation monitor,5,3
+TREATMENT,pulmonary|ventilation and oxygenation|oxygen therapy (> 60%)|face tent,4,3
+TREATMENT,surgery|pulmonary therapies|mechanical ventilation|pressure support,3,3
+TREATMENT,surgery|pulmonary therapies|mechanical ventilation|tidal volume < 6 ml/kg,3,3
+TREATMENT,surgery|pulmonary therapies|oxygen therapy (< 40%)|face mask,4,3
+TREATMENT,surgery|pulmonary therapies|oxygen therapy (< 40%)|trach collar,5,3
+TREATMENT,pulmonary|ventilation and oxygenation|mechanical ventilation|non-invasive ventilation|nasal mask,2,2
+TREATMENT,pulmonary|ventilation and oxygenation|mechanical ventilation|tidal volume > 10 ml/kg,2,2
+TREATMENT,surgery|pulmonary therapies|cpap/peep therapy|5-10 cm h2o,3,2
+TREATMENT,surgery|pulmonary therapies|mechanical ventilation|permissive hypercapnea,2,2
+TREATMENT,surgery|pulmonary therapies|oxygen therapy (> 60%)|face mask,3,2
+TREATMENT,infectious diseases|procedures|hyperbaric oxygen,2,1
+TREATMENT,neurologic|therapy for controlling cerebral perfusion pressure|hyperventilation|pco2 25-35mmhg,1,1
+TREATMENT,surgery|pulmonary therapies|mechanical ventilation|non-invasive ventilation,1,1
+TREATMENT,surgery|pulmonary therapies|mechanical ventilation|non-invasive ventilation|nasal mask,1,1
+TREATMENT,surgery|pulmonary therapies|mechanical ventilation|pressure controlled,1,1
+TREATMENT,surgery|pulmonary therapies|non-invasive ventilation|face mask,1,1
+TREATMENT,surgery|pulmonary therapies|oxygen therapy (40% to 60%)|face tent,2,1
+TREATMENT,surgery|pulmonary therapies|oxygen therapy (< 40%)|25-30%,3,1
+TREATMENT,surgery|pulmonary therapies|oxygen therapy (< 40%)|non-rebreather mask,2,1
+TREATMENT,surgery|pulmonary therapies|oxygen therapy (> 60%)|80-90%,1,1
+TREATMENT,surgery|pulmonary therapies|ventilator weaning|slow,1,1
+TREATMENT,toxicology|drug overdose|agent specific therapy|carbon monoxide|hyperbaric oxygen,1,1
+TREATMENT,toxicology|drug overdose|mechanical ventilation|permissive hypercapnea,1,1
+TREATMENT,toxicology|drug overdose|mechanical ventilation|tidal volume 6-10 ml/kg,1,1
+TREATMENT,toxicology|drug overdose|non-invasive ventilation|face mask,1,1

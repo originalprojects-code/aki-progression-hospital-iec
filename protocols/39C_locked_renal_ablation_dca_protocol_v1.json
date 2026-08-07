@@ -1,0 +1,112 @@
+{
+  "analysis_type": "post_hoc_renal_marker_ablation_decision_curve_protocol_lock",
+  "analysis_version": "39C",
+  "bootstrap": {
+    "confidence_intervals": "pointwise percentile 95%, exploratory, not multiplicity-adjusted",
+    "paired_resampling": true,
+    "replicates": 2000,
+    "seed": 20260723,
+    "unit": "hospital"
+  },
+  "comparators": [
+    "full_locked_xgboost_platt_calibrated",
+    "renal_marker_ablated_xgboost_platt_calibrated",
+    "treat_all",
+    "treat_none"
+  ],
+  "dca_result_calculated": false,
+  "dca_result_viewed": false,
+  "interpretation_rules": [
+    "This DCA is supplementary and post-hoc; it does not alter the primary full-model DCA.",
+    "Positive net benefit of the ablated model indicates residual decision value after direct creatinine/KDIGO markers are removed; it does not establish prospective clinical effectiveness.",
+    "Do not select or emphasize a single 'best' threshold after viewing the curves.",
+    "Report the full locked threshold ranges.",
+    "Pointwise confidence intervals are not simultaneous bands and are not multiplicity-adjusted."
+  ],
+  "modeling_changes": {
+    "candidate_reselection_performed": false,
+    "model_fit_performed_in_39C": false,
+    "recalibration_performed": false,
+    "retuning_performed": false,
+    "test_driven_changes_performed": false
+  },
+  "net_benefit_formula": "TP/N - FP/N * pt/(1-pt)",
+  "primary_contrasts": [
+    "full_xgboost_minus_ablated_xgboost",
+    "ablated_xgboost_minus_treat_all",
+    "ablated_xgboost_minus_treat_none",
+    "full_xgboost_minus_treat_all",
+    "full_xgboost_minus_treat_none"
+  ],
+  "primary_thresholds": [
+    0.01,
+    0.015,
+    0.02,
+    0.025,
+    0.03,
+    0.035,
+    0.04,
+    0.045,
+    0.05,
+    0.055,
+    0.06,
+    0.065,
+    0.07,
+    0.075,
+    0.08,
+    0.085,
+    0.09,
+    0.095,
+    0.1
+  ],
+  "privacy_and_storage": {
+    "aggregate_dca_outputs_may_be_written_to_drive": true,
+    "bigquery_dml_used": false,
+    "patient_level_predictions_written_to_drive": false
+  },
+  "scientific_question": "Does the renal-marker-ablated XGBoost model retain clinically meaningful net benefit across the same prespecified threshold range used for the primary full-model decision curve analysis?",
+  "sensitivity_thresholds": [
+    0.005,
+    0.01,
+    0.015,
+    0.02,
+    0.025,
+    0.03,
+    0.035,
+    0.04,
+    0.045,
+    0.05,
+    0.055,
+    0.06,
+    0.065,
+    0.07,
+    0.075,
+    0.08,
+    0.085,
+    0.09,
+    0.095,
+    0.1,
+    0.105,
+    0.11,
+    0.115,
+    0.12,
+    0.125,
+    0.13,
+    0.135,
+    0.14,
+    0.145,
+    0.15
+  ],
+  "status": "exploratory_post_hoc_supplementary_analysis",
+  "threshold_provenance": {
+    "new_threshold_selection_performed": false,
+    "post_hoc_optimal_threshold_selection": "PROHIBITED",
+    "source_protocol": "37A_locked_decision_curve_analysis_protocol_v1",
+    "source_protocol_sha256": "e0f574c228be1d76e75669e7e446df6d9461dee11883acf5e4b22735dcffcbfb"
+  },
+  "upstream_sha256": {
+    "37A_primary_dca_protocol": "e0f574c228be1d76e75669e7e446df6d9461dee11883acf5e4b22735dcffcbfb",
+    "39A_R2_ablation_protocol": "b56eb8ba8ba1f74def121280d17f8acc861dd4074b875aa6c68c2e655789ec35",
+    "39B_ablation_manifest": "fe50ce847b8eed3c886d4b2cb7734513316edad2babdbfcac207f8649f547215"
+  }
+}

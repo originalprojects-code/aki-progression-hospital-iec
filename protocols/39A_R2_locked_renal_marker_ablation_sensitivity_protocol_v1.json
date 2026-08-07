@@ -1,0 +1,136 @@
+{
+  "ablation_definition": {
+    "bun_removed": false,
+    "creatinine_lab_predictors_removed": [
+      "x_lab_creatinine_first",
+      "x_lab_creatinine_last",
+      "x_lab_creatinine_max",
+      "x_lab_creatinine_mean",
+      "x_lab_creatinine_min",
+      "x_lab_creatinine_n"
+    ],
+    "other_non_creatinine_physiology_removed": false,
+    "rationale": "Remove direct creatinine/KDIGO-derived, outcome-proximal renal-state information while retaining broader physiology and non-creatinine laboratory information.",
+    "removed_predictor_count": 8,
+    "retained_predictor_count": 151,
+    "rule": "Remove x_reference_creatinine, x_stage1_at_landmark, and every existing source predictor in the locked core registry whose name starts with x_lab_creatinine_.",
+    "source_predictors_removed": [
+      "x_reference_creatinine",
+      "x_stage1_at_landmark",
+      "x_lab_creatinine_first",
+      "x_lab_creatinine_last",
+      "x_lab_creatinine_max",
+      "x_lab_creatinine_mean",
+      "x_lab_creatinine_min",
+      "x_lab_creatinine_n"
+    ]
+  },
+  "analysis_type": "post_hoc_renal_marker_ablation_sensitivity_protocol_lock",
+  "analysis_version": "39A-R2",
+  "calibration": {
+    "fit_source": "pooled inner-OOF raw model scores within each outer fold",
+    "method": "Platt scaling",
+    "new_calibrator_required_for_ablated_model": true,
+    "outer_test_used_for_calibration": false
+  },
+  "calibration_diagnostics": [
+    "mean predicted risk",
+    "calibration intercept",
+    "calibration slope"
+  ],
+  "candidate_reselection_performed": false,
+  "cohort": {
+    "events": 3032,
+    "hospitals": 198,
+    "outer_folds": 5,
+    "patients": 58491,
+    "same_as_primary_xgboost_analysis": true
+  },
+  "dca": {
+    "performed_in_39_series": false,
+    "rule": "Any DCA of the ablated model requires a separate protocol lock after discrimination/calibration results are available."
+  },
+  "full_model_reference": {
+    "model": "locked_xgboost",
+    "performance_reference_probability": "fold_specific_platt_calibrated",
+    "prediction_table": "model_xgb_outer_predictions_all5_v1"
+  },
+  "interpretation_rules": [
+    "The ablated model is a sensitivity analysis, not a replacement clinical model.",
+    "Retained performance does not prove causal importance of non-renal predictors.",
+    "A performance drop does not prove leakage; removed predictors are legitimate pre-landmark variables whose temporal validity was separately audited.",
+    "The analysis tests dependence of predictive performance on direct creatinine/KDIGO information."
+  ],
+  "model_fit_performed": false,
+  "modeling_rule": {
+    "algorithm": "XGBoost",
+    "candidate_selection": "fixed_from_original_locked_outer_fold",
+    "class_weighting_permitted": false,
+    "early_stopping_permitted": false,
+    "hyperparameter_reselection_permitted": false,
+    "new_grid_search_permitted": false,
+    "outer_test_retuning_permitted": false,
+    "selected_candidate_by_outer_fold": {
+      "1": "XGB04",
+      "2": "XGB04",
+      "3": "XGB04",
+      "4": "XGB04",
+      "5": "XGB06"
+    },
+    "smote_or_resampling_permitted": false
+  },
+  "nested_evaluation": {
+    "inner_fold_guard": {
+      "expected_sha256": "34b3fed6f6216d7a59afb8303e081fb48c9dade9bab1bb367e395372098e9b50",
+      "file_sha256": "400141917f0d3282fcd60766e2bc462815fd358810e00d0917d721a3eb2d434a",
+      "resolution_method": "expected_sha_found_inside_07D_artifact",
+      "resolved_filename": "07D_locked_inner_hospital_folds_v1_SHA256.txt",
+      "resolved_path": "{{OUTPUT_ROOT}}/05_MODELING_OUTPUTS/07D_locked_inner_hospital_folds_v1_SHA256.txt"
+    },
+    "inner_folds": "same locked 07D hospital-disjoint inner folds",
+    "inner_oof_role": "generate out-of-fold raw predictions for fitting the ablated-model Platt calibrator",
+    "outer_folds": "same five hospital-disjoint outer folds",
+    "outer_test_role": "untouched until fixed model and calibrator are locked"
+  },
+  "outer_test_used": false,
+  "paired_comparison": {
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 20260723,
+    "bootstrap_unit": "hospital",
+    "comparison": "full locked XGBoost vs renal-marker-ablated XGBoost",
+    "confidence_intervals": "nominal exploratory 95% percentile intervals",
+    "multiplicity_adjusted": false,
+    "paired_resampling": true,
+    "same_outer_test_patients": true
+  },
+  "performance_result_calculated": false,
+  "performance_result_viewed": false,
+  "preprocessing": {
+    "categorical": "constant missing imputation plus sparse one-hot encoding",
+    "fit_only_on_training_partition": true,
+    "numeric": "median imputation with missing indicators",
+    "same_as_primary_xgboost": true,
+    "unknown_categories": "ignore"
+  },
+  "primary_metrics": [
+    "AUROC",
+    "AUPRC",
+    "Brier score",
+    "log loss"
+  ],
+  "privacy_and_storage": {
+    "aggregate_outputs_written_to_drive": true,
+    "bigquery_dml_used": false,
+    "patient_level_predictions_may_be_written_to_secure_bigquery": true,
+    "patient_level_predictions_written_to_drive": false
+  },
+  "retuning_performed": false,
+  "revision_reason": "39A-R1 stopped before protocol creation because x_lab_creatinine_delta was assumed to exist but is absent from the locked 159-predictor core registry. 39A-R2 replaces the hand-written creatinine-summary list with a deterministic registry-based rule: remove x_reference_creatinine, x_stage1_at_landmark, and every existing predictor beginning with x_lab_creatinine_. No ablated-model result had been calculated or viewed before this correction.",
+  "scientific_question": "How much predictive performance remains after removing direct, outcome-proximal creatinine/KDIGO-derived predictors from the locked core XGBoost feature set?",
+  "status": "exploratory_post_hoc_sensitivity_analysis",
+  "upstream_sha256": {
+    "38C_R1_treeshap_manifest": "0469f6e3a1f31c5621904d4fbfd3c35904ccd435eca805ddc60f833f925ec521",
+    "inner_fold_configuration": "34b3fed6f6216d7a59afb8303e081fb48c9dade9bab1bb367e395372098e9b50",
+    "xgboost_protocol": "3434db5dd0b4b5145950fc07fba3d007829738d800b88ec40fbdb09879188264"
+  }
+}
