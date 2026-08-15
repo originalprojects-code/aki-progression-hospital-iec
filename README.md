@@ -1,50 +1,43 @@
-# AKI Progression — Hospital-Disjoint Internal–External Validation
+# Subsequent stage 2–3 AKI prediction with hospital-disjoint internal-external validation
 
-Reproducibility materials for the manuscript:
+Reproducibility materials for the A20 science-locked manuscript:
 
-**Machine learning for early prediction of acute kidney injury progression in critically ill adults: hospital-disjoint internal–external validation**
+**Machine learning for early prediction of subsequent stage 2–3 acute kidney injury in critically ill adults: hospital-disjoint internal-external validation**
 
 Authors: Cagdas Yilmaz and Ali Akdagli
 
-## Study summary
+## Study purpose and design
 
-The primary cohort included 58,491 patients from 198 hospitals, with 3,032 serum-creatinine-defined KDIGO stage 2–3 progression events after a fixed 12-hour landmark. The primary XGBoost model was evaluated using hospital-disjoint internal–external cross-validation.
+The study estimates risk of a subsequent serum-creatinine-defined KDIGO stage 2–3 acute kidney injury outcome after a fixed 12-hour ICU landmark. Evaluation uses hospital-disjoint internal-external cross-validation. This is not independent external validation and does not demonstrate clinical benefit or implementation readiness.
 
-## Repository contents
+## Public release scope
 
-- `code/`: seven source-only notebooks covering feasibility, cohort and outcome construction, feature preparation, model development, strengthening analyses, and Table 1
-- `sql/`: parameterized BigQuery SQL used to construct the analysis tables
-- `protocols/`: predefined model, calibration, decision-curve, TreeSHAP, clinical-comparator, and renal-marker-ablation specifications
-- `aggregate_outputs/`: manuscript-level and fold-level aggregate results
-- `checklists/`: data-privacy, reproducibility, and TRIPOD reporting checklists
-- `docs/`: run order, data-access requirements, software environment, analysis scope, and reporting limits
-- `figures/`: publication-oriented aggregate figures
-- `release/`: file inventory, notebook source validation, and SHA-256 manifest
+This repository contains source code, parameterized SQL, analysis specifications, disclosure-safe aggregate outputs, tables, figures, reporting checklists, and software-environment information. It includes the primary pipeline plus seven sensitivity/robustness analyses: cohort selection, high-missingness ablation, missingness-indicator dependence, renal comparators, exploratory subgroup analyses, lead-time/outcome-window sensitivity, and hospital heterogeneity.
 
-## Data access
+## Data access and DUA boundaries
 
-The eICU Collaborative Research Database is available through PhysioNet to credentialed users who complete the required human-subjects research training and accept the applicable Data Use Agreement. Source data and patient-level derivatives are not redistributed in this repository.
+No patient-level eICU data, patient-level predictions, patient-level SHAP values, raw extracts, hospital identity mappings, or DUA-restricted derivatives are distributed. The eICU Collaborative Research Database must be accessed separately through PhysioNet by credentialed users who complete the required training and accept the applicable Data Use Agreement.
 
-## Reproduction configuration
+## Repository structure
 
-The notebooks use configurable values for the authorized execution environment:
+- `code/`, `sql/`, `protocols/`: primary source pipeline and locked/specification files.
+- `analyses/`: Step 1–7 public-safe source code, READMEs, environments, and aggregate outputs.
+- `aggregate_outputs/` and `tables/`: public aggregate results and final A20 supplementary-table sources.
+- `figures/`: final A20 supplementary-figure source images.
+- `docs/`: run order, scope, DUA notes, software environment, and A20 source mapping.
+- `checklists/`: privacy, reproducibility, and reporting checks.
+- `release/`: inventory, hashes, and release validation.
 
-- `GOOGLE_CLOUD_PROJECT`
-- `AKI_DATASET_ID` (default `aki_jcmc_v2`)
-- `EICU_SOURCE_DATASET` (default `physionet-data.eicu_crd`)
-- `BIGQUERY_LOCATION` (default `US`)
-- `AKI_OUTPUT_ROOT`
+## Reproducibility entry points
 
-See `docs/RUN_ORDER.md` and the files under `sql/` and `protocols/` for execution details.
+Start with `docs/RUN_ORDER.md`, `docs/DATA_ACCESS_AND_DUA.md`, `code/README.md`, `protocols/README.md`, and `docs/A20_SUPPLEMENT_SOURCE_MAP.csv`. Each Step 1–7 analysis has a public README/source directory under `analyses/`.
 
-## Interpretation
+## Environment
 
-The validation design is hospital-disjoint internal–external cross-validation and should not be interpreted as independent external validation. The outcome is serum-creatinine-defined. SHAP values are non-causal model attributions. Decision-curve analysis estimates net benefit but does not establish clinical effectiveness. The renal-marker ablation is exploratory. Independent external and prospective evaluation remain necessary before clinical implementation.
+See `requirements.txt` and `docs/SOFTWARE_ENVIRONMENT.md`. Runtime project, dataset, location, dependency, input, and output paths are configured through environment variables; no private local paths are required.
 
-## Version
+## Citation and version
 
-Current source-package version: `v1.0.0-manuscript`.
+See `CITATION.cff`. Version: `1.1.0-submission`. This release preserves historical `v1.0.0-manuscript` provenance while aligning current metadata with the A20 science-locked manuscript.
 
-## License
-
-Original code and documentation are released under the MIT License. eICU data remain governed by the PhysioNet Data Use Agreement and are not covered by the MIT License.
+Original code and documentation are MIT licensed. eICU data remain under the PhysioNet DUA and are not covered by the MIT license.

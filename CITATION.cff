@@ -1,15 +1,14 @@
 cff-version: 1.2.0
-message: If you use this software, please cite the manuscript and the archived software
-  release.
-title: AKI progression prediction with hospital-disjoint internal-external validation
+message: "If you use this software, please cite the associated manuscript and archived software release."
+title: "Machine learning for early prediction of subsequent stage 2–3 acute kidney injury in critically ill adults: hospital-disjoint internal-external validation — reproducibility materials"
 type: software
 authors:
-- family-names: Yilmaz
-  given-names: Cagdas
-  orcid: https://orcid.org/0000-0001-6373-2768
-- family-names: Akdagli
-  given-names: Ali
-  orcid: https://orcid.org/0000-0003-3312-992X
-repository-code: https://github.com/originalprojects-code/aki-progression-hospital-iec
+  - family-names: Yilmaz
+    given-names: Cagdas
+    orcid: "https://orcid.org/0000-0001-6373-2768"
+  - family-names: Akdagli
+    given-names: Ali
+    orcid: "https://orcid.org/0000-0003-3312-992X"
+repository-code: "https://github.com/originalprojects-code/aki-progression-hospital-iec"
 license: MIT
-version: 1.0.0-manuscript
+version: 1.1.0-submission

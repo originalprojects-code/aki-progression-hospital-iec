@@ -2,7 +2,7 @@
 
 - This is a retrospective prognostic prediction study.
 - Validation is hospital-disjoint internal–external cross-validation, not independent external validation.
-- The outcome is serum-creatinine-defined KDIGO stage 2–3 progression.
+- The outcome is subsequent serum-creatinine-defined KDIGO stage 2–3 AKI.
 - Reliable hourly urine-output data were not available for a complete KDIGO phenotype.
 - The early reference creatinine is not assumed to represent stable pre-illness kidney function.
 - SHAP values are model attributions, not causal effects.

@@ -1,0 +1,27 @@
+comparison,characteristic,abs_smd
+Final vs no reference,Invasive mechanical ventilation by 12 h,0.38241863130695314
+Final vs no reference,ICU admission source (maximum category-wise),0.2853837248561507
+Final vs no reference,"Last heart rate by 12 h, beats/min",0.2517536512682324
+Final vs no reference,Any vasopressor infusion by 12 h,0.24532005363247342
+Final vs no reference,Hospital admission source (maximum category-wise),0.2384417938115595
+Final vs no reference,"Last blood urea nitrogen by 12 h, mg/dL",0.17754280648005585
+Final vs no reference,ICU type (maximum category-wise),0.12907809059089023
+Final vs no reference,"Last systolic blood pressure by 12 h, mmHg",0.12041945468431413
+Final vs no reference,Race/ethnicity (maximum category-wise),0.07448617758790882
+Final vs no reference,"Last respiratory rate by 12 h, breaths/min",0.05261040563904367
+Final vs no reference,Sex (maximum category-wise),0.042680213532737904
+Final vs no reference,"Age, years",0.02919696743123061
+Final vs no reference,"Body mass index, kg/mÂ²",0.004707138900836928
+Final vs other excluded,Invasive mechanical ventilation by 12 h,0.296973506649558
+Final vs other excluded,ICU admission source (maximum category-wise),0.18064279079743686
+Final vs other excluded,Any vasopressor infusion by 12 h,0.14936243833030394
+Final vs other excluded,Hospital admission source (maximum category-wise),0.14200874227117932
+Final vs other excluded,"Last heart rate by 12 h, beats/min",0.1279329369455054
+Final vs other excluded,"Last systolic blood pressure by 12 h, mmHg",0.09636857815781869
+Final vs other excluded,ICU type (maximum category-wise),0.06690987447622773
+Final vs other excluded,"Age, years",0.06312475874815057
+Final vs other excluded,"Body mass index, kg/mÂ²",0.045614075344740275
+Final vs other excluded,Race/ethnicity (maximum category-wise),0.04481105260531861
+Final vs other excluded,"Last blood urea nitrogen by 12 h, mg/dL",0.03321926799424899
+Final vs other excluded,Sex (maximum category-wise),0.03165637338389255
+Final vs other excluded,"Last respiratory rate by 12 h, breaths/min",0.005950465780855992

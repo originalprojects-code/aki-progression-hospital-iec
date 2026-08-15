@@ -1,0 +1,19 @@
+variable,characteristic,group,observed_n,missing_n,missing_pct
+age,"Age, years",A_final_primary,58491,0,0.0
+age,"Age, years",B_no_reference,41614,0,0.0
+age,"Age, years",C_other_post_reference,26219,0,0.0
+bmi,"Body mass index, kg/mÂ²",A_final_primary,57098,1393,2.3815629755005046
+bmi,"Body mass index, kg/mÂ²",B_no_reference,39174,2440,5.863411351948863
+bmi,"Body mass index, kg/mÂ²",C_other_post_reference,25077,1142,4.355619970250582
+hr,"Last heart rate by 12 h, beats/min",A_final_primary,57593,898,1.5352789318014737
+hr,"Last heart rate by 12 h, beats/min",B_no_reference,40628,986,2.3693949151727782
+hr,"Last heart rate by 12 h, beats/min",C_other_post_reference,25531,688,2.6240512605362523
+sbp,"Last systolic blood pressure by 12 h, mmHg",A_final_primary,57614,877,1.4993759723718179
+sbp,"Last systolic blood pressure by 12 h, mmHg",B_no_reference,40554,1060,2.5472196856827027
+sbp,"Last systolic blood pressure by 12 h, mmHg",C_other_post_reference,25574,645,2.4600480567527367
+rr,"Last respiratory rate by 12 h, breaths/min",A_final_primary,53306,5185,8.864611649655503
+rr,"Last respiratory rate by 12 h, breaths/min",B_no_reference,37983,3631,8.72542894218292
+rr,"Last respiratory rate by 12 h, breaths/min",C_other_post_reference,23203,3016,11.503108432815896
+bun,"Last blood urea nitrogen by 12 h, mg/dL",A_final_primary,45473,13018,22.256415516917134
+bun,"Last blood urea nitrogen by 12 h, mg/dL",B_no_reference,18042,23572,56.64439851972894
+bun,"Last blood urea nitrogen by 12 h, mg/dL",C_other_post_reference,21543,4676,17.8343949044586

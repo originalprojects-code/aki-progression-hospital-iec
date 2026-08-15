@@ -1,0 +1,15 @@
+candidate_feature,source,definition,time_window,available_by_12h,missingness,contributes_to_outcome_definition,leakage_violations,retained_primary_comparator,decision_reason
+x_reference_creatinine,creatinine_staged_v1 / feature_static_v1,"Earliest qualifying creatinine from max(hospital admission,-24 h) through +6 h",-24 h admission bound to +6 h,True,0.0,True,0,True,Baseline renal status; cohort requires availability
+x_lab_creatinine_first,feature_labs_v1,First valid 0-12 h creatinine,0-12 h,True,0.21844386315843464,False,0,False,Algebraically represented through last and slope
+x_lab_creatinine_last,feature_labs_v1,Last valid 0-12 h creatinine,0-12 h,True,0.21844386315843464,False,0,True,Current renal level
+x_lab_creatinine_min,feature_labs_v1,Minimum valid 0-12 h creatinine,0-12 h,True,0.21844386315843464,False,0,False,Redundant summary
+x_lab_creatinine_max,feature_labs_v1,Maximum valid 0-12 h creatinine,0-12 h,True,0.21844386315843464,False,0,True,Worst pre-landmark renal level
+x_lab_creatinine_mean,feature_labs_v1,Mean valid 0-12 h creatinine,0-12 h,True,0.21844386315843464,False,0,False,Redundant summary
+x_lab_creatinine_n,feature_labs_v1,Count valid 0-12 h creatinine values,0-12 h,True,0.0,False,0,True,Trajectory information; zero when none
+x_creatinine_slope_per_hour,derived from feature_labs_v1 plus raw offsets,"(last-first)/(last offset-first offset), n>=2",0-12 h,True,0.7181104785351593,False,0,True,Rate of early creatinine change
+x_stage1_at_landmark,cohort_outcome_v1 / feature_static_v1,Maximum KDIGO creatinine stage from reference through 720 min equals 1,through 12 h,True,0.0,True,0,True,Clinically interpretable landmark renal status
+BUN,audited authoritative pipeline,See report,through 12 h,True,,False,0,False,Non-creatinine renal marker; excluded to keep primary comparator creatinine-focused
+urine output,audited authoritative pipeline,See report,through 12 h,True,,False,0,False,No validated urine-output feature in locked 159-predictor registry
+RRT information,audited authoritative pipeline,See report,through 12 h,True,,True,0,False,Pre-landmark acute RRT is an exclusion; post-landmark RRT prohibited
+relative creatinine change,audited authoritative pipeline,See report,through 12 h,True,,False,0,False,Redundant with reference/last/stage-1 status
+time between measurements,audited authoritative pipeline,See report,through 12 h,True,,False,0,False,Used only to derive slope; not separately entered

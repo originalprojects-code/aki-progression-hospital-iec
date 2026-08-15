@@ -1,0 +1,6 @@
+model,specification,auroc,auprc,brier,log_loss,calibration_intercept,calibration_slope
+Full XGBoost,159-predictor primary model,0.8758038099504537,0.3988324062812816,0.037799630507975676,0.14201893213075395,0.002270707704053653,1.0045791401544033
+Comparator 0: reference creatinine,x_reference_creatinine,0.7139716284025647,0.20565114184249333,0.04666868982448908,0.18534123002768824,-0.0023031449167355417,0.9987218761823476
+Comparator 1: renal status,"x_reference_creatinine, x_lab_creatinine_last, x_creatinine_last_reference_ratio, x_stage1_at_landmark",0.8344136010100593,0.28834940940149945,0.043083360231771714,0.16357347198405695,-0.005329814715833523,0.99771182885845
+Comparator 2: creatinine trajectory,"x_reference_creatinine, x_lab_creatinine_last, x_lab_creatinine_max, x_creatinine_slope_per_hour, x_lab_creatinine_n, x_stage1_at_landmark",0.7839225794747895,0.2506805853557031,0.04398467664147823,0.16886226454936365,-0.017170055905379383,0.9937636631687772
+Comparator 3: renal + minimal clinical,"x_reference_creatinine, x_lab_creatinine_last, x_lab_creatinine_max, x_creatinine_slope_per_hour, x_lab_creatinine_n, x_stage1_at_landmark, x_age_years, x_sex, x_tx_any_vasopressor, x_resp_invasive_mechanical_ventilation",0.8245096534505202,0.2717932210879307,0.04336603245004789,0.16523141192539925,-0.018192998118135035,0.9925157580532591

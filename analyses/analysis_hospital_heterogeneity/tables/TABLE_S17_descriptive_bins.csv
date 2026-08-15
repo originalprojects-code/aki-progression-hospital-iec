@@ -1,0 +1,12 @@
+metric,category,count,percentage
+AUROC,<0.60,0,0.0
+AUROC,<0.65,0,0.0
+AUROC,<0.70,0,0.0
+AUROC,<0.75,1,0.0196078431372549
+AUROC,>=0.80,47,0.9215686274509803
+calibration_intercept,|intercept| <=0.10,13,0.2549019607843137
+calibration_intercept,|intercept| 0.10-0.25,10,0.19607843137254902
+calibration_intercept,|intercept| >0.25,28,0.5490196078431373
+calibration_slope,slope <0.75,1,0.0196078431372549
+calibration_slope,slope 0.75-1.25,48,0.9411764705882353
+calibration_slope,slope >1.25,2,0.0392156862745098

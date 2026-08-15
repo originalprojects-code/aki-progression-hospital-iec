@@ -1,6 +1,6 @@
 1. Use 'internal-external cross-validation' for the eICU hospital-disjoint outer-fold design. Do not call it independent external validation.
 2. The primary outcome is incident/progressive KDIGO stage 2-3 after the 12-hour landmark through 72 hours.
-3. Main scientific framing: early prediction of AKI progression across unseen hospitals.
+3. Main scientific framing: early prediction of subsequent stage 2–3 AKI across held-out hospitals.
 4. XGBoost had the best overall numerical performance, but the three nonlinear ensemble learners formed a broadly comparable upper performance cluster. Do not claim universal or dramatic superiority.
 5. CatBoost and Random Forest are additional/post-hoc benchmarks unless separate prior provenance demonstrates otherwise.
 6. The parsimonious clinical logistic baseline is an additional/post-hoc exploratory benchmark. qSOFA and SIRS were not adequately reconstructable within 0-12 hours; do not state that they underperformed.

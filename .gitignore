@@ -1,10 +1,35 @@
+# Python/notebook caches
 .ipynb_checkpoints/
 __pycache__/
 *.pyc
+cache/
+.cache/
+logs/
+preview/
+previews/
+*.inspect.ndjson
+
+# Credentials and secrets
 .env
+credentials/
 credentials*.json
-service-account*.json
+service-account*
+*.key
+*.pem
+
+# Restricted/patient-level material
 patient_level/
+patient-level/
 raw_predictions/
+raw_bootstrap/
 restricted_data/
+HOSPITAL_ANONYMIZATION_MAP.csv
+hospital_mapping/
+
+# Local staging/build artifacts
+ONLINE_RELEASE_STAGING*/
+ONLINE_RELEASE_BUILD_AUDIT*/
+ONLINE_RELEASE_PACKAGE*.zip
+tmp/
+temp/
 .DS_Store

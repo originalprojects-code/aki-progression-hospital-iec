@@ -1,0 +1,31 @@
+{
+  "primary_comparison": "Full calibrated XGBoost minus Comparator 2 native logistic probability",
+  "comparator_0": [
+    "x_reference_creatinine"
+  ],
+  "comparator_1": [
+    "x_reference_creatinine",
+    "x_lab_creatinine_last",
+    "x_creatinine_last_reference_ratio",
+    "x_stage1_at_landmark"
+  ],
+  "comparator_2_primary": [
+    "x_reference_creatinine",
+    "x_lab_creatinine_last",
+    "x_lab_creatinine_max",
+    "x_creatinine_slope_per_hour",
+    "x_lab_creatinine_n",
+    "x_stage1_at_landmark"
+  ],
+  "comparator_3_secondary": [
+    "Comparator 2",
+    "x_age_years",
+    "x_sex",
+    "x_tx_any_vasopressor",
+    "x_resp_invasive_mechanical_ventilation"
+  ],
+  "model": "unpenalized logistic regression; training-fold median imputation and standardization; no explicit missingness indicators",
+  "probability": "native logistic primary; no test-set recalibration",
+  "rationale": "Comparator 2 uses level, worst value, within-window rate, measurement count, and landmark KDIGO status without jointly entering algebraically redundant first/minimum/mean/delta/ratio terms.",
+  "locked_before_performance_review": true
+}

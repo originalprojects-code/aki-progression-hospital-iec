@@ -1,0 +1,15 @@
+domain,subgroup,hospitals_represented,median_hospital_proportion,min_hospital_proportion,max_hospital_proportion
+Age,50-64,193,0.27619919090733963,0.0,0.5
+Age,65-79,193,0.32932952370384755,0.0,1.0
+Age,<50,190,0.18170300982800983,0.0,1.0
+Age,>=80,193,0.19491346559729844,0.0,0.6666666666666666
+Recorded race/ethnicity,African American,144,0.038628421093964735,0.0,0.5
+Recorded race/ethnicity,Asian,101,0.0019589108378996484,0.0,0.3764705882352941
+Recorded race/ethnicity,Caucasian,195,0.8531534167093298,0.0,1.0
+Recorded race/ethnicity,Hispanic,98,0.0,0.0,0.810126582278481
+Recorded race/ethnicity,Missing,52,0.0,0.0,1.0
+Recorded race/ethnicity,Native American,64,0.0,0.0,0.3333333333333333
+Recorded race/ethnicity,Other/Unknown,142,0.01904761904761905,0.0,0.5531496062992126
+Sex,female,197,0.46412067599683127,0.0,1.0
+Sex,male,193,0.5358793240031687,0.0,1.0
+Sex,other_or_missing,7,0.0,0.0,0.0058823529411764705

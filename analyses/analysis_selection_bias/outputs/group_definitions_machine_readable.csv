@@ -1,0 +1,4 @@
+compare_group,unique_patients,unique_stays,hospitals
+A_final_primary,58491,58491,198
+B_no_reference,41614,41614,207
+C_other_post_reference,26219,26219,204

@@ -1,0 +1,14 @@
+variable,clinical_meaning,source_table_field,extraction_window,available_before_selection_point,scientifically_fair,missing_pct_A_final_primary,missing_pct_B_no_reference,missing_pct_C_other_post_reference
+age,Age,eICU patient.age,At ICU admission,Yes,Include,0.0,0.0,0.0
+bmi,BMI,patient.admissionHeight/admissionWeight,At ICU admission,Yes,Include,2.381562975500504,5.863411351948863,4.355619970250581
+sex,Recorded sex,patient.gender,At ICU admission,Yes,Include,0.0,0.0,0.0
+ethnicity,Recorded race/ethnicity,patient.ethnicity,At ICU admission,Yes,Include; missing retained as category,0.0,0.0,0.0
+unit_type,ICU type,patient.unitType,At ICU admission,Yes,Include,0.0,0.0,0.0
+unit_admit_source,ICU admission source,patient.unitAdmitSource,At ICU admission,Yes,Include,0.0,0.0,0.0
+hospital_admit_source,Hospital admission source,patient.hospitalAdmitSource,At hospital admission,Yes,Include,0.0,0.0,0.0
+hr,Last valid heart rate,vitalPeriodic.heartRate,0–720 min,Yes,Include; observed-value SMD plus missingness,1.535278931801474,2.3693949151727787,2.6240512605362523
+sbp,Last valid systolic BP,vitalPeriodic.systemicSystolic,0–720 min,Yes,Include; observed-value SMD plus missingness,1.4993759723718179,2.5472196856827027,2.4600480567527367
+rr,Last valid respiratory rate,vitalPeriodic.respiration,0–720 min,Yes,Include; observed-value SMD plus missingness,8.864611649655503,8.72542894218292,11.503108432815896
+bun,Last valid BUN,lab.labResult where labName=BUN,0–720 min,Yes,Include cautiously; observation-process signal expected,22.256415516917134,56.64439851972893,17.8343949044586
+any_vasopressor,Any vasopressor infusion,infusionDrug.drugName,0–720 min,Yes,Include; absence of record treated as no documented infusion,0.0,0.0,0.0
+invasive_ventilation,Conservative invasive ventilation flag,respiratoryCare.airwayType; treatment.treatmentString,0–720 min,Yes,Include; absence of qualifying documentation treated as no,0.0,0.0,0.0

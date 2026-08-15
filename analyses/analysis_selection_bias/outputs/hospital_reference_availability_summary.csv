@@ -1,0 +1,3 @@
+population,hospitals,candidate_median,candidate_iqr_low,candidate_iqr_high,availability_median,availability_iqr_low,availability_iqr_high,availability_p10,availability_p90,availability_min,availability_max
+All hospitals,208,342.5,141.5,793.25,0.6290608883049728,0.48832796740425455,0.7783140283140283,0.40595720069404284,0.8996482412060302,0.0,1.0
+Hospitals with ≥100 candidates (descriptive sensitivity),169,448.0,245.0,949.0,0.6314199395770392,0.5082417582417582,0.7837837837837838,0.422594288205799,0.9004132973944295,0.25,0.9765395894428153

@@ -1,0 +1,9 @@
+compare_group,exclusion_detail,patients,stays,hospitals
+A_final_primary,included_main,58491,58491,198
+B_no_reference,no_reference_creatinine,41614,41614,207
+C_other_post_reference,acute_rrt_by_12h,276,276,84
+C_other_post_reference,chronic_dialysis_or_esrd,1635,1635,135
+C_other_post_reference,early_death,2181,2181,168
+C_other_post_reference,inadequate_followup,2948,2948,184
+C_other_post_reference,no_future_creatinine,18066,18066,201
+C_other_post_reference,severe_aki_by_12h,1113,1113,142

@@ -1,0 +1,5 @@
+subgroup,model,n,events,auroc,auprc
+Stage 1 at landmark,Full XGBoost,2949,781,0.7376447548086237,0.5151741050423715
+Stage 1 at landmark,Comparator 2: creatinine trajectory,2949,781,0.5664652541211712,0.3402281952870042
+No stage 1 at landmark,Full XGBoost,55542,2251,0.8585413794811805,0.3505517357771235
+No stage 1 at landmark,Comparator 2: creatinine trajectory,55542,2251,0.7411010696648506,0.23198869507303696

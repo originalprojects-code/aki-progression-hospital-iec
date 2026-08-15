@@ -1,0 +1,2 @@
+max_absolute_net_benefit_difference,xgboost_greater_threshold_min,xgboost_greater_threshold_max,fraction_thresholds_xgboost_greater,difference_at_50_permille,difference_at_75_permille,difference_at_100_permille
+0.00858251696842249,0.01,0.10000000000000002,1.0,0.0029667182265557673,0.002604697326962297,0.0048136560420501545

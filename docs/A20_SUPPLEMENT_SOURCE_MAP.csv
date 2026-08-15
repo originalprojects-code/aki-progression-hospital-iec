@@ -1,0 +1,31 @@
+﻿A20_item,item_type,final_title,public_source_file,origin_analysis,notes
+Table S1,Table,Expanded operating-point scenarios for calibrated XGBoost,aggregate_outputs/TABLE_S1_selected_operating_points.csv,Primary repository,Canonical public CSV mapped to A20 final numbering.
+Table S2,Table,Sensitivity analysis of alternative reference-creatinine definitions,aggregate_outputs/TABLE_S2_reference_creatinine_sensitivity.csv,Primary repository,Canonical public CSV mapped to A20 final numbering.
+Table S3,Table,Mutually exclusive landmark selection groups,aggregate_outputs/TABLE_S3_landmark_selection_groups.csv,Primary repository,Canonical public CSV mapped to A20 final numbering.
+Table S4,Table,Hospital-level heterogeneity summary,aggregate_outputs/TABLE_S4_hospital_heterogeneity_summary.csv,Primary repository,Canonical public CSV mapped to A20 final numbering.
+Table S5,Table,Selection characteristics and missingness by landmark-selection group,tables/TABLE_S5_source.csv,analysis_selection_bias,Canonical public CSV mapped to A20 final numbering.
+Table S6,Table,Full XGBoost versus training-fold-specific high-missingness ablation,tables/TABLE_S6_source.csv,analysis_high_missingness_ablation,Canonical public CSV mapped to A20 final numbering.
+Table S7,Table,Source predictors excluded at the >=50% outer-training-fold missingness threshold,tables/TABLE_S7_source.csv,analysis_high_missingness_ablation,Canonical public CSV mapped to A20 final numbering.
+Table S8,Table,Leading explicit numeric missingness-indicator attributions in held-out XGBoost predictions,tables/TABLE_S8_source.csv,analysis_missingness_indicator_dependence,Canonical public CSV mapped to A20 final numbering.
+Table S9,Table,Full XGBoost versus XGBoost without explicit numeric missingness indicators,tables/TABLE_S9_source.csv,analysis_missingness_indicator_dependence,Canonical public CSV mapped to A20 final numbering.
+Table S10,Table,Performance of full XGBoost and renal Comparator 0–3 models,tables/TABLE_S10_source.csv,analysis_renal_trajectory_comparator,Canonical public CSV mapped to A20 final numbering.
+Table S11,Table,Paired incremental performance versus prespecified Comparator 2,tables/TABLE_S11_source.csv,analysis_renal_trajectory_comparator,Canonical public CSV mapped to A20 final numbering.
+Table S12,Table,Fixed-threshold and matched-alert renal-comparator comparisons,tables/TABLE_S12_source.csv,analysis_renal_trajectory_comparator,Canonical public CSV mapped to A20 final numbering.
+Table S13,Table,Exploratory subgroup discrimination and calibration,tables/TABLE_S13_source.csv,Step-derived aggregate,Canonical public CSV mapped to A20 final numbering.
+Table S14,Table,Exploratory subgroup operating-point performance,tables/TABLE_S14_source.csv,Step-derived aggregate,Canonical public CSV mapped to A20 final numbering.
+Table S15,Table,Actionable lead-time sensitivity,tables/TABLE_S15_source.csv,analysis_lead_time_outcome_window,Canonical public CSV mapped to A20 final numbering.
+Table S16,Table,Alternative outcome-window sensitivity,tables/TABLE_S16_source.csv,analysis_lead_time_outcome_window,Canonical public CSV mapped to A20 final numbering.
+Table S17,Table,Held-out hospital performance distributions,tables/TABLE_S17_source.csv,analysis_hospital_heterogeneity,Canonical public CSV mapped to A20 final numbering.
+Table S18,Table,Lower-tail hospital audit without identifiers,tables/TABLE_S18_source.csv,analysis_hospital_heterogeneity,Canonical public CSV mapped to A20 final numbering.
+Figure S1,Figure,Hospital-disjoint outer-fold discrimination,figures/FIG_S1_outer_fold_performance_final.png,Primary repository,Canonical public PNG mapped to A20 final numbering.
+Figure S2,Figure,Hospital-level calibration-in-the-large,figures/FIG_S2_hospital_calibration_eligible_centers.png,Primary repository,Canonical public PNG mapped to A20 final numbering.
+Figure S3,Figure,Operating-point trade-offs,figures/FIG_S3_operating_point_tradeoffs.png,Primary repository,Canonical public PNG mapped to A20 final numbering.
+Figure S4,Figure,Alternative reference-creatinine event rates,figures/FIG_S4_reference_creatinine_sensitivity.png,Primary repository,Canonical public PNG mapped to A20 final numbering.
+Figure S5,Figure,Landmark cohort inclusion and exclusion groups,figures/FIG_S5_landmark_selection_groups.png,Primary repository,Canonical public PNG mapped to A20 final numbering.
+Figure S6,Figure,Covariate shift between included and excluded candidate populations,figures/FIG_S6_covariate_shift.png,analysis_selection_bias,Canonical public PNG mapped to A20 final numbering.
+Figure S7,Figure,Missingness-indicator attribution,figures/FIG_S7_missingness_indicator_attribution.png,Step-derived aggregate,Canonical public PNG mapped to A20 final numbering.
+Figure S8,Figure,Incremental predictive value of renal comparators,figures/FIG_S8_renal_trajectory_incremental_value.png,Step-derived aggregate,Canonical public PNG mapped to A20 final numbering.
+Figure S9,Figure,Exploratory subgroup calibration,figures/FIG_S9_subgroup_calibration.png,Step-derived aggregate,Canonical public PNG mapped to A20 final numbering.
+Figure S10,Figure,Exploratory subgroup discrimination and precision-recall performance,figures/FIG_S10_subgroup_discrimination.png,Step-derived aggregate,Canonical public PNG mapped to A20 final numbering.
+Figure S11,Figure,Actionable lead-time sensitivity,figures/FIG_S11_lead_time_sensitivity.png,analysis_lead_time_outcome_window,Canonical public PNG mapped to A20 final numbering.
+Figure S12,Figure,Hospital-level discrimination and calibration heterogeneity,figures/FIG_S12_hospital_performance_heterogeneity.png,analysis_hospital_heterogeneity,Canonical public PNG mapped to A20 final numbering.

@@ -1,5 +1,0 @@
-method,primary_cohort_patients,reference_available,severe_by_landmark,alternative_eligible,alternative_events,alternative_event_rate,labels_agree,labels_disagree,changed_0_to_1,changed_1_to_0,reference_coverage,disagreement_rate_among_alt_eligible
-first_icu_0_360,58491,38244,142,38102,1883,0.0494199779539131,37905,197,33,164,0.6538441811560753,0.005170332266022781
-locked_current,58491,58491,0,58491,3032,0.051837034757484,58491,0,0,0,1.0,0.0
-minimum_prelandmark,58491,58491,594,57897,3048,0.0526452147779677,57788,109,109,0,1.0,0.0018826536780834932
-pre_icu_earliest,58491,33318,0,33318,1795,0.0538747823999039,33318,0,0,0,0.5696260963225112,0.0
