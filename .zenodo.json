@@ -1,6 +1,6 @@
 {
-  "title": "Machine learning for early prediction of subsequent stage 2–3 acute kidney injury in critically ill adults: hospital-disjoint internal-external validation — reproducibility materials",
-  "description": "Source-only code, parameterized SQL, analysis specifications, disclosure-safe aggregate outputs, figures, and documentation supporting the A20 science-locked manuscript. No patient-level data or Data Use Agreement-restricted derivatives are included.",
+  "title": "Machine learning for early prediction of subsequent stage 2-3 acute kidney injury in critically ill adults: hospital-disjoint internal-external validation — reproducibility materials",
+  "description": "Source-only code, parameterized SQL, analysis specifications, disclosure-safe aggregate outputs, figures, and documentation aligned with the final A23 scientifically and linguistically locked manuscript. This patch updates public terminology, metadata, and supplementary figure presentation only; scientific results are unchanged. No patient-level data or Data Use Agreement-restricted derivatives are included.",
   "creators": [
     {
       "name": "Yilmaz, Cagdas",
@@ -16,7 +16,7 @@
   "license": "mit",
   "keywords": [
     "acute kidney injury",
-    "KDIGO stage 2–3",
+    "KDIGO stage 2-3",
     "critical care",
     "machine learning",
     "hospital-disjoint internal-external validation",
@@ -25,16 +25,16 @@
   ],
   "upload_type": "software",
   "access_right": "open",
-  "version": "1.1.0-submission",
+  "version": "1.1.1-submission",
   "language": "eng",
   "related_identifiers": [
     {
-      "identifier": "https://github.com/originalprojects-code/aki-progression-hospital-iec/tree/v1.1.0-submission",
+      "identifier": "https://github.com/originalprojects-code/aki-progression-hospital-iec/tree/v1.1.1-submission",
       "relation": "isSupplementTo",
       "resource_type": "software"
     },
     {
-      "identifier": "10.5281/zenodo.21824202",
+      "identifier": "10.5281/zenodo.21959115",
       "relation": "isNewVersionOf",
       "resource_type": "software"
     },

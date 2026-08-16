@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite the associated manuscript and archived software release."
-title: "Machine learning for early prediction of subsequent stage 2–3 acute kidney injury in critically ill adults: hospital-disjoint internal-external validation — reproducibility materials"
+title: "Machine learning for early prediction of subsequent stage 2-3 acute kidney injury in critically ill adults: hospital-disjoint internal-external validation — reproducibility materials"
 type: software
 authors:
   - family-names: Yilmaz
@@ -11,4 +11,4 @@ authors:
     orcid: "https://orcid.org/0000-0003-3312-992X"
 repository-code: "https://github.com/originalprojects-code/aki-progression-hospital-iec"
 license: MIT
-version: 1.1.0-submission
+version: 1.1.1-submission

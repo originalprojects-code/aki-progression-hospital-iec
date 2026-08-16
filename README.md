@@ -1,14 +1,14 @@
-# Subsequent stage 2–3 AKI prediction with hospital-disjoint internal-external validation
+# Subsequent stage 2-3 AKI prediction with hospital-disjoint internal-external validation
 
-Reproducibility materials for the A20 science-locked manuscript:
+Reproducibility materials aligned with the A23 scientifically and linguistically locked manuscript:
 
-**Machine learning for early prediction of subsequent stage 2–3 acute kidney injury in critically ill adults: hospital-disjoint internal-external validation**
+**Machine learning for early prediction of subsequent stage 2-3 acute kidney injury in critically ill adults: hospital-disjoint internal-external validation**
 
 Authors: Cagdas Yilmaz and Ali Akdagli
 
 ## Study purpose and design
 
-The study estimates risk of a subsequent serum-creatinine-defined KDIGO stage 2–3 acute kidney injury outcome after a fixed 12-hour ICU landmark. Evaluation uses hospital-disjoint internal-external cross-validation. This is not independent external validation and does not demonstrate clinical benefit or implementation readiness.
+The study estimates risk of a subsequent serum-creatinine-defined KDIGO stage 2-3 acute kidney injury outcome after a fixed 12-hour ICU landmark. Evaluation uses hospital-disjoint internal-external cross-validation. This is not independent external validation and does not demonstrate clinical benefit or implementation readiness.
 
 ## Public release scope
 
@@ -22,15 +22,15 @@ No patient-level eICU data, patient-level predictions, patient-level SHAP values
 
 - `code/`, `sql/`, `protocols/`: primary source pipeline and locked/specification files.
 - `analyses/`: Step 1–7 public-safe source code, READMEs, environments, and aggregate outputs.
-- `aggregate_outputs/` and `tables/`: public aggregate results and final A20 supplementary-table sources.
-- `figures/`: final A20 supplementary-figure source images.
-- `docs/`: run order, scope, DUA notes, software environment, and A20 source mapping.
+- `aggregate_outputs/` and `tables/`: public aggregate results and final supplementary-table sources.
+- `figures/`: final supplementary-figure source images.
+- `docs/`: run order, scope, DUA notes, software environment, and final source mapping.
 - `checklists/`: privacy, reproducibility, and reporting checks.
 - `release/`: inventory, hashes, and release validation.
 
 ## Reproducibility entry points
 
-Start with `docs/RUN_ORDER.md`, `docs/DATA_ACCESS_AND_DUA.md`, `code/README.md`, `protocols/README.md`, and `docs/A20_SUPPLEMENT_SOURCE_MAP.csv`. Each Step 1–7 analysis has a public README/source directory under `analyses/`.
+Start with `docs/RUN_ORDER.md`, `docs/DATA_ACCESS_AND_DUA.md`, `code/README.md`, `protocols/README.md`, and `docs/A23_SUPPLEMENT_SOURCE_MAP.csv`. Each Step 1–7 analysis has a public README/source directory under `analyses/`.
 
 ## Environment
 
@@ -38,6 +38,6 @@ See `requirements.txt` and `docs/SOFTWARE_ENVIRONMENT.md`. Runtime project, data
 
 ## Citation and version
 
-See `CITATION.cff`. Version: `1.1.0-submission`. This release preserves historical `v1.0.0-manuscript` provenance while aligning current metadata with the A20 science-locked manuscript.
+See `CITATION.cff`. Version: `1.1.1-submission`. This patch release preserves historical `v1.0.0-manuscript` and `v1.1.0-submission` provenance while aligning current metadata and supplementary figure presentation with the final A23 manuscript framing. Scientific results are unchanged.
 
 Original code and documentation are MIT licensed. eICU data remain under the PhysioNet DUA and are not covered by the MIT license.
