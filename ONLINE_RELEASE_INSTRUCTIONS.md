@@ -1,22 +1,44 @@
-# Online release instructions — v1.1.0-submission
+# Online release instructions
 
-Do not alter the science-locked A20 manuscript or Online Resource except for a later repository/DOI locator-only update if required.
+The current repository state is aligned with the A25 submission-locked manuscript
+and final publication figure set.
 
-Target GitHub repository: `originalprojects-code/aki-progression-hospital-iec`
+## Pre-release checks
 
-Existing authoritative archive to preserve:
-- GitHub main commit before release: `2f4fabd115e9f882e7deb4ae1f198a5fd3735734`
-- existing tag/version: `v1.0.0-manuscript`
-- existing Zenodo record/version: `1.0.0-manuscript`, DOI `10.5281/zenodo.21824202`
+Before creating the release:
 
-Required actions:
-1. Verify no patient-level data, raw predictions, raw hospital-ID mappings, credentials, local Windows paths, or DUA-restricted derivatives are in the release package.
-2. Update GitHub with the supplied metadata and portable submission-stage analysis scripts. Preserve all old history and the old tag.
-3. Commit message: `Prepare v1.1.0-submission reproducibility snapshot`.
-4. Create tag/release `v1.1.0-submission` after confirming main is clean.
-5. Create a new Zenodo version corresponding to that GitHub release; do not overwrite the previous version. Suggested label: `1.1.0-submission` and description `Submission-ready reproducibility snapshot`.
-6. Record the new GitHub commit, tag/release URL, Zenodo version DOI, and concept DOI if shown.
-7. After the new DOI/version exists, compare it with the A20 Code Availability statement. If the exact DOI/version locator changed, create a locator-only A21 manuscript revision; do not change scientific prose.
-8. Re-render any locator-only manuscript revision and verify all pages.
+1. Confirm `docs/REPRODUCIBILITY_CHECKLIST_A25.md` is complete.
+2. Run:
+   `python aggregate_outputs/publication_figures/verify_publication_sources.py`
+3. Run:
+   `python code/08_BUILD_PUBLICATION_FIGURES.py`
+4. Confirm Fig. 1–3 and Fig. S1–S12 all rebuild successfully.
+5. Confirm `docs/A25_FINAL_FIGURE_SOURCE_MAP.csv` points to existing repository files.
+6. Confirm the SHA-256 manifests under `release/` match the repository snapshot.
+7. Confirm no restricted patient-level or hospital-identifier data are present.
 
-The public release package intentionally excludes raw patient-level data and private hospital identifier maps.
+## GitHub release
+
+Create a new immutable tag and release:
+
+`v1.2.0-submission`
+
+Do not modify historical tags or releases.
+
+Use `RELEASE_NOTES_A25_REPRODUCIBILITY.md` as the release-note basis.
+
+## Zenodo
+
+Archive the new GitHub release as a new software version. The current `.zenodo.json`
+is prepared for version `1.2.0-submission` and retains links to the prior archived
+version and the software record.
+
+After Zenodo assigns the new version DOI, record that DOI in the manuscript/repository
+only where appropriate; do not replace the concept-record relationship with a
+version-specific DOI unless required by the citation workflow.
+
+## Final verification
+
+Download the released repository archive and rerun the publication-source verifier
+and figure builder from the downloaded archive before considering the online release
+complete.

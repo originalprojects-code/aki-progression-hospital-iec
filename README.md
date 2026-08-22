@@ -42,7 +42,7 @@ The A25 publication artwork is repository-rebuildable from disclosure-safe aggre
 
 ## Version
 
-This repository is aligned with the A25 submission-locked manuscript and publication figure set. Historical release tags remain unchanged.
+Current submission-aligned reproducibility version: `v1.2.0-submission`.
 
 ## License
 

@@ -1,6 +1,6 @@
 # Changelog
 
-## A25 reproducibility update
+## v1.2.0-submission — A25 reproducibility update
 
 Aligned repository-contained publication reproducibility with the A25 locked submission: final manuscript/ESM snapshots, 15 final figures, disclosure-safe figure-source aggregates, one publication builder, clean-room 15/15 rebuild, and A25 source mapping.
 
