@@ -1,0 +1,7 @@
+{
+  "final_figures": 15,
+  "figure_files": 30,
+  "clean_room_status": "15/15 PASS",
+  "builder": "code/08_BUILD_PUBLICATION_FIGURES.py",
+  "historical_release_policy": "do not mutate v1.0.0-manuscript or v1.1.0-submission"
+}

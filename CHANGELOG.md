@@ -1,12 +1,13 @@
 # Changelog
 
-## v1.1.1-submission
+## A25 reproducibility update
 
-Patch release aligned with the final A23 manuscript framing. Updates current public metadata/version wording and removes conflicting provisional figure numbers embedded in four supplementary source images. Supplementary mapping remains Tables S1–S18 and Figures S1–S12; Step 1–7 coverage and all scientific results are unchanged. No patient-level or DUA-restricted data are included.
+Aligned repository-contained publication reproducibility with the A25 locked submission: final manuscript/ESM snapshots, 15 final figures, disclosure-safe figure-source aggregates, one publication builder, clean-room 15/15 rebuild, and A25 source mapping.
+
 
 ## v1.1.0-submission
 
-Expanded A20 science-locked reproducibility release. Adds sanitized Step 1–7 robustness/sensitivity materials, aligns current title and general-cohort terminology, reconciles final supplementary numbering, and parameterizes local paths. Primary scientific results are unchanged. No patient-level or DUA-restricted data are included.
+Submission-ready manuscript snapshot and added robustness analyses: selection characterization, missingness robustness, renal comparators, exploratory subgroup performance, actionable lead-time/outcome-window sensitivity, and hospital-level heterogeneity.
 
 ## v1.0.0-manuscript
 

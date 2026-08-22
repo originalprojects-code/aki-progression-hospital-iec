@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "final_figures": 15,
+  "png_600dpi": 15,
+  "vector_pdf": 15,
+  "figure_source_map_rows": 15,
+  "publication_source_verifier": "PASS",
+  "hashed_identifier_scan_scientific_csvs": "PASS",
+  "clean_room_builder_status": "15/15 PASS from Gap 2",
+  "figure_technical_metadata": [
+    {
+      "file": "FIG_1_A25.png",
+      "width_px": 6912,
+      "height_px": 4932,
+      "dpi_x": 600.0,
+      "dpi_y": 600.0
+    },
+    {
+      "file": "FIG_2_A25.png",
+      "width_px": 4110,
+      "height_px": 3600,
+      "dpi_x": 600.0,
+      "dpi_y": 600.0
+    },
+    {
+      "file": "FIG_3_A25.png",
+      "width_px": 4110,
+      "height_px": 4260,
+      "dpi_x": 600.0,
+      "dpi_y": 600.0
+    },
+    {
+      "file": "FIG_S10_A25.png",
+      "width_px": 4500,
+      "height_px": 5460,
+      "dpi_x": 600.0,
+      "dpi_y": 600.0
+    },
+    {
+      "file": "FIG_S11_A25.png",
+      "width_px": 4500,
+      "height_px": 5700,
+      "dpi_x": 600.0,
+      "dpi_y": 600.0
+    },
+    {
+      "file": "FIG_S12_A25.png",
+      "width_px": 4500,
+      "height_px": 5820,
+      "dpi_x": 600.0,
+      "dpi_y": 600.0
+    },
+    {
+      "file": "FIG_S1_A25.png",
+      "width_px": 4110,
+      "height_px": 2250,
+      "dpi_x": 600.0,
+      "dpi_y": 600.0
+    },
+    {
+      "file": "FIG_S2_A25.png",
+      "width_px": 4110,
+      "height_px": 2490,
+      "dpi_x": 600.0,
+      "dpi_y": 600.0
+    },
+    {
+      "file": "FIG_S3_A25.png",
+      "width_px": 4800,
+      "height_px": 3300,
+      "dpi_x": 600.0,
+      "dpi_y": 600.0
+    },
+    {
+      "file": "FIG_S4_A25.png",
+      "width_px": 4110,
+      "height_px": 2550,
+      "dpi_x": 600.0,
+      "dpi_y": 600.0
+    },
+    {
+      "file": "FIG_S5_A25.png",
+      "width_px": 4110,
+      "height_px": 2790,
+      "dpi_x": 600.0,
+      "dpi_y": 600.0
+    },
+    {
+      "file": "FIG_S6_A25.png",
+      "width_px": 4500,
+      "height_px": 3510,
+      "dpi_x": 600.0,
+      "dpi_y": 600.0
+    },
+    {
+      "file": "FIG_S7_A25.png",
+      "width_px": 4500,
+      "height_px": 6000,
+      "dpi_x": 600.0,
+      "dpi_y": 600.0
+    },
+    {
+      "file": "FIG_S8_A25.png",
+      "width_px": 4500,
+      "height_px": 5760,
+      "dpi_x": 600.0,
+      "dpi_y": 600.0
+    },
+    {
+      "file": "FIG_S9_A25.png",
+      "width_px": 4500,
+      "height_px": 5820,
+      "dpi_x": 600.0,
+      "dpi_y": 600.0
+    }
+  ]
+}
