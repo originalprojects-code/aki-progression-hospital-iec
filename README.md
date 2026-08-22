@@ -1,43 +1,49 @@
-# Subsequent stage 2-3 AKI prediction with hospital-disjoint internal-external validation
+# Subsequent Stage 2-3 AKI Prediction — Hospital-Disjoint Internal–External Validation
 
-Reproducibility materials aligned with the A23 scientifically and linguistically locked manuscript:
+Reproducibility materials for the manuscript:
 
 **Machine learning for early prediction of subsequent stage 2-3 acute kidney injury in critically ill adults: hospital-disjoint internal-external validation**
 
 Authors: Cagdas Yilmaz and Ali Akdagli
 
-## Study purpose and design
+## Study summary
 
-The study estimates risk of a subsequent serum-creatinine-defined KDIGO stage 2-3 acute kidney injury outcome after a fixed 12-hour ICU landmark. Evaluation uses hospital-disjoint internal-external cross-validation. This is not independent external validation and does not demonstrate clinical benefit or implementation readiness.
+The primary cohort included 58,491 patients from 198 hospitals; 3,032 (5.18%) developed subsequent serum-creatinine-defined KDIGO stage 2-3 AKI after a fixed 12-hour landmark. The primary XGBoost strategy was evaluated using hospital-disjoint internal-external cross-validation.
 
-## Public release scope
+## Repository contents
 
-This repository contains source code, parameterized SQL, analysis specifications, disclosure-safe aggregate outputs, tables, figures, reporting checklists, and software-environment information. It includes the primary pipeline plus seven sensitivity/robustness analyses: cohort selection, high-missingness ablation, missingness-indicator dependence, renal comparators, exploratory subgroup analyses, lead-time/outcome-window sensitivity, and hospital heterogeneity.
+- `code/`: original source-only notebooks plus submission-stage robustness analysis scripts
+- `sql/`: parameterized BigQuery SQL used to construct the analysis tables
+- `protocols/`: analysis-specific model, calibration, decision-curve, TreeSHAP, comparator, and ablation specifications
+- `aggregate_outputs/`: manuscript-level and fold-level aggregate results
+- `checklists/`: data-privacy, reproducibility, and TRIPOD reporting checklists
+- `docs/`: run order, data-access requirements, software environment, analysis scope, and reporting limits
+- `figures/`: publication-oriented aggregate figures
+- `manuscript/`: submission-ready manuscript snapshot and Online Resource PDF
+- `release/`: file inventory, source validation, and SHA-256 manifest material
 
-## Data access and DUA boundaries
+Submission-stage robustness analyses include cohort selection characterization, high-missingness ablation, explicit missingness-indicator dependence, renal-status/creatinine-trajectory comparators, exploratory subgroup performance, actionable lead-time/outcome-window sensitivity, and hospital-level discrimination/calibration heterogeneity.
 
-No patient-level eICU data, patient-level predictions, patient-level SHAP values, raw extracts, hospital identity mappings, or DUA-restricted derivatives are distributed. The eICU Collaborative Research Database must be accessed separately through PhysioNet by credentialed users who complete the required training and accept the applicable Data Use Agreement.
+## Data access
 
-## Repository structure
+The eICU Collaborative Research Database is available through PhysioNet to credentialed users who complete the required human-subjects research training and accept the applicable Data Use Agreement. Source data and patient-level derivatives are not redistributed in this repository.
 
-- `code/`, `sql/`, `protocols/`: primary source pipeline and locked/specification files.
-- `analyses/`: Step 1–7 public-safe source code, READMEs, environments, and aggregate outputs.
-- `aggregate_outputs/` and `tables/`: public aggregate results and final supplementary-table sources.
-- `figures/`: final supplementary-figure source images.
-- `docs/`: run order, scope, DUA notes, software environment, and final source mapping.
-- `checklists/`: privacy, reproducibility, and reporting checks.
-- `release/`: inventory, hashes, and release validation.
+## Reproduction configuration
 
-## Reproducibility entry points
+The project uses configurable values for the authorized execution environment, including `GOOGLE_CLOUD_PROJECT`, `AKI_DATASET_ID`, `EICU_SOURCE_DATASET`, `BIGQUERY_LOCATION`, and `AKI_OUTPUT_ROOT`. See `docs/RUN_ORDER.md`, the files under `sql/` and `protocols/`, and the source scripts under `code/` for execution details.
 
-Start with `docs/RUN_ORDER.md`, `docs/DATA_ACCESS_AND_DUA.md`, `code/README.md`, `protocols/README.md`, and `docs/A23_SUPPLEMENT_SOURCE_MAP.csv`. Each Step 1–7 analysis has a public README/source directory under `analyses/`.
+## Interpretation
 
-## Environment
+The validation design is hospital-disjoint internal-external cross-validation and is not independent external validation. The primary outcome is serum-creatinine-defined. SHAP values are non-causal model attributions. Decision-curve analysis estimates net benefit but does not establish clinical effectiveness. Hospital-level discrimination was broadly maintained among adequately sized held-out hospitals, while calibration-in-the-large showed greater between-center heterogeneity. Independent contemporary external and prospective evaluation remain necessary before clinical implementation.
 
-See `requirements.txt` and `docs/SOFTWARE_ENVIRONMENT.md`. Runtime project, dataset, location, dependency, input, and output paths are configured through environment variables; no private local paths are required.
+## Publication-figure reproducibility
 
-## Citation and version
+The A25 publication artwork is repository-rebuildable from disclosure-safe aggregate sources. `code/08_BUILD_PUBLICATION_FIGURES.py` regenerates Fig. 1–3 and Fig. S1–S12 as 600-dpi PNG and vector PDF. See `docs/FIGURE_REPRODUCIBILITY.md` and `docs/A25_FINAL_FIGURE_SOURCE_MAP.csv`.
 
-See `CITATION.cff`. Version: `1.1.1-submission`. This patch release preserves historical `v1.0.0-manuscript` and `v1.1.0-submission` provenance while aligning current metadata and supplementary figure presentation with the final A23 manuscript framing. Scientific results are unchanged.
+## Version
 
-Original code and documentation are MIT licensed. eICU data remain under the PhysioNet DUA and are not covered by the MIT license.
+Current submission-aligned reproducibility version: `v1.2.0-submission`.
+
+## License
+
+Original code and documentation are released under the MIT License. eICU data remain governed by the PhysioNet Data Use Agreement and are not covered by the MIT License.

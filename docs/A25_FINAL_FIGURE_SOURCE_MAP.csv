@@ -1,0 +1,16 @@
+figure,publication_png,publication_vector_pdf,numerical_source,render_script,clean_room_status
+Fig. 1,figures/FIG_1_A25.png,figures/FIG_1_A25.pdf,aggregate_outputs/cohort_outcome/06_cohort_flow_aggregate.csv; fixed landmark/window definitions in code/08_BUILD_PUBLICATION_FIGURES.py,code/08_BUILD_PUBLICATION_FIGURES.py,PASS
+Fig. 2,figures/FIG_2_A25.png,figures/FIG_2_A25.pdf,aggregate_outputs/publication_figures/FIG_2_five_model_metrics_and_calibration.csv; aggregate_outputs/publication_figures/FIG_2_xgboost_calibration_deciles.csv,code/08_BUILD_PUBLICATION_FIGURES.py,PASS
+Fig. 3,figures/FIG_3_A25.png,figures/FIG_3_A25.pdf,aggregate_outputs/publication_figures/FIG_3_decision_curve.csv; aggregate_outputs/publication_figures/FIG_3_grouped_treeshap.csv,code/08_BUILD_PUBLICATION_FIGURES.py,PASS
+Fig. S1,figures/FIG_S1_A25.png,figures/FIG_S1_A25.pdf,analyses/analysis_renal_trajectory_comparator/outputs/fold_performance.csv,code/08_BUILD_PUBLICATION_FIGURES.py,PASS
+Fig. S2,figures/FIG_S2_A25.png,figures/FIG_S2_A25.pdf,aggregate_outputs/publication_figures/FIG_S2_tier_b_calibration_points.csv,code/08_BUILD_PUBLICATION_FIGURES.py,PASS
+Fig. S3,figures/FIG_S3_A25.png,figures/FIG_S3_A25.pdf,aggregate_outputs/publication_figures/FIG_S3_operating_points_full.csv,code/08_BUILD_PUBLICATION_FIGURES.py,PASS
+Fig. S4,figures/FIG_S4_A25.png,figures/FIG_S4_A25.pdf,aggregate_outputs/publication_figures/FIG_S4_reference_creatinine_sensitivity.csv,code/08_BUILD_PUBLICATION_FIGURES.py,PASS
+Fig. S5,figures/FIG_S5_A25.png,figures/FIG_S5_A25.pdf,analyses/analysis_selection_bias/outputs/cohort_group_counts.csv,code/08_BUILD_PUBLICATION_FIGURES.py,PASS
+Fig. S6,figures/FIG_S6_A25.png,figures/FIG_S6_A25.pdf,analyses/analysis_selection_bias/outputs/ranked_absolute_smds.csv,code/08_BUILD_PUBLICATION_FIGURES.py,PASS
+Fig. S7,figures/FIG_S7_A25.png,figures/FIG_S7_A25.pdf,analyses/analysis_missingness_indicator_dependence/outputs/fold_level_attribution_summary.csv; analyses/analysis_missingness_indicator_dependence/outputs/fold_indicator_importance_and_ranks.csv,code/08_BUILD_PUBLICATION_FIGURES.py,PASS
+Fig. S8,figures/FIG_S8_A25.png,figures/FIG_S8_A25.pdf,analyses/analysis_renal_trajectory_comparator/outputs/roc_pr_curve_data.csv; analyses/analysis_renal_trajectory_comparator/outputs/decision_curve_data.csv,code/08_BUILD_PUBLICATION_FIGURES.py,PASS
+Fig. S9,figures/FIG_S9_A25.png,figures/FIG_S9_A25.pdf,analyses/analysis_subgroup_fairness/outputs/subgroup_calibration_quintiles.csv,code/08_BUILD_PUBLICATION_FIGURES.py,PASS
+Fig. S10,figures/FIG_S10_A25.png,figures/FIG_S10_A25.pdf,analyses/analysis_subgroup_fairness/outputs/subgroup_performance_with_cluster_ci.csv,code/08_BUILD_PUBLICATION_FIGURES.py,PASS
+Fig. S11,figures/FIG_S11_A25.png,figures/FIG_S11_A25.pdf,aggregate_outputs/publication_figures/FIG_S11_event_time_histogram.csv; tables/TABLE_S15_source.csv,code/08_BUILD_PUBLICATION_FIGURES.py,PASS
+Fig. S12,figures/FIG_S12_A25.png,figures/FIG_S12_A25.pdf,aggregate_outputs/publication_figures/FIG_S12_tier_b_auroc.csv; aggregate_outputs/publication_figures/FIG_S12_tier_b_calibration.csv; aggregate_outputs/publication_figures/FIG_S12_all_hospital_calibration_context.csv,code/08_BUILD_PUBLICATION_FIGURES.py,PASS
