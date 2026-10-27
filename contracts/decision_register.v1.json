@@ -1,0 +1,37 @@
+{
+  "contract_version": "1.0.0",
+  "decisions": [
+    {
+      "decision_id": "D-001",
+      "status": "requires_researcher_approval",
+      "question": "What documented availability rule should govern laboratory predictors when only sample and revision times are available?",
+      "evidence": "191 rebuilt-cohort records lacked reference creatinine confirmed available by 12 hours under the audited revision-time proxy; excluding late revisions removed at least one physiologically valid laboratory record in 8,074 patients.",
+      "constraint": "A late final revision must not be treated as the first result-availability time."
+    },
+    {
+      "decision_id": "D-002",
+      "status": "requires_researcher_approval",
+      "question": "Should past-history predictors require pastHistoryEnteredOffset at or before the landmark, and how should unknown entry times be handled?",
+      "evidence": "Documentation-time filtering changed at least one of 11 history indicators in 264 patients."
+    },
+    {
+      "decision_id": "D-003",
+      "status": "requires_researcher_approval",
+      "question": "Which timing rule should define invasive mechanical ventilation when event and documentation times differ or are missing?",
+      "evidence": "Respiratory documentation-time sensitivity changed the combined invasive mechanical ventilation indicator in 515 patients."
+    },
+    {
+      "decision_id": "D-004",
+      "status": "requires_researcher_approval",
+      "question": "Are infusionOffset and treatmentOffset valid predictor-availability timestamps, or must a different availability convention be used?",
+      "evidence": "Frozen source SQL filters infusionOffset and treatmentOffset to the predictor window, but no separate availability-time field is encoded in the audited source."
+    },
+    {
+      "decision_id": "D-005",
+      "status": "requires_researcher_approval",
+      "question": "What discharge-censoring and missing-outcome observation rule should be used in the corrected implementation?",
+      "evidence": "Frozen cohort SQL censors the creatinine outcome at min(discharge, 4320); corrected handling remains a scientific decision."
+    }
+  ],
+  "interpretation_note": "Affected-patient counts are sensitivity findings. They are non-additive and do not establish prediction changes."
+}

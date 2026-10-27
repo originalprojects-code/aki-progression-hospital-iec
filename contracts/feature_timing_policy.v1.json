@@ -1,0 +1,64 @@
+{
+  "contract_version": "1.0.0",
+  "landmark_minutes": 720,
+  "primary_outcome_window": {
+    "lower_bound_minutes": 720,
+    "lower_bound_inclusive": false,
+    "upper_bound_minutes": 4320,
+    "upper_bound_inclusive": true,
+    "censor_at_discharge": true
+  },
+  "policies": [
+    {
+      "policy_id": "TIME-001",
+      "source": "all_predictors",
+      "event_time_field": "source-specific offset",
+      "pre_landmark_rule": "inclusive [0, 720] minutes",
+      "status": "approved_reference_constraint"
+    },
+    {
+      "policy_id": "LAB-001",
+      "source": "laboratory",
+      "sample_time_field": "labResultOffset",
+      "revision_time_field": "labResultRevisedOffset",
+      "result_availability_field": null,
+      "pre_landmark_rule": "sample and revision evidence must be retained separately; unknown availability must not be inferred",
+      "status": "requires_researcher_approval",
+      "decision_id": "D-001"
+    },
+    {
+      "policy_id": "HISTORY-001",
+      "source": "pastHistory",
+      "event_time_field": "pastHistoryOffset",
+      "documentation_time_field": "pastHistoryEnteredOffset",
+      "pre_landmark_rule": "retain both fields; final feature eligibility policy is unresolved",
+      "status": "requires_researcher_approval",
+      "decision_id": "D-002"
+    },
+    {
+      "policy_id": "RESP-001",
+      "source": "respiratoryCare",
+      "event_time_field": "ventStartOffset",
+      "documentation_time_field": "respCareStatusOffset",
+      "pre_landmark_rule": "retain event and documentation timing separately; combined indicator policy is unresolved",
+      "status": "requires_researcher_approval",
+      "decision_id": "D-003"
+    },
+    {
+      "policy_id": "INFUSION-001",
+      "source": "infusionDrug",
+      "event_time_field": "infusionOffset",
+      "pre_landmark_rule": "preserve documented infusion timestamp semantics pending review",
+      "status": "requires_researcher_approval",
+      "decision_id": "D-004"
+    },
+    {
+      "policy_id": "TREATMENT-001",
+      "source": "treatment",
+      "event_time_field": "treatmentOffset",
+      "pre_landmark_rule": "preserve documented treatment timestamp semantics pending review",
+      "status": "requires_researcher_approval",
+      "decision_id": "D-004"
+    }
+  ]
+}
