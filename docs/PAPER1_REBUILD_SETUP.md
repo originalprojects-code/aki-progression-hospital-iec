@@ -19,7 +19,7 @@ python -m pip install -e .
 ```
 
 Copy `config/rebuild.example.toml` to an untracked local configuration file and
-replace the placeholder project and destination dataset. Do not place credentials,
+replace the source/destination project and destination dataset placeholders. Do not place credentials,
 patient-level paths, query exports, or source data in the repository.
 
 ## Query safety contract

@@ -14,8 +14,9 @@ REQUIRED_BILLING_LIMIT = 5_000_000_000
 
 @dataclass(frozen=True)
 class RebuildConfig:
-    project_id: str
+    source_project_id: str
     source_dataset: str
+    destination_project_id: str
     destination_dataset: str
     run_id: str
     landmark_hours: int
@@ -24,8 +25,9 @@ class RebuildConfig:
 
     def __post_init__(self) -> None:
         required_strings = {
-            "project_id": self.project_id,
+            "source_project_id": self.source_project_id,
             "source_dataset": self.source_dataset,
+            "destination_project_id": self.destination_project_id,
             "destination_dataset": self.destination_dataset,
             "run_id": self.run_id,
         }

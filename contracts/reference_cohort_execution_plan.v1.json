@@ -1,0 +1,19 @@
+{
+  "plan_version": "1.0.0",
+  "kind": "reference_reconstruction_not_corrected_science",
+  "execution_status": "not_executed",
+  "required_guard": "aki_rebuild.query_guard.BigQueryExecutionGuard",
+  "stages": [
+    {"name": "base_stays", "template": "sql/rebuild/reference/01_base_stays.sql", "depends_on": [], "output_table": "base_stays_v1"},
+    {"name": "creatinine_long", "template": "sql/rebuild/reference/02_creatinine_long.sql", "depends_on": ["base_stays"], "output_table": "creatinine_long_v1"},
+    {"name": "renal_flags", "template": "sql/rebuild/reference/03_renal_flags.sql", "depends_on": ["base_stays"], "output_table": "renal_flags_v1"},
+    {"name": "creatinine_staged", "template": "sql/rebuild/reference/04_creatinine_staged.sql", "depends_on": ["base_stays", "creatinine_long"], "output_table": "creatinine_staged_v1"},
+    {"name": "cohort_outcome", "template": "sql/rebuild/reference/05_cohort_outcome.sql", "depends_on": ["base_stays", "renal_flags", "creatinine_staged"], "output_table": "cohort_outcome_v1"}
+  ],
+  "historical_comparison": {
+    "patients": 59612,
+    "positives": 3060,
+    "hospitals": 199,
+    "interpretation": "audited_original_code_rebuild_reference_not_final_corrected_target"
+  }
+}

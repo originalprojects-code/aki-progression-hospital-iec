@@ -15,8 +15,9 @@ class ManifestTests(unittest.TestCase):
             sql_file = Path(temporary_path) / "example.sql"
             sql_file.write_text("SELECT 1;\n", encoding="utf-8")
             config = RebuildConfig(
-                project_id="test-project",
-                source_dataset="physionet-data.eicu_crd",
+                source_project_id="physionet-data",
+                source_dataset="eicu_crd",
+                destination_project_id="test-project",
                 destination_dataset="aki_rebuild_test",
                 run_id="unit-test",
                 landmark_hours=12,
