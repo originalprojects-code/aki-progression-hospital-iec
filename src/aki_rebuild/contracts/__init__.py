@@ -5,6 +5,7 @@ from .v1 import (
     LANDMARK_MINUTES,
     OUTCOME_HORIZON_MINUTES,
     ContractViolation,
+    LaboratoryGroupingKey,
     LaboratoryTiming,
     OriginalCohortSelection,
     PastHistoryTiming,
@@ -13,6 +14,7 @@ from .v1 import (
     assert_outer_test_excluded_from_fitting,
     in_predictor_window,
     in_primary_outcome_window,
+    reference_timestamp_eligibility,
     select_latest_revised_record,
 )
 
@@ -21,6 +23,7 @@ __all__ = [
     "LANDMARK_MINUTES",
     "OUTCOME_HORIZON_MINUTES",
     "ContractViolation",
+    "LaboratoryGroupingKey",
     "LaboratoryTiming",
     "OriginalCohortSelection",
     "PastHistoryTiming",
@@ -29,5 +32,6 @@ __all__ = [
     "assert_outer_test_excluded_from_fitting",
     "in_predictor_window",
     "in_primary_outcome_window",
+    "reference_timestamp_eligibility",
     "select_latest_revised_record",
 ]

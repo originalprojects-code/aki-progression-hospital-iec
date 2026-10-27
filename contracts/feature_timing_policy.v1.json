@@ -11,9 +11,9 @@
   "policies": [
     {
       "policy_id": "TIME-001",
-      "source": "all_predictors",
+      "source": "source_specific",
       "event_time_field": "source-specific offset",
-      "pre_landmark_rule": "inclusive [0, 720] minutes",
+      "pre_landmark_rule": "No universal negative-offset rule; apply each source's frozen SQL semantics.",
       "status": "approved_reference_constraint"
     },
     {
@@ -22,7 +22,8 @@
       "sample_time_field": "labResultOffset",
       "revision_time_field": "labResultRevisedOffset",
       "result_availability_field": null,
-      "pre_landmark_rule": "sample and revision evidence must be retained separately; unknown availability must not be inferred",
+      "original_source_semantics": "sql/07_feature_labs.sql filters labResultOffset inclusively to [0,720].",
+      "proposed_corrected_policy": "sample and revision evidence must be retained separately; unknown availability must not be inferred",
       "status": "requires_researcher_approval",
       "decision_id": "D-001"
     },
@@ -31,7 +32,8 @@
       "source": "pastHistory",
       "event_time_field": "pastHistoryOffset",
       "documentation_time_field": "pastHistoryEnteredOffset",
-      "pre_landmark_rule": "retain both fields; final feature eligibility policy is unresolved",
+      "original_source_semantics": "sql/03_renal_flags.sql and sql/09_feature_context.sql use pastHistoryOffset <= 720 without a lower bound or entered-time filter.",
+      "proposed_corrected_policy": "retain both fields; final feature eligibility policy is unresolved",
       "status": "requires_researcher_approval",
       "decision_id": "D-002"
     },
@@ -40,7 +42,8 @@
       "source": "respiratoryCare",
       "event_time_field": "ventStartOffset",
       "documentation_time_field": "respCareStatusOffset",
-      "pre_landmark_rule": "retain event and documentation timing separately; combined indicator policy is unresolved",
+      "original_source_semantics": "sql/09_feature_context.sql applies inclusive [0,720] filters to ventStartOffset or respCareStatusOffset.",
+      "proposed_corrected_policy": "retain event and documentation timing separately; combined indicator policy is unresolved",
       "status": "requires_researcher_approval",
       "decision_id": "D-003"
     },
@@ -48,7 +51,8 @@
       "policy_id": "INFUSION-001",
       "source": "infusionDrug",
       "event_time_field": "infusionOffset",
-      "pre_landmark_rule": "preserve documented infusion timestamp semantics pending review",
+      "original_source_semantics": "sql/09_feature_context.sql filters infusionOffset inclusively to [0,720].",
+      "proposed_corrected_policy": "preserve documented infusion timestamp semantics pending review",
       "status": "requires_researcher_approval",
       "decision_id": "D-004"
     },
@@ -56,7 +60,8 @@
       "policy_id": "TREATMENT-001",
       "source": "treatment",
       "event_time_field": "treatmentOffset",
-      "pre_landmark_rule": "preserve documented treatment timestamp semantics pending review",
+      "original_source_semantics": "sql/09_feature_context.sql filters treatmentOffset inclusively to [0,720].",
+      "proposed_corrected_policy": "preserve documented treatment timestamp semantics pending review",
       "status": "requires_researcher_approval",
       "decision_id": "D-004"
     }

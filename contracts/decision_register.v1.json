@@ -31,6 +31,13 @@
       "status": "requires_researcher_approval",
       "question": "What discharge-censoring and missing-outcome observation rule should be used in the corrected implementation?",
       "evidence": "Frozen cohort SQL censors the creatinine outcome at min(discharge, 4320); corrected handling remains a scientific decision."
+    },
+    {
+      "decision_id": "D-006",
+      "status": "requires_researcher_approval",
+      "question": "For each source, should negative offsets retain the frozen source-SQL behavior or be handled differently in a corrected feature-availability policy?",
+      "evidence": "Frozen past-history SQL has no lower bound before 720 minutes, while laboratory, respiratory, infusion, and treatment feature SQL uses inclusive [0,720] filtering.",
+      "constraint": "No global negative-offset eligibility rule is scientifically approved by this contract."
     }
   ],
   "interpretation_note": "Affected-patient counts are sensitivity findings. They are non-additive and do not establish prediction changes."
