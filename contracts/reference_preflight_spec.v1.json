@@ -1,0 +1,22 @@
+{
+  "spec_version": "1.0.0",
+  "kind": "local_non_executing_preflight",
+  "destination_dataset": {
+    "must_start_with": "aki_paper1_rebuild_",
+    "rejected_dataset_names_case_insensitive": ["aki_jcmc_v2"],
+    "reason": "dedicated destination required; original production/audit destination is prohibited"
+  },
+  "source_tables": {
+    "patient": ["patientUnitStayID", "patientHealthSystemStayID", "uniquePID", "hospitalID", "unitVisitNumber", "hospitalAdmitOffset", "unitDischargeOffset", "unitDischargeStatus", "hospitalDischargeStatus", "age"],
+    "lab": ["patientUnitStayID", "labID", "labResultOffset", "labResultRevisedOffset", "labResult", "labName"],
+    "pasthistory": ["patientUnitStayID", "pastHistoryOffset", "pastHistoryPath", "pastHistoryValue", "pastHistoryValueText"],
+    "diagnosis": ["patientUnitStayID", "diagnosisOffset", "diagnosisString"],
+    "treatment": ["patientUnitStayID", "treatmentOffset", "treatmentString"],
+    "intakeoutput": ["patientUnitStayID", "intakeOutputOffset", "dialysisTotal"]
+  },
+  "dry_run": {
+    "allowed_only_after_explicit_approval": true,
+    "execution_job_allowed": false,
+    "maximum_bytes_billed": 5000000000
+  }
+}

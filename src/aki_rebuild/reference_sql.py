@@ -19,6 +19,8 @@ from .query_guard import BigQueryExecutionGuard, QueryEstimate
 _PROJECT_ID = re.compile(r"[a-z][a-z0-9-]{4,28}[a-z0-9]$")
 _DATASET_ID = re.compile(r"[A-Za-z_][A-Za-z0-9_]{0,1023}$")
 _RUN_ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9_-]{0,127}$")
+PROHIBITED_REFERENCE_DESTINATION_DATASETS = frozenset({"aki_jcmc_v2"})
+REQUIRED_REFERENCE_DESTINATION_PREFIX = "aki_paper1_rebuild_"
 
 
 @dataclass(frozen=True)
@@ -70,6 +72,14 @@ def validate_reference_config(config: RebuildConfig) -> None:
     _validate_identifier(config.source_dataset, _DATASET_ID, "source dataset ID")
     _validate_identifier(config.destination_dataset, _DATASET_ID, "destination dataset ID")
     _validate_identifier(config.run_id, _RUN_ID, "run ID")
+    destination = config.destination_dataset.lower()
+    if destination in PROHIBITED_REFERENCE_DESTINATION_DATASETS:
+        raise ValueError("Reference rebuild must not target the original production/audit dataset.")
+    if not destination.startswith(REQUIRED_REFERENCE_DESTINATION_PREFIX):
+        raise ValueError(
+            "Reference rebuild requires a dedicated destination dataset beginning with "
+            f"{REQUIRED_REFERENCE_DESTINATION_PREFIX!r}."
+        )
 
 
 def render_reference_template(template: str, config: RebuildConfig) -> str:
@@ -121,6 +131,23 @@ def guarded_reference_dry_run(
     """
 
     return {query.stage.name: guard.estimate(query.sql) for query in plan}
+
+
+def optional_guarded_reference_dry_run(
+    plan: Iterable[PlannedReferenceQuery],
+    guard: BigQueryExecutionGuard,
+    *,
+    explicit_remote_approval: bool = False,
+) -> dict[str, QueryEstimate]:
+    """Run only guarded dry-run estimates after explicit authorization.
+
+    This function never calls ``guard.run`` and therefore never submits a real
+    execution job. It is deliberately opt-in and is not called by local preflight.
+    """
+
+    if not explicit_remote_approval:
+        raise PermissionError("Remote BigQuery dry-run requires explicit approval.")
+    return guarded_reference_dry_run(plan, guard)
 
 
 def submit_reference_plan(

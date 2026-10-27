@@ -12,6 +12,7 @@ from aki_rebuild.reference_sql import (
     build_reference_run_manifest,
     guarded_reference_dry_run,
     in_reference_creatinine_outcome_window,
+    optional_guarded_reference_dry_run,
     plan_reference_pipeline,
     reference_revision_order_key,
     reference_stay_order_key,
@@ -45,7 +46,7 @@ def reference_config() -> RebuildConfig:
         source_project_id="physionet-data",
         source_dataset="eicu_crd",
         destination_project_id="test-project",
-        destination_dataset="aki_rebuild_test",
+        destination_dataset="aki_paper1_rebuild_test",
         run_id="reference-test-001",
         landmark_hours=12,
         outcome_horizon_hours=72,
@@ -59,12 +60,12 @@ class ReferenceCohortSqlTests(unittest.TestCase):
         self.assertEqual([query.stage.name for query in plan], [stage.name for stage in REFERENCE_STAGES])
         self.assertTrue(all("{{" not in query.sql for query in plan))
         self.assertIn("`physionet-data.eicu_crd.patient`", plan[0].sql)
-        self.assertIn("`test-project.aki_rebuild_test.base_stays_v1`", plan[0].sql)
+        self.assertIn("`test-project.aki_paper1_rebuild_test.base_stays_v1`", plan[0].sql)
         unsafe = RebuildConfig(
             source_project_id="physionet-data",
             source_dataset="eicu_crd; DROP SCHEMA x",
             destination_project_id="test-project",
-            destination_dataset="aki_rebuild_test",
+            destination_dataset="aki_paper1_rebuild_test",
             run_id="reference-test-001",
             landmark_hours=12,
             outcome_horizon_hours=72,
@@ -98,6 +99,19 @@ class ReferenceCohortSqlTests(unittest.TestCase):
         jobs = submit_reference_plan(plan, guard)  # type: ignore[arg-type]
         self.assertEqual(jobs, ["guarded-job"] * 5)
         self.assertEqual(len(guard.submitted), 5)
+
+    def test_optional_remote_dry_run_requires_explicit_approval_and_never_runs_jobs(self) -> None:
+        plan = plan_reference_pipeline(reference_config(), TEMPLATE_DIRECTORY)
+        guard = RecordingGuard()
+        with self.assertRaises(PermissionError):
+            optional_guarded_reference_dry_run(plan, guard)  # type: ignore[arg-type]
+        self.assertEqual(guard.estimated, [])
+        self.assertEqual(guard.submitted, [])
+        optional_guarded_reference_dry_run(
+            plan, guard, explicit_remote_approval=True  # type: ignore[arg-type]
+        )
+        self.assertEqual(len(guard.estimated), 5)
+        self.assertEqual(guard.submitted, [])
 
     def test_synthetic_landmark_and_outcome_window_boundaries(self) -> None:
         self.assertFalse(in_reference_creatinine_outcome_window(720, 5_000))
