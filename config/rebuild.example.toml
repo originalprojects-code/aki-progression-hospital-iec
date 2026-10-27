@@ -1,0 +1,9 @@
+# Copy to config/rebuild.toml for an authorized local environment.
+# Never commit credentials or patient-level locations.
+project_id = "YOUR_GOOGLE_CLOUD_PROJECT"
+source_dataset = "physionet-data.eicu_crd"
+destination_dataset = "aki_paper1_rebuild_dev"
+run_id = "paper1-rebuild-YYYYMMDD"
+landmark_hours = 12
+outcome_horizon_hours = 72
+maximum_bytes_billed = 5000000000
