@@ -7,9 +7,9 @@
 | Item | Value |
 |---|---|
 | SQL artifact | `sql/audits/paper1_d005_p3a_p3c_aggregate_comparison.sql` |
-| Source SHA-256 | `C2C1494C04DDC38585AD1992CD6BEF646DE7319F35F310D3B304CEE2AB588FA9` |
+| Source SHA-256 | `C79A82D07A059421EDB7FEEF097625542B328C4EEE99E67466079F817DB83798` |
 | Render parameters used only for hash verification | `mimic-ai-project` / `aki_paper1_rebuild_reference_2026` |
-| Rendered SHA-256 | `4371C57CACBDFA01819839C82C9B9F202B02207ED7D10C31FB1F1D280289F43C` |
+| Rendered SHA-256 | `45E32F33AE959D7544B5C7CDA667A14792326E57446ABE4E7C62ED5A6B7D31C6` |
 | Final output | Aggregate section/unit/category/count/status rows only |
 
 ## Scientific traceability and separation
@@ -18,17 +18,21 @@
 
 `E_frozen_reconstruction` applies the approved Option A comparator definition: frozen reference creatinine, frozen baseline-stage logic, no strict chronic dialysis/ESRD, and no early strict RRT. It is explicitly a retrospective frozen-reconstruction variable, is not availability-confirmed information at 720 minutes, and does not resolve D-001.
 
-P3-A surveillance eligibility is outcome-status independent: it requires either the frozen 48–72-hour selected-creatinine pathway for valid ≥72-hour ICU stays, or the frozen recent-selected-creatinine pathway for early alive ICU exits. The alternative label is positive when the frozen staged series contains an incident stage 2–3 event in the frozen outcome window and negative otherwise. Observed positive events that fail the surveillance rule are counted as P3-A exclusions, not relabelled or deleted from the comparison universe.
+P3-A surveillance eligibility is outcome-status independent: it requires either the frozen 48–72-hour selected-creatinine pathway for valid ≥72-hour ICU stays, or the frozen recent-selected-creatinine pathway for early alive ICU exits. Its membership flags are explicit non-NULL booleans: source NULLs do not satisfy either pathway and are not recoded as clinically adequate surveillance. The alternative label is positive when the frozen staged series contains an incident stage 2–3 event in the frozen outcome window and negative otherwise. Observed positive events that fail the surveillance rule are counted as P3-A exclusions, not relabelled or deleted from the comparison universe.
 
 P3-A reports stay membership, **any-stay** patient membership, label agreement among common stay members, and observed-positive surveillance effects. The any-stay patient partition means that a patient has at least one frozen member and/or at least one P3-A member; it is neither same-stay membership nor P3-C index-selected patient membership. The common P3-A universe is all non-null patients with at least one `E_frozen_reconstruction` stay. This is a frozen-restricted comparator universe; it is not an all-patient operational universe.
 
 Observed-positive effects are reported at two distinct grains. Stay rows are retained/excluded under P3-A. Patient rows are distinct `uniquePID` values classified as retained-only, excluded-only, or both-retained-and-excluded; no patient with positive stays in both statuses is counted twice. Common-stay label agreement includes explicit frozen `NULL` and unexpected-label categories. QC reports source-row count, partition-row count, their difference, and frozen-NULL/unexpected counts; a nonzero source-minus-partition difference is a reconciliation failure.
+
+The integrity output separately counts source NULLs in each field that can affect the P3-A surveillance or frozen-membership interpretation (`unitDischargeOffset`, discharge status, 48–72-hour count, last future-creatinine offset, and `eligible_main_cohort`), along with any unexpected NULL membership flag after CASE evaluation. These are missing-data diagnostics, not evidence that a patient had adequate surveillance.
 
 ### P3-C, isolated matched ranking
 
 The matched section holds the frozen `n_hospitals_for_patient = 1` restriction and `E_frozen_reconstruction` eligibility fixed. It compares the frozen selected stay (`eligible_main_cohort = 1` and frozen deterministic rank = 1) with `identifier_order_technical_sensitivity`, ordered by `patientHealthSystemStayID`, then `COALESCE(unitVisitNumber, 999999)`, then `patientUnitStayID`.
 
 This is nonchronological identifier order, not first chronological admission, not prospective 12-hour indexing, and not deployment logic.
+
+The audit verifies this matched comparison at patient grain: the frozen selected set is checked for more than one selected row per `uniquePID`, and the joined P3-C matched pairs are independently checked for more than one row per `uniquePID`. Null selected patient keys and the difference between matched-pair rows and the matched-patient universe are reported as suppressed technical QC when nonzero and below the release threshold.
 
 ### P3-C, separate cross-hospital restriction effect
 
@@ -44,6 +48,7 @@ Consequently, the requested broad common patient universe is represented in this
 - If any category is 1–10, the entire partition returns one suppression status with no counts, avoiding reconstruction from the total and remaining cells.
 - Technical QC reports zero or counts ≥11; values 1–10 are suppressed.
 - Singleton base/outcome keys and missing outcome linkage are QC outputs; no duplicate row is selected arbitrarily.
+- P3-A source NULLs that could affect membership and P3-C/frozen patient-key cardinality are separate technical QC outputs; they are not converted into eligibility or surveillance evidence.
 
 ## Local static checks
 
@@ -58,6 +63,8 @@ Consequently, the requested broad common patient universe is represented in this
 | P3-A patient grain | PASS — section is explicitly any-stay; P3-C index-selected membership is separate |
 | P3-A observed-positive patient grain | PASS — grouped by distinct `uniquePID`, with a both-status category |
 | P3-A NULL-label reconciliation | PASS — explicit categories and source/partition QC are present |
+| P3-A NULL-safe membership | PASS — CASE produces non-NULL membership flags; source NULLs are separately QCed and never treated as adequate surveillance |
+| Frozen/P3-C patient cardinality | PASS — selected frozen rows and P3-C matched pairs are separately checked for at most one row per `uniquePID` |
 | P3-C effect separation | PASS — matched and cross-hospital sections use separate partitions |
 | BigQuery parser/schema/cost validation | NOT PERFORMED |
 

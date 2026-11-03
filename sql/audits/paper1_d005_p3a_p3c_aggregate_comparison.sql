@@ -64,7 +64,7 @@ e_frozen_reconstruction AS (
 ),
 p3a_flags AS (
   SELECT *,
-    (
+    CASE WHEN (
       (unitDischargeOffset >= 4320 AND n_creatinine_48_72h > 0)
       OR (
         unitDischargeOffset > 720
@@ -73,9 +73,10 @@ p3a_flags AS (
         AND last_future_creatinine_offset IS NOT NULL
         AND last_future_creatinine_offset >= unitDischargeOffset - 1440
       )
-    ) AS p3a_surveillance_eligible,
-    eligible_main_cohort = 1 AS frozen_main_member,
-    incident_stage23_offset IS NOT NULL AS observed_stage23_event
+    ) THEN TRUE ELSE FALSE END AS p3a_surveillance_eligible,
+    CASE WHEN eligible_main_cohort = 1 THEN TRUE ELSE FALSE END AS frozen_main_member,
+    CASE WHEN incident_stage23_offset IS NOT NULL THEN TRUE ELSE FALSE END
+      AS observed_stage23_event
   FROM e_frozen_reconstruction
 ),
 p3a_stay_membership AS (
@@ -146,6 +147,11 @@ frozen_selected AS (
   WHERE eligible_main_cohort = 1
     AND deterministic_eligible_patient_stay_rank = 1
 ),
+frozen_selected_key_counts AS (
+  SELECT uniquePID, COUNT(*) AS n
+  FROM frozen_selected
+  GROUP BY uniquePID
+),
 technical_matched_ranked AS (
   SELECT uniquePID, patientUnitStayID,
     ROW_NUMBER() OVER (
@@ -179,6 +185,11 @@ p3c_matched_pairs AS (
   FROM matched_patient_universe AS u
   LEFT JOIN frozen_selected AS f USING (uniquePID)
   LEFT JOIN technical_matched_selected AS t USING (uniquePID)
+),
+p3c_matched_pair_key_counts AS (
+  SELECT uniquePID, COUNT(*) AS n
+  FROM p3c_matched_pairs
+  GROUP BY uniquePID
 ),
 broad_technical_ranked AS (
   -- This section isolates the n_hospitals_for_patient restriction only. It is
@@ -346,6 +357,45 @@ integrity_qc AS (
   SELECT 'p3a_common_label_source_minus_partition_rows',
          (SELECT COUNT(*) FROM p3a_common_label_source)
          - (SELECT COUNT(*) FROM p3a_common_label_stays)
+  UNION ALL
+  -- NULL source fields are reported as analytic uncertainty/exclusion signals;
+  -- they are never recoded as adequate surveillance.
+  SELECT 'p3a_e_frozen_null_unit_discharge_offset', COUNTIF(unitDischargeOffset IS NULL)
+  FROM p3a_flags
+  UNION ALL
+  SELECT 'p3a_e_frozen_null_unit_discharge_status', COUNTIF(unit_discharge_status IS NULL)
+  FROM p3a_flags
+  UNION ALL
+  SELECT 'p3a_e_frozen_null_n_creatinine_48_72h', COUNTIF(n_creatinine_48_72h IS NULL)
+  FROM p3a_flags
+  UNION ALL
+  SELECT 'p3a_e_frozen_null_last_future_creatinine_offset',
+         COUNTIF(last_future_creatinine_offset IS NULL)
+  FROM p3a_flags
+  UNION ALL
+  SELECT 'p3a_e_frozen_null_eligible_main_cohort', COUNTIF(eligible_main_cohort IS NULL)
+  FROM p3a_flags
+  UNION ALL
+  SELECT 'p3a_null_surveillance_membership_after_case',
+         COUNTIF(p3a_surveillance_eligible IS NULL)
+  FROM p3a_flags
+  UNION ALL
+  SELECT 'p3a_null_frozen_membership_after_case', COUNTIF(frozen_main_member IS NULL)
+  FROM p3a_flags
+  UNION ALL
+  SELECT 'frozen_selected_duplicate_uniquePID_groups', COUNTIF(n > 1)
+  FROM frozen_selected_key_counts
+  UNION ALL
+  SELECT 'frozen_selected_null_uniquePID_rows', COUNT(*)
+  FROM frozen_selected
+  WHERE uniquePID IS NULL
+  UNION ALL
+  SELECT 'p3c_matched_pair_duplicate_uniquePID_groups', COUNTIF(n > 1)
+  FROM p3c_matched_pair_key_counts
+  UNION ALL
+  SELECT 'p3c_matched_pair_rows_minus_patient_universe',
+         (SELECT COUNT(*) FROM p3c_matched_pairs)
+         - (SELECT COUNT(*) FROM matched_patient_universe)
 ),
 public_partitions AS (
   SELECT p.section, p.unit, p.category, p.value, 'released' AS release_status
