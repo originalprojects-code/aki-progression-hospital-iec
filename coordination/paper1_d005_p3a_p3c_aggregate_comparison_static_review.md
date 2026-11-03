@@ -7,9 +7,9 @@
 | Item | Value |
 |---|---|
 | SQL artifact | `sql/audits/paper1_d005_p3a_p3c_aggregate_comparison.sql` |
-| Source SHA-256 | `4033BC98CE65B25CF6A73601654AAA8BB22DB8FDE60EB0C274E404A43E74897E` |
+| Source SHA-256 | `C2C1494C04DDC38585AD1992CD6BEF646DE7319F35F310D3B304CEE2AB588FA9` |
 | Render parameters used only for hash verification | `mimic-ai-project` / `aki_paper1_rebuild_reference_2026` |
-| Rendered SHA-256 | `2CBD9DEE8C5918F16AAF7D6E1E20DCC5D37B50952A3E997A0255C499D5A061AC` |
+| Rendered SHA-256 | `4371C57CACBDFA01819839C82C9B9F202B02207ED7D10C31FB1F1D280289F43C` |
 | Final output | Aggregate section/unit/category/count/status rows only |
 
 ## Scientific traceability and separation
@@ -20,7 +20,9 @@
 
 P3-A surveillance eligibility is outcome-status independent: it requires either the frozen 48–72-hour selected-creatinine pathway for valid ≥72-hour ICU stays, or the frozen recent-selected-creatinine pathway for early alive ICU exits. The alternative label is positive when the frozen staged series contains an incident stage 2–3 event in the frozen outcome window and negative otherwise. Observed positive events that fail the surveillance rule are counted as P3-A exclusions, not relabelled or deleted from the comparison universe.
 
-P3-A reports stay- and patient-level frozen/P3-A membership partitions, label agreement among common stay members, and observed-positive surveillance effects. The common P3-A universe is all non-null patients with at least one `E_frozen_reconstruction` stay. This is a frozen-restricted comparator universe; it is not an all-patient operational universe.
+P3-A reports stay membership, **any-stay** patient membership, label agreement among common stay members, and observed-positive surveillance effects. The any-stay patient partition means that a patient has at least one frozen member and/or at least one P3-A member; it is neither same-stay membership nor P3-C index-selected patient membership. The common P3-A universe is all non-null patients with at least one `E_frozen_reconstruction` stay. This is a frozen-restricted comparator universe; it is not an all-patient operational universe.
+
+Observed-positive effects are reported at two distinct grains. Stay rows are retained/excluded under P3-A. Patient rows are distinct `uniquePID` values classified as retained-only, excluded-only, or both-retained-and-excluded; no patient with positive stays in both statuses is counted twice. Common-stay label agreement includes explicit frozen `NULL` and unexpected-label categories. QC reports source-row count, partition-row count, their difference, and frozen-NULL/unexpected counts; a nonzero source-minus-partition difference is a reconciliation failure.
 
 ### P3-C, isolated matched ranking
 
@@ -53,6 +55,9 @@ Consequently, the requested broad common patient universe is represented in this
 | Frozen sources only | PASS — `base_stays_v1` and `cohort_outcome_v1` |
 | Source-field traceability | PASS — fields are emitted by frozen `01_base_stays.sql` and `05_cohort_outcome.sql` |
 | P3-A event-status-independent eligibility | PASS — incident event is not referenced in the surveillance predicate |
+| P3-A patient grain | PASS — section is explicitly any-stay; P3-C index-selected membership is separate |
+| P3-A observed-positive patient grain | PASS — grouped by distinct `uniquePID`, with a both-status category |
+| P3-A NULL-label reconciliation | PASS — explicit categories and source/partition QC are present |
 | P3-C effect separation | PASS — matched and cross-hospital sections use separate partitions |
 | BigQuery parser/schema/cost validation | NOT PERFORMED |
 

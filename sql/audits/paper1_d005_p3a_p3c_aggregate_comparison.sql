@@ -88,7 +88,9 @@ p3a_stay_membership AS (
     END AS category
   FROM p3a_flags
 ),
-p3a_patient_membership AS (
+p3a_any_stay_patient_membership AS (
+  -- This is patient-level ANY-STAY membership only. It is neither same-stay
+  -- membership nor P3-C index-selected patient membership.
   SELECT uniquePID,
     CASE
       WHEN LOGICAL_OR(frozen_main_member) AND LOGICAL_OR(p3a_surveillance_eligible) THEN 'both'
@@ -99,20 +101,44 @@ p3a_patient_membership AS (
   FROM p3a_flags
   GROUP BY uniquePID
 ),
-p3a_common_label_stays AS (
-  SELECT patientUnitStayID, uniquePID,
-    CONCAT(
-      'frozen_', CAST(outcome_creatinine_stage23 AS STRING),
-      '_p3a_', CAST(IF(observed_stage23_event, 1, 0) AS STRING)
-    ) AS category
+p3a_common_label_source AS (
+  SELECT patientUnitStayID, uniquePID, outcome_creatinine_stage23,
+         IF(observed_stage23_event, 1, 0) AS p3a_label
   FROM p3a_flags
   WHERE frozen_main_member AND p3a_surveillance_eligible
 ),
-p3a_observed_positive_exclusions AS (
+p3a_common_label_stays AS (
+  SELECT patientUnitStayID, uniquePID,
+    CASE
+      WHEN outcome_creatinine_stage23 IS NULL
+        THEN CONCAT('frozen_null_p3a_', CAST(p3a_label AS STRING))
+      WHEN outcome_creatinine_stage23 IN (0, 1)
+        THEN CONCAT('frozen_', CAST(outcome_creatinine_stage23 AS STRING),
+                    '_p3a_', CAST(p3a_label AS STRING))
+      ELSE CONCAT('frozen_unexpected_p3a_', CAST(p3a_label AS STRING))
+    END AS category
+  FROM p3a_common_label_source
+),
+p3a_observed_positive_stays AS (
   SELECT patientUnitStayID, uniquePID,
     IF(p3a_surveillance_eligible, 'retained_under_p3a', 'excluded_under_p3a') AS category
   FROM p3a_flags
   WHERE observed_stage23_event
+),
+p3a_observed_positive_patients AS (
+  -- A patient with both retained and excluded observed-positive stays is not
+  -- forced into either single-status category.
+  SELECT uniquePID,
+    CASE
+      WHEN LOGICAL_OR(p3a_surveillance_eligible)
+       AND LOGICAL_OR(NOT p3a_surveillance_eligible) THEN 'both_retained_and_excluded'
+      WHEN LOGICAL_OR(p3a_surveillance_eligible) THEN 'retained_only'
+      WHEN LOGICAL_OR(NOT p3a_surveillance_eligible) THEN 'excluded_only'
+      ELSE 'neither'
+    END AS category
+  FROM p3a_flags
+  WHERE observed_stage23_event
+  GROUP BY uniquePID
 ),
 frozen_selected AS (
   SELECT uniquePID, patientUnitStayID AS frozen_selected_stay
@@ -211,8 +237,8 @@ partition_rows AS (
          CAST(patientUnitStayID AS STRING) AS entity_id
   FROM p3a_stay_membership
   UNION ALL
-  SELECT 'p3a_patient_membership', 'patients', category, CAST(uniquePID AS STRING)
-  FROM p3a_patient_membership
+  SELECT 'p3a_any_stay_patient_membership', 'patients', category, CAST(uniquePID AS STRING)
+  FROM p3a_any_stay_patient_membership
   UNION ALL
   SELECT 'p3a_common_member_label_agreement', 'stays', category,
          CAST(patientUnitStayID AS STRING)
@@ -220,11 +246,11 @@ partition_rows AS (
   UNION ALL
   SELECT 'p3a_observed_positive_surveillance_effect', 'stays', category,
          CAST(patientUnitStayID AS STRING)
-  FROM p3a_observed_positive_exclusions
+  FROM p3a_observed_positive_stays
   UNION ALL
   SELECT 'p3a_observed_positive_surveillance_effect', 'patients', category,
          CAST(uniquePID AS STRING)
-  FROM p3a_observed_positive_exclusions
+  FROM p3a_observed_positive_patients
   UNION ALL
   SELECT 'p3c_matched_frozen_vs_identifier_order', 'patients', category,
          CAST(uniquePID AS STRING)
@@ -239,18 +265,24 @@ partition_category_definitions AS (
   UNION ALL SELECT 'p3a_stay_membership', 'stays', 'frozen_only'
   UNION ALL SELECT 'p3a_stay_membership', 'stays', 'p3a_only'
   UNION ALL SELECT 'p3a_stay_membership', 'stays', 'neither'
-  UNION ALL SELECT 'p3a_patient_membership', 'patients', 'both'
-  UNION ALL SELECT 'p3a_patient_membership', 'patients', 'frozen_only'
-  UNION ALL SELECT 'p3a_patient_membership', 'patients', 'p3a_only'
-  UNION ALL SELECT 'p3a_patient_membership', 'patients', 'neither'
+  UNION ALL SELECT 'p3a_any_stay_patient_membership', 'patients', 'both'
+  UNION ALL SELECT 'p3a_any_stay_patient_membership', 'patients', 'frozen_only'
+  UNION ALL SELECT 'p3a_any_stay_patient_membership', 'patients', 'p3a_only'
+  UNION ALL SELECT 'p3a_any_stay_patient_membership', 'patients', 'neither'
   UNION ALL SELECT 'p3a_common_member_label_agreement', 'stays', 'frozen_0_p3a_0'
   UNION ALL SELECT 'p3a_common_member_label_agreement', 'stays', 'frozen_0_p3a_1'
   UNION ALL SELECT 'p3a_common_member_label_agreement', 'stays', 'frozen_1_p3a_0'
   UNION ALL SELECT 'p3a_common_member_label_agreement', 'stays', 'frozen_1_p3a_1'
+  UNION ALL SELECT 'p3a_common_member_label_agreement', 'stays', 'frozen_null_p3a_0'
+  UNION ALL SELECT 'p3a_common_member_label_agreement', 'stays', 'frozen_null_p3a_1'
+  UNION ALL SELECT 'p3a_common_member_label_agreement', 'stays', 'frozen_unexpected_p3a_0'
+  UNION ALL SELECT 'p3a_common_member_label_agreement', 'stays', 'frozen_unexpected_p3a_1'
   UNION ALL SELECT 'p3a_observed_positive_surveillance_effect', 'stays', 'retained_under_p3a'
   UNION ALL SELECT 'p3a_observed_positive_surveillance_effect', 'stays', 'excluded_under_p3a'
-  UNION ALL SELECT 'p3a_observed_positive_surveillance_effect', 'patients', 'retained_under_p3a'
-  UNION ALL SELECT 'p3a_observed_positive_surveillance_effect', 'patients', 'excluded_under_p3a'
+  UNION ALL SELECT 'p3a_observed_positive_surveillance_effect', 'patients', 'retained_only'
+  UNION ALL SELECT 'p3a_observed_positive_surveillance_effect', 'patients', 'excluded_only'
+  UNION ALL SELECT 'p3a_observed_positive_surveillance_effect', 'patients', 'both_retained_and_excluded'
+  UNION ALL SELECT 'p3a_observed_positive_surveillance_effect', 'patients', 'neither'
   UNION ALL SELECT 'p3c_matched_frozen_vs_identifier_order', 'patients', 'same_stay'
   UNION ALL SELECT 'p3c_matched_frozen_vs_identifier_order', 'patients', 'different_stay'
   UNION ALL SELECT 'p3c_matched_frozen_vs_identifier_order', 'patients', 'frozen_only'
@@ -296,6 +328,24 @@ integrity_qc AS (
   SELECT 'null_uniquePID_in_broad_landmark_base', COUNT(*)
   FROM base_singletons
   WHERE eligible_unit_rank_in_hospstay = 1 AND uniquePID IS NULL
+  UNION ALL
+  SELECT 'p3a_common_label_source_rows', COUNT(*)
+  FROM p3a_common_label_source
+  UNION ALL
+  SELECT 'p3a_common_label_partition_rows', COUNT(*)
+  FROM p3a_common_label_stays
+  UNION ALL
+  SELECT 'p3a_common_label_null_frozen_rows', COUNTIF(outcome_creatinine_stage23 IS NULL)
+  FROM p3a_common_label_source
+  UNION ALL
+  SELECT 'p3a_common_label_unexpected_frozen_rows',
+         COUNTIF(outcome_creatinine_stage23 IS NOT NULL
+                 AND outcome_creatinine_stage23 NOT IN (0, 1))
+  FROM p3a_common_label_source
+  UNION ALL
+  SELECT 'p3a_common_label_source_minus_partition_rows',
+         (SELECT COUNT(*) FROM p3a_common_label_source)
+         - (SELECT COUNT(*) FROM p3a_common_label_stays)
 ),
 public_partitions AS (
   SELECT p.section, p.unit, p.category, p.value, 'released' AS release_status
