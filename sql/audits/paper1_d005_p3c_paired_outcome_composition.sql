@@ -130,6 +130,10 @@ paired_details AS (
   -- The paired grain is one different-selected-stay pair within one uniquePID.
   SELECT
     p.uniquePID,
+    p.frozen_selected_stay AS paired_frozen_selected_stay,
+    p.technical_selected_stay AS paired_technical_selected_stay,
+    f.frozen_selected_stay AS frozen_detail_selected_stay,
+    t.technical_selected_stay AS technical_detail_selected_stay,
     f.frozen_outcome,
     f.frozen_observation_class,
     f.frozen_incident_stage23_offset,
@@ -312,18 +316,49 @@ integrity_qc AS (
     SELECT uniquePID FROM different_stay_pairs
   ) AS detail_minus_p3c
   UNION ALL
-  SELECT 'paired_detail_rows_missing_frozen_or_technical_detail', COUNT(*)
+  -- Join integrity is checked only with the selected-stay keys.  A NULL
+  -- clinical field is a valid outcome/observation category, not a missing join.
+  SELECT 'paired_detail_rows_without_frozen_selected_stay_key_match', COUNT(*)
   FROM paired_details
-  WHERE (frozen_outcome IS NULL AND frozen_observation_class IS NULL)
-     OR (technical_outcome IS NULL AND technical_observation_class IS NULL)
+  WHERE frozen_detail_selected_stay IS NULL
+     OR paired_frozen_selected_stay IS NULL
+     OR frozen_detail_selected_stay != paired_frozen_selected_stay
   UNION ALL
-  SELECT 'frozen_primary_label_event_discordance', COUNT(*)
+  SELECT 'paired_detail_rows_without_technical_selected_stay_key_match', COUNT(*)
   FROM paired_details
-  WHERE (frozen_outcome = 1) != (frozen_incident_stage23_offset IS NOT NULL)
+  WHERE technical_detail_selected_stay IS NULL
+     OR paired_technical_selected_stay IS NULL
+     OR technical_detail_selected_stay != paired_technical_selected_stay
   UNION ALL
-  SELECT 'technical_primary_label_event_discordance', COUNT(*)
+  -- Valid combinations are positive with an observed event, negative without
+  -- an observed event, and indeterminate NULL without an observed event.
+  -- All other combinations, including observed event plus NULL/negative label,
+  -- are contradictions. This CASE is deliberately NULL-safe.
+  SELECT 'frozen_primary_label_event_contradictions', COUNTIF(
+    CASE
+      WHEN frozen_outcome = 1
+       AND frozen_incident_stage23_offset IS NOT NULL THEN FALSE
+      WHEN frozen_outcome = 0
+       AND frozen_incident_stage23_offset IS NULL THEN FALSE
+      WHEN frozen_outcome IS NULL
+       AND frozen_incident_stage23_offset IS NULL THEN FALSE
+      ELSE TRUE
+    END
+  )
   FROM paired_details
-  WHERE (technical_outcome = 1) != (technical_incident_stage23_offset IS NOT NULL)
+  UNION ALL
+  SELECT 'technical_primary_label_event_contradictions', COUNTIF(
+    CASE
+      WHEN technical_outcome = 1
+       AND technical_incident_stage23_offset IS NOT NULL THEN FALSE
+      WHEN technical_outcome = 0
+       AND technical_incident_stage23_offset IS NULL THEN FALSE
+      WHEN technical_outcome IS NULL
+       AND technical_incident_stage23_offset IS NULL THEN FALSE
+      ELSE TRUE
+    END
+  )
+  FROM paired_details
 ),
 public_transition_rows AS (
   SELECT section, unit, category, value, 'released' AS release_status

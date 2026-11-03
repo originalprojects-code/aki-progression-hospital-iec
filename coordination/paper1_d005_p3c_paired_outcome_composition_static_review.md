@@ -7,9 +7,9 @@
 | Item | Value |
 |---|---|
 | SQL artifact | `sql/audits/paper1_d005_p3c_paired_outcome_composition.sql` |
-| Source SHA-256 | `052023810FAB795814B1A1AFAF406C2C0E7343B99476E044E44234D1EC64AA9D` |
+| Source SHA-256 | `F1FD3CB4BD99CEEFB15A11AF0072486534F577A848C2F14DD7721500F2709702` |
 | Render parameters used only for hash verification | `mimic-ai-project` / `aki_paper1_rebuild_reference_2026` |
-| Rendered SHA-256 | `1B9058499B1092FCB16CF3F85035A3CF4EC0C9BE3157B78EA2B09ACABD23160C` |
+| Rendered SHA-256 | `14251992E2C50C3A6765E35D8AE1C416EEDD17BB887B2AA7269A10D2094FC602` |
 | Final output | Aggregate `section`, `unit`, `category`, `value`, `release_status` rows only |
 
 ## Scientific specification
@@ -30,7 +30,9 @@ The primary-outcome transition describes label/ascertainment composition; the ob
 
 ## Reconciliation and integrity QC
 
-The SQL derives its `different_stay_pairs` directly from the replicated P3-C pair classification rather than hardcoding the previously observed count. It reports the pair count, paired-detail count, their difference, both patient-set differences, selected/pair duplicate-`uniquePID` groups, singleton-key failures, missing detail joins, and positive-label versus observed-event discordance. Any nonzero integrity violation, including a suppressed small technical QC value, requires review and is not a pass.
+The SQL derives its `different_stay_pairs` directly from the replicated P3-C pair classification rather than hardcoding the previously observed count. It reports the pair count, paired-detail count, their difference, both patient-set differences, selected/pair duplicate-`uniquePID` groups, singleton-key failures, and explicit frozen/technical selected-stay key matches. Missing clinical outcome or observation fields are retained as analytic categories and are not used as JOIN-failure proxies.
+
+Primary-label/event QC is NULL-safe. A positive label requires an observed event; a negative label and an indeterminate NULL label are each valid only when no observed event is present. Thus an observed event paired with a NULL or negative label is reported as a contradiction, while a valid indeterminate outcome without an observed event is not. Any nonzero integrity violation, including a suppressed small technical QC value, requires review and is not a pass.
 
 ## Privacy design
 
@@ -45,7 +47,9 @@ All transitions are defined with complete zero-cell scaffolds. A single shared g
 | `E_frozen_reconstruction` predicate | PASS — reference, baseline-stage, chronic dialysis/ESRD, and early strict-RRT predicates preserved |
 | Primary outcome / observation fields | PASS — read directly from frozen `cohort_outcome_v1`; no recomputation |
 | Different-stay pairing grain | PASS — one internal pair per `uniquePID`, with duplicate and set-equivalence QC |
+| Selected-stay JOIN integrity | PASS — frozen and technical selected-stay keys are checked independently; clinical-field NULLs are not JOIN proxies |
 | NULL and unknown categories | PASS — explicit for primary outcome and observation class |
+| Primary-label/event contradiction QC | PASS — explicit NULL-safe valid and contradictory combinations |
 | Small-cell and complementary-disclosure protection | PASS — common detailed-partition gate plus technical-QC suppression |
 | DDL/DML/export/call statements | PASS — none |
 | BigQuery parser, schema, and cost validation | NOT PERFORMED |
