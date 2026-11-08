@@ -1,8 +1,8 @@
 # Changelog
 
-## v1.2.2-submission — draft for review
+## v1.2.2-submission
 
-Stages the current manuscript and supplementary information, figure reproduction scripts and reference figures, plus a scoped checksum list. Aggregate analytical inputs are unchanged. A DOI and release tag are pending publication.
+Stages the current manuscript and supplementary information, figure reproduction scripts and reference figures, plus a scoped checksum list. Aggregate analytical inputs are unchanged. The manuscript and software metadata identify the corresponding version-specific DOI and release tag.
 
 
 ## v1.2.0-submission — A25 reproducibility update

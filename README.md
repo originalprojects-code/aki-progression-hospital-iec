@@ -1,6 +1,6 @@
 # Subsequent Stage 2-3 AKI Prediction — Hospital-Disjoint Internal–External Validation
 
-> **Draft branch for review.** Updated 8 November 2026 submission figure scripts and reference outputs are staged under `code/` and `figures/submission_2026_11/`; see `docs/FIGURES_SUBMISSION_2026_11.md`. The manuscript, DOI, release metadata, and inventories have not yet been updated for this draft. The published `v1.2.1-submission` tag remains unchanged.
+> **Draft branch for review.** Updated 8 November 2026 submission figure scripts and reference outputs are staged under `code/` and `figures/submission_2026_11/`; see `docs/FIGURES_SUBMISSION_2026_11.md`. The updated manuscript, planned DOI and version metadata, and a scoped checksum list are included for review. The published `v1.2.1-submission` tag remains unchanged.
 
 Reproducibility materials for the manuscript:
 
@@ -40,7 +40,7 @@ The validation design is hospital-disjoint internal-external cross-validation an
 
 ## Publication-figure reproducibility
 
-The A25 publication artwork is repository-rebuildable from disclosure-safe aggregate sources. `code/08_BUILD_PUBLICATION_FIGURES.py` regenerates Fig. 1–3 and Fig. S1–S12 as 600-dpi PNG and vector PDF. See `docs/FIGURE_REPRODUCIBILITY.md` and `docs/A25_FINAL_FIGURE_SOURCE_MAP.csv`.
+The current submission figure scripts and reference outputs are described in `docs/FIGURES_SUBMISSION_2026_11.md`. The earlier A25 artwork can still be regenerated with `code/08_BUILD_PUBLICATION_FIGURES.py` from disclosure-safe aggregate sources.
 
 ## Version
 

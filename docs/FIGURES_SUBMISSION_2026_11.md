@@ -1,6 +1,6 @@
 # Submission figure reproduction draft
 
-This branch stages the 8 November 2026 figure build scripts and figure outputs for review. It does not replace the existing release or update the manuscript, DOI, provenance manifests, or the legacy builder. Those must be reconciled before creating a new release.
+The 8 November 2026 figure build scripts and reference outputs are included alongside the earlier A25 artwork and builder. The submission manuscript and supplementary information are in `manuscript/submission_2026_11/`. The earlier A25 inventories describe the historical snapshot; `release/SHA256SUMS_2026_11.txt` covers the newly added files listed therein.
 
 The two build scripts read the pre-existing aggregate files under `aggregate_outputs/`, `analyses/`, and `tables/`, and write PNG and PDF figures to a chosen output directory. They do not run the underlying clinical analyses.
 
@@ -16,4 +16,4 @@ The figure reference files were checked against the 8 November submission packag
 
 The build scripts ran in a separate Linux environment using DejaVu Sans as a fallback because Arial was unavailable. This changes figure appearance; the verifier intentionally reports nonidentical files rather than asserting exact reproducibility in a different environment. A matching Windows/Arial environment is required to evaluate the stated byte-identical PNG reproduction. The standalone PDF files contain metadata such as timestamps, so the verifier compares their rendered pages at 150 dpi.
 
-This is a draft, not a new software release. Research data and patient-level derivatives must not be added to the repository.
+Research data and patient-level derivatives must not be added to the repository.

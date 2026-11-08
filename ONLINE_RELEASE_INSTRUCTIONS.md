@@ -1,44 +1,7 @@
-# Online release instructions
+# Release and archiving instructions
 
-The current repository state is aligned with the A25 submission-locked manuscript
-and final publication figure set.
+The 2026-11 submission figure scripts and outputs are described in `docs/FIGURES_SUBMISSION_2026_11.md`. The manuscript and supplementary information are under `manuscript/submission_2026_11/`.
 
-## Pre-release checks
+Before publishing, verify `release/SHA256SUMS_2026_11.txt` for the 37 newly staged files. The A25 manifests and artwork describe historical files, not a complete inventory of this version. Check the submission manuscript, metadata and reserved Zenodo DOI, and create the `v1.2.2-submission` tag from the reviewed commit. Archive that same snapshot under DOI `10.5281/zenodo.24058816`. The tag and DOI only resolve after publication.
 
-Before creating the release:
-
-1. Confirm `docs/REPRODUCIBILITY_CHECKLIST_A25.md` is complete.
-2. Run:
-   `python aggregate_outputs/publication_figures/verify_publication_sources.py`
-3. Run:
-   `python code/08_BUILD_PUBLICATION_FIGURES.py`
-4. Confirm Fig. 1–3 and Fig. S1–S12 all rebuild successfully.
-5. Confirm `docs/A25_FINAL_FIGURE_SOURCE_MAP.csv` points to existing repository files.
-6. Confirm the SHA-256 manifests under `release/` match the repository snapshot.
-7. Confirm no restricted patient-level or hospital-identifier data are present.
-
-## GitHub release
-
-Create a new immutable tag and release:
-
-`v1.2.0-submission`
-
-Do not modify historical tags or releases.
-
-Use `RELEASE_NOTES_A25_REPRODUCIBILITY.md` as the release-note basis.
-
-## Zenodo
-
-Archive the new GitHub release as a new software version. The current `.zenodo.json`
-is prepared for version `1.2.0-submission` and retains links to the prior archived
-version and the software record.
-
-After Zenodo assigns the new version DOI, record that DOI in the manuscript/repository
-only where appropriate; do not replace the concept-record relationship with a
-version-specific DOI unless required by the citation workflow.
-
-## Final verification
-
-Download the released repository archive and rerun the publication-source verifier
-and figure builder from the downloaded archive before considering the online release
-complete.
+No patient-level or Data Use Agreement-restricted data should be included.
