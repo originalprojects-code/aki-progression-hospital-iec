@@ -1,0 +1,6 @@
+matplotlib==3.11.2
+pandas==3.0.6
+numpy==2.5.3
+Pillow==12.3.0
+# optional, only for code/verify_outputs.py pixel comparison of PDFs
+pymupdf
