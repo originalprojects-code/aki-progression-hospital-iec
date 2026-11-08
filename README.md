@@ -1,5 +1,7 @@
 # Subsequent Stage 2-3 AKI Prediction — Hospital-Disjoint Internal–External Validation
 
+> **Draft branch for review.** Updated 8 November 2026 submission figure scripts and reference outputs are staged under `code/` and `figures/submission_2026_11/`; see `docs/FIGURES_SUBMISSION_2026_11.md`. The manuscript, DOI, release metadata, and inventories have not yet been updated for this draft. The published `v1.2.1-submission` tag remains unchanged.
+
 Reproducibility materials for the manuscript:
 
 **Machine learning for early prediction of subsequent stage 2-3 acute kidney injury in critically ill adults: hospital-disjoint internal-external validation**
@@ -42,7 +44,7 @@ The A25 publication artwork is repository-rebuildable from disclosure-safe aggre
 
 ## Version
 
-Current submission-aligned reproducibility version: `v1.2.0-submission`.
+This review branch derives from the published `v1.2.1-submission` tag. Its new figure files are a draft and are not yet a published version.
 
 ## License
 
