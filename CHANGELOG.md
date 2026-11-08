@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.2.2-submission — draft for review
+
+Stages the current manuscript and supplementary information, figure reproduction scripts and reference figures, plus a scoped checksum list. Aggregate analytical inputs are unchanged. A DOI and release tag are pending publication.
+
+
 ## v1.2.0-submission — A25 reproducibility update
 
 Aligned repository-contained publication reproducibility with the A25 locked submission: final manuscript/ESM snapshots, 15 final figures, disclosure-safe figure-source aggregates, one publication builder, clean-room 15/15 rebuild, and A25 source mapping.

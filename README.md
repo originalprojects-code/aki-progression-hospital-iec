@@ -49,3 +49,8 @@ This review branch derives from the published `v1.2.1-submission` tag. Its new f
 ## License
 
 Original code and documentation are released under the MIT License. eICU data remain governed by the PhysioNet Data Use Agreement and are not covered by the MIT License.
+
+
+## Staged submission files
+
+The review branch includes the current submission manuscript and supplementary information under `manuscript/submission_2026_11/`. Its manuscript contains the reserved DOI `10.5281/zenodo.24058816` and planned tag `v1.2.2-submission`; these links are not live until the release is published. The legacy `manuscript/`, `figures/`, and A25 inventories are retained as historical snapshots. The scoped `release/SHA256SUMS_2026_11.txt` covers the 37 newly staged figure and manuscript files, not the entire repository.

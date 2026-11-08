@@ -1,6 +1,6 @@
 {
   "title": "Machine learning for early prediction of subsequent stage 2-3 acute kidney injury in critically ill adults: hospital-disjoint internal-external validation — reproducibility materials",
-  "description": "Source-only code, parameterized SQL, analysis specifications, disclosure-safe aggregate outputs, final publication figures, and documentation aligned with the A25 submission-locked manuscript. Scientific results are unchanged. No patient-level data or Data Use Agreement-restricted derivatives are included.",
+  "description": "Source code, parameterized SQL, analysis specifications, disclosure-safe aggregate outputs, submission figure-generation scripts and reference figures, and documentation. No patient-level data or Data Use Agreement-restricted derivatives are included.",
   "creators": [
     {
       "name": "Yilmaz, Cagdas",
@@ -25,16 +25,16 @@
   ],
   "upload_type": "software",
   "access_right": "open",
-  "version": "1.2.0-submission",
+  "version": "1.2.2-submission",
   "language": "eng",
   "related_identifiers": [
     {
-      "identifier": "https://github.com/originalprojects-code/aki-progression-hospital-iec/tree/v1.2.0-submission",
+      "identifier": "https://github.com/originalprojects-code/aki-progression-hospital-iec/tree/v1.2.2-submission",
       "relation": "isSupplementTo",
       "resource_type": "software"
     },
     {
-      "identifier": "10.5281/zenodo.21959115",
+      "identifier": "10.5281/zenodo.22062452",
       "relation": "isNewVersionOf",
       "resource_type": "software"
     },
