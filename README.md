@@ -1,6 +1,6 @@
 # Subsequent Stage 2-3 AKI Prediction — Hospital-Disjoint Internal–External Validation
 
-> **Draft branch for review.** Updated 8 November 2026 submission figure scripts and reference outputs are staged under `code/` and `figures/submission_2026_11/`; see `docs/FIGURES_SUBMISSION_2026_11.md`. The updated manuscript, planned DOI and version metadata, and a scoped checksum list are included for review. The published `v1.2.1-submission` tag remains unchanged.
+> The 8 November 2026 submission figure scripts and reference outputs are under `code/` and `figures/submission_2026_11/`; see `docs/FIGURES_SUBMISSION_2026_11.md`. Earlier A25 materials remain available as historical snapshots.
 
 Reproducibility materials for the manuscript:
 
@@ -44,13 +44,13 @@ The current submission figure scripts and reference outputs are described in `do
 
 ## Version
 
-This review branch derives from the published `v1.2.1-submission` tag. Its new figure files are a draft and are not yet a published version.
+Version `v1.2.2-submission` derives from the `v1.2.1-submission` tag.
 
 ## License
 
 Original code and documentation are released under the MIT License. eICU data remain governed by the PhysioNet Data Use Agreement and are not covered by the MIT License.
 
 
-## Staged submission files
+## Submission files
 
-The review branch includes the current submission manuscript and supplementary information under `manuscript/submission_2026_11/`. Its manuscript contains the reserved DOI `10.5281/zenodo.24058816` and planned tag `v1.2.2-submission`; these links are not live until the release is published. The legacy `manuscript/`, `figures/`, and A25 inventories are retained as historical snapshots. The scoped `release/SHA256SUMS_2026_11.txt` covers the 37 newly staged figure and manuscript files, not the entire repository.
+The current submission manuscript and supplementary information are under `manuscript/submission_2026_11/`. The manuscript refers to DOI `10.5281/zenodo.24058816` and tag `v1.2.2-submission`. The legacy `manuscript/`, `figures/`, and A25 inventories are retained as historical snapshots. The scoped `release/SHA256SUMS_2026_11.txt` covers the 37 figure and manuscript files listed there, not the entire repository.
